@@ -1,0 +1,11 @@
+.table-divide {
+  @apply divide-y divide-black-200;
+}
+
+th {
+  @apply px-6 py-3 text-left text-xs font-medium tracking-wider text-black-400 dark:text-white;
+}
+
+td {
+  @apply h-[40px] whitespace-nowrap px-6 py-4;
+}

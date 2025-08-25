@@ -1,0 +1,24 @@
+.device-dialog {
+  // .el-dialog {}
+  .el-dialog__header {
+    @apply flex items-center justify-center;
+    padding: 10px 32px;
+    border-bottom: 1px solid var(--el-border-color-lighter);
+  }
+
+  .el-dialog__title {
+    @apply text-2xl font-semibold dark:text-white;
+  }
+
+  .el-dialog__body {
+    @apply p-4 dark:text-white;
+  }
+
+  .el-input.is-disabled .el-input__wrapper {
+    background-color: var(--el-fill-color-light);
+  }
+
+  .dialog-footer {
+    @apply mt-4 flex justify-end gap-4;
+  }
+}

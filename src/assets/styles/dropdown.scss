@@ -1,0 +1,11 @@
+.dropdown-container {
+  @apply absolute right-0 top-full z-10 mt-2 grid w-32 grid-cols-1 gap-1 rounded-lg bg-black-200 p-2 shadow-lg dark:bg-black-500;
+}
+
+.dropdown-container-button {
+  @apply flex w-full items-center gap-2 rounded-xl p-2 hover:bg-black-200 dark:hover:bg-black-500;
+}
+
+.dropdown-container-button-active {
+  @apply bg-black-100 dark:bg-black-400;
+}

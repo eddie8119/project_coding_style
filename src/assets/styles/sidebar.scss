@@ -1,0 +1,7 @@
+.sidebar-nav-link {
+  @apply flex h-[36px] items-center gap-2 rounded-xl p-2 hover:bg-black-200 dark:hover:bg-black-500;
+}
+
+.router-link-active {
+  @apply bg-black-200 dark:bg-black-500;
+}

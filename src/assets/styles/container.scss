@@ -1,0 +1,21 @@
+.header-container {
+  @apply flex h-[50px] items-center p-3 md:h-[60px] md:px-7 md:py-5;
+}
+
+.sidebar-container {
+  @apply flex h-screen flex-col p-4;
+  font-size: 14px;
+}
+
+// panel
+.basic-container {
+  @apply rounded-xl shadow-lg dark:bg-black-500;
+}
+
+.panel-container {
+  @apply basic-container bg-primary-light p-3;
+}
+
+.auth-container {
+  @apply basic-container w-[400px] bg-black-200 p-6 dark:!text-[#ffffff];
+}

@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="panel-container relative flex flex-col p-4">
     <H2Title :title="t('title.subTitle.statistics')" />
     <ShowUpdateTime :last-update-time="lastUpdateTime" />
@@ -52,4 +52,4 @@ const transformedStatistics = computed(() => {
 });
 </script>
 
-<style scoped></style>
+<style scoped></style> -->

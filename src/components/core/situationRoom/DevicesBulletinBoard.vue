@@ -45,7 +45,14 @@
 import { watch, computed } from 'vue';
 
 import type { CaliData, Measure } from '@/types/datainsight';
-import type { Device, PHDevice, ORPDevice, NH3NDevice, FlourideDevice } from '@/types/device';
+import type {
+  Device,
+  PHDevice,
+  ORPDevice,
+  NH3NDevice,
+  FlourideDevice,
+  RealTimeData,
+} from '@/types/device';
 
 import ProgressBar from '@/components/core/chart/ProgressBar.vue';
 import StatusShow from '@/components/core/StatusShow.vue';
@@ -168,19 +175,21 @@ watch(
 );
 
 watch(wsParsedData, (newVal) => {
-  if (!newVal) return;
+  if (!newVal || (newVal as RealTimeData).app !== 'real-time') return;
 
-  if (newVal && (newVal as { app: string }).app === 'real-time') {
-    const idx = devices.value.findIndex((device: Device) => device.ID === newVal.ID);
+  const realTimeData = newVal as RealTimeData;
+  const idx = devices.value.findIndex((device: Device) => device.ID === realTimeData.ID);
 
-    if (idx !== -1) {
-      devices.value[idx] = {
-        ...devices.value[idx],
-        ...newVal,
-      };
-      devices.value = [...devices.value];
-      updateLastUpdateTime();
-    }
+  if (idx !== -1) {
+    const deviceToUpdate = devices.value[idx];
+    const dataToUpdate = { ...realTimeData };
+
+    delete (dataToUpdate as Partial<RealTimeData>).app;
+    delete (dataToUpdate as Partial<RealTimeData>).version;
+
+    devices.value[idx] = { ...deviceToUpdate, ...dataToUpdate };
+    devices.value = [...devices.value];
+    updateLastUpdateTime();
   }
 });
 </script>

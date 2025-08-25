@@ -12,10 +12,9 @@
     <Table
       :columns="PH_DEVICE_USAGE_COLUMNS"
       :data="dummyDevices"
-      :action-list="[]"
+      :show-actions="false"
       :show-pagination="false"
       :show-search="false"
-      :actions="[]"
       max-height="calc(100vh - 250px)"
     />
   </div>

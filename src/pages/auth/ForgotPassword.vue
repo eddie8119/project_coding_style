@@ -44,7 +44,7 @@ const { handleSubmit, errors, isSubmitting } = useFormValidation<ForgotPasswordD
 
 const { value: email, handleBlur: handleBlurEmail } = useField<string>('email');
 
-const isValid = computed<boolean>(() => {
+const isValid = computed(() => {
   return email.value && Object.keys(errors.value).length === 0;
 });
 

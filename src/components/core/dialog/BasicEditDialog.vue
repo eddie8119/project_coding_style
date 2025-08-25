@@ -5,7 +5,6 @@
     :title="title"
     :close-on-click-modal="true"
     :close-on-press-escape="true"
-    :class="dialogClass"
     @close="onCancel"
   >
     <el-form label-width="110px" class="device-form" @submit.prevent="onSubmit">

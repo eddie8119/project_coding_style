@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="panel-container h-fit min-h-min w-full p-4">
     <H3Title :title="'Tag: ' + props.gaugeProps.tag" class="mb-2" />
     <div v-for="data in showData" :key="data.key">
@@ -26,4 +26,4 @@ const showData = ref<{ key: string; value: number }[]>([
   { key: 'Temperature', value: props.gaugeProps.temperature },
   { key: 'mv', value: props.gaugeProps.mv },
 ]);
-</script>
+</script> -->

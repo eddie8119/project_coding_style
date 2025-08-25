@@ -51,7 +51,7 @@
           :prop="column.field"
           :label="t(`column.${column.field}`)"
           :min-width="column.minWidth || 80"
-          :sortable="column.sortable !== false"
+          :sortable="true"
           show-overflow-tooltip
         >
           <template #default="scope">
@@ -102,7 +102,7 @@
   </div>
 </template>
 
-<script setup lang="ts" generic="T">
+<script setup lang="ts" generic="T extends Record<string, any>">
 import { Search } from '@element-plus/icons-vue';
 import { ref, computed } from 'vue';
 import { useI18n } from 'vue-i18n';

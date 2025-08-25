@@ -83,7 +83,7 @@ const props = defineProps<{
 const itemData = computed(() => props.item || {});
 
 const emit = defineEmits<{
-  (e: 'observation-change', val: string): void;
+  (e: 'observation-change', val: ObservationType): void;
 }>();
 
 function handleChoose() {

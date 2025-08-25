@@ -14,7 +14,7 @@ interface UseDialogReturn<T> {
   closeDialog: () => void;
 }
 
-export function useDialog<T>(): UseDialogReturn<T> {
+export function useDialog<T extends object>(): UseDialogReturn<T> {
   const showEditDialog = ref<boolean>(false);
   const selectedObject = ref<T | null>(null);
 

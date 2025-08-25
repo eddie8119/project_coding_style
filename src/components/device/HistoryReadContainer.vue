@@ -76,7 +76,7 @@
 import { ref, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 
-import type { Measure } from '@/types/datainsight';
+import type { MeasureHistory } from '@/types/datainsight';
 import type { Device } from '@/types/device';
 
 import HistoryChart from '@/components/core/chart/HistoryChart.vue';
@@ -97,12 +97,8 @@ const props = defineProps<{
   fetchedDevice: Device | undefined;
 }>();
 
-interface MeasureHistoryState {
-  measureHistory: Measure[];
-}
-
-const localData = ref<MeasureHistoryState>({
-  measureHistory: [],
+const localData = ref({
+  measureHistory: [] as MeasureHistory[],
 });
 const queryMode = ref<'days' | 'custom'>('days');
 const selectedDays = ref<number>(1);
@@ -195,4 +191,3 @@ watch(
 </script>
 
 <style scoped></style>
-

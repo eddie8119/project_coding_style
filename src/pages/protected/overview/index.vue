@@ -6,7 +6,7 @@
       <p class="ml-2 flex-nowrap text-gray-500">SITE_12</p>
     </div>
 
-    <div class="flex flex-1 flex-col gap-3 overflow-hidden lg:flex-row overflow-y-auto">
+    <div class="flex flex-1 flex-col gap-3 overflow-hidden overflow-y-auto lg:flex-row">
       <div class="flex flex-1 flex-col gap-3 lg:w-8/12 xl:w-9/12">
         <div class="flex flex-1 flex-col gap-3 overflow-hidden xl:flex-row">
           <!-- 監測數據表格 -->

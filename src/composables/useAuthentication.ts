@@ -14,7 +14,7 @@ import { useRouter } from 'vue-router';
 import type { Ref } from 'vue/dist/vue.js';
 
 import { authApi } from '@/api/auth';
-import { useAuthStore } from '@/store/auth';
+import { useAuthStore } from '@/stores/auth';
 
 interface AuthenticationItem {
   code: string;

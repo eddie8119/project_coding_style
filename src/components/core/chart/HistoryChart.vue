@@ -6,7 +6,7 @@
 import * as echarts from 'echarts';
 import { ref, onMounted, onActivated, onDeactivated, watch, computed, nextTick } from 'vue';
 
-import type { Measure } from '@/types/datainsight';
+import type { MeasureHistory } from '@/types/datainsight';
 
 const chartContainer = ref<HTMLElement | null>(null);
 const chartInstance = ref<echarts.ECharts | null>(null);
@@ -14,7 +14,7 @@ const lastUpdateTime = ref<string>('');
 const isChartReady = ref<boolean>(false);
 
 const props = defineProps<{
-  measureHistoryData: Measure[];
+  measureHistoryData: MeasureHistory[];
   unit: string;
   mainLabel: string;
 }>();
@@ -99,11 +99,14 @@ function setChartOption() {
   // Create a sorted copy to avoid mutating the prop and ensure the line chart is drawn correctly.
   const sortedData = [...data].sort((a, b) => parseInt(a.version) - parseInt(b.version));
 
-  const timeData = sortedData.map((item: Measure) => {
+  const timeData = sortedData.map((item: MeasureHistory) => {
     const date = new Date(parseInt(item.version));
     return `${date.getMonth() + 1}/${date.getDate()} ${date.getHours().toString().padStart(2, '0')}:${date.getMinutes().toString().padStart(2, '0')}`;
   });
-  const unitData = sortedData.map((item: Measure) => item[props.unit]);
+
+  const unitData = sortedData.map((item: MeasureHistory) =>
+    parseFloat(item[props.unit as keyof MeasureHistory] as string)
+  );
 
   const yMin = computed(() => {
     if (!unitData.length) return 0;
@@ -131,7 +134,7 @@ function setChartOption() {
     },
   };
 
-  const option: echarts.EChartsOption = {
+  const option = {
     ...baseOption,
     legend: {
       data: [props.unit],

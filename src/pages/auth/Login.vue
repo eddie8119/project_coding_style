@@ -33,7 +33,7 @@ import AuthCard from '@/components/auth/AuthCard.vue';
 import LoginForm from '@/components/auth/LoginForm.vue';
 import { useFormError } from '@/composables/useFormError';
 import { useFormValidation } from '@/composables/useFormValidation';
-import { useAuthStore } from '@/store/auth';
+import { useAuthStore } from '@/stores/auth';
 import { loginSchema } from '@/utils/schemas/loginSchema';
 
 const { t } = useI18n();

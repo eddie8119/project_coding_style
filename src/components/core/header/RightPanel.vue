@@ -51,7 +51,7 @@ import type { NavItem } from '@/types/layout';
 import { useAuth } from '@/composables/useAuth';
 import { useAuthentication } from '@/composables/useAuthentication';
 import { useLocale } from '@/composables/useLocale';
-import { useAuthStore } from '@/store/auth';
+import { useAuthStore } from '@/stores/auth';
 import { getIconUrl } from '@/utils/assetUrl';
 
 const { t } = useI18n();

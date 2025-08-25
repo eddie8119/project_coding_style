@@ -1,9 +1,10 @@
 export default {
   en: {
     dropdown: {
-      'zh-TW': 'Chinese',
+      // 語系呈現把它寫死
+      'zh-TW': '繁體中文',
       en: 'English',
-      ja: 'Japanese',
+      ja: '日本語',
       user: 'User',
       logout: 'Logout',
       edit: 'Edit',
@@ -12,9 +13,6 @@ export default {
   },
   'zh-TW': {
     dropdown: {
-      'zh-TW': '中文',
-      en: '英文',
-      ja: '日文',
       user: '使用者',
       logout: '登出',
       edit: '編輯',
@@ -23,9 +21,6 @@ export default {
   },
   ja: {
     dropdown: {
-      'zh-TW': '繁体字',
-      en: '英語',
-      ja: '日本語',
       user: 'ユーザー',
       logout: 'ログアウト',
       edit: '編集',

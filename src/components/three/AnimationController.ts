@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 import { updateMarkerOrientations } from './Markers';
 
@@ -68,7 +68,7 @@ export function createAnimationController(config: AnimationConfig) {
     },
 
     get isRunning() {
-      return running;
+      return active;
     },
 
     get isDestroyed() {

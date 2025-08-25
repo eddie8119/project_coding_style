@@ -1,4 +1,10 @@
-<template>
+<template></template>
+
+<script setup lang="ts"></script>
+
+<style scoped></style>
+
+<!-- <template>
   <div class="panel-container relative flex flex-col">
     <H2Title :title="t('title.subTitle.latest_calibration')" />
     <ShowUpdateTime :last-update-time="lastUpdateTime" />
@@ -44,4 +50,4 @@ onMounted(() => {
 });
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped></style> -->

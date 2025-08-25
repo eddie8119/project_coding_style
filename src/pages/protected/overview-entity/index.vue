@@ -1,4 +1,10 @@
-<template>
+<template></template>
+
+<script setup lang="ts"></script>
+
+<style scoped></style>
+
+<!-- <template>
   <div class="mt-6 flex flex-col gap-6">
     <ProgressSpinner v-if="isLoading" />
     <template v-if="isReady">
@@ -125,4 +131,4 @@ const measureHistory = computed(() => state.value.measureHistory);
 const calibrationHistory = computed(() => state.value.calibrationHistory);
 </script>
 
-<style scoped></style>
+<style scoped></style> -->

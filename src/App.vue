@@ -5,7 +5,7 @@
 <script setup lang="ts">
 import { ref, provide } from 'vue';
 
-import { useAuthStore } from '@/store/auth';
+import { useAuthStore } from '@/stores/auth';
 import { initTheme, setTheme } from '@/utils/theme';
 
 const authStore = useAuthStore();

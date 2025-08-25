@@ -1,13 +1,13 @@
 import * as THREE from 'three';
 
+import type { ObservationType } from '@/types/device';
+
 export interface Marker {
-  id: number;
   position: { x: number; y: number; z: number };
+  type: 'caution' | 'warning';
+  observation: ObservationType;
   label: string;
-  color?: string;
-  size?: number;
-  type?: 'floating' | 'fixed'; // 標記類型：浮動或固定
-  showLabel?: boolean; // 是否顯示標籤
+  color: string;
 }
 
 /**
@@ -99,9 +99,6 @@ export function addMarkers(scene: THREE.Scene, markers: Marker[]): THREE.Group[]
   markers.forEach((marker) => {
     const markerMesh = createMarker(marker.position, marker.label, {
       color: marker.color,
-      size: marker.size,
-      type: marker.type || 'floating',
-      showLabel: marker.showLabel,
     });
     scene.add(markerMesh);
     markerGroups.push(markerMesh);
@@ -146,8 +143,6 @@ export function addFixedMarkers(modelGroup: THREE.Group, markers: Marker[]): THR
   markers.forEach((marker) => {
     const markerMesh = createFixedMarker(modelGroup, marker.position, marker.label, {
       color: marker.color,
-      size: marker.size,
-      showLabel: marker.showLabel,
     });
     markerGroups.push(markerMesh);
   });

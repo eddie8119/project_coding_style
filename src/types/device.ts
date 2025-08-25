@@ -42,26 +42,26 @@ interface BasicDevice {
 }
 
 export interface PHDevice extends BasicDevice {
-  ph: number;
-  temperature: number;
-  mv: number;
-  zero: number;
-  slope: number;
+  ph: number | undefined;
+  temperature: number | undefined;
+  mv: number | undefined;
+  zero: number | undefined;
+  slope: number | undefined;
 }
 
 export interface ORPDevice extends BasicDevice {
-  mv: number;
-  offset: number;
+  mv: number | undefined;
+  offset: number | undefined;
 }
 
 export interface NH3NDevice extends BasicDevice {
-  ppm: number;
-  sensitivity: number;
+  ppm: number | undefined;
+  sensitivity: number | undefined;
 }
 
 export interface FlourideDevice extends BasicDevice {
-  ppm: number;
-  sensitivity: number;
+  ppm: number | undefined;
+  sensitivity: number | undefined;
 }
 
 export type Device = PHDevice | ORPDevice | NH3NDevice | FlourideDevice;
@@ -75,6 +75,9 @@ export interface Devices {
 export interface DeviceDevice {
   device: Device;
 }
+
+// 設備告警
+export type RealTimeData = Partial<Device> & { app: string; version: string; ID: string };
 
 // 設備告警
 export interface DeviceAlarm {

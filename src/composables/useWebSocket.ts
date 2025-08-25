@@ -4,10 +4,6 @@ import { ref, onBeforeUnmount } from 'vue';
 import type { WsData } from '@/types/websocket';
 
 const WS_RECONNECT_DELAY = 1000;
-const HEARTBEAT_CONFIG = {
-  MESSAGE: 'ping',
-  INTERVAL: 30_000,
-} as const;
 
 export function useWebSocket() {
   const wsParsedData = ref<WsData | undefined>(undefined);

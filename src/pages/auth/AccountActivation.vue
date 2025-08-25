@@ -40,6 +40,7 @@
 
 <script setup lang="ts">
 import { Loading } from '@element-plus/icons-vue';
+import { isAxiosError } from 'axios';
 import { ref, onMounted } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRoute, useRouter } from 'vue-router';
@@ -48,7 +49,7 @@ import { usersApi } from '@/api/users';
 import check from '@/assets/images/check.png';
 import close from '@/assets/images/close.png';
 import AuthCard from '@/components/auth/AuthCard.vue';
-import { useAuthStore } from '@/store/auth';
+import { useAuthStore } from '@/stores/auth';
 
 const { t } = useI18n();
 const route = useRoute();
@@ -75,7 +76,11 @@ const activateAccount = async () => {
     });
     activationStatus.value = 'success';
   } catch (error) {
-    errorMessage.value = error.response?.data?.detail || t('error.activation_failed');
+    if (isAxiosError(error)) {
+      errorMessage.value = error.response?.data?.detail || t('error.activation_failed');
+    } else {
+      errorMessage.value = t('error.activation_failed');
+    }
     activationStatus.value = 'error';
   } finally {
     isLoading.value = false;

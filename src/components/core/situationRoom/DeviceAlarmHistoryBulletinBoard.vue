@@ -1,9 +1,12 @@
 <template>
-  <div v-if="formattedDeviceAlarmRecords?.length > 0" class="relative flex flex-col">
+  <div
+    v-if="formattedDeviceAlarmRecords && formattedDeviceAlarmRecords.length > 0"
+    class="relative flex flex-col"
+  >
     <H3Title :title="t('title.subTitle.alarm_history')" />
 
     <Table
-      :data="formattedDeviceAlarmRecords"
+      :data="formattedDeviceAlarmRecords || []"
       :columns="observation.columns"
       :actions="alarmActions"
       :loading="false"

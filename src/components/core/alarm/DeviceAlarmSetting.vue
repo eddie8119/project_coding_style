@@ -61,7 +61,7 @@ import type { DeviceAlarm } from '@/types/device';
 
 import { alarmApi } from '@/api/alarm';
 import TextButton from '@/components/core/button/TextButton.vue';
-import { useAuthStore } from '@/store/auth';
+import { useAuthStore } from '@/stores/auth';
 
 const { t } = useI18n();
 const authStore = useAuthStore();

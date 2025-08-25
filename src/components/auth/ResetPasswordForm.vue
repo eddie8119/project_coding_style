@@ -33,7 +33,7 @@ import { useI18n } from 'vue-i18n';
 
 import FormInput from '../core/input/FormInput.vue';
 
-import { useAuthStore } from '@/store/auth';
+import { useAuthStore } from '@/stores/auth';
 
 const { t } = useI18n();
 const authStore = useAuthStore();

@@ -14,7 +14,7 @@ import * as echarts from 'echarts';
 import { storeToRefs } from 'pinia';
 import { inject, onMounted, ref, watch } from 'vue';
 
-import { useTagStore } from '@/store/tag';
+import { useTagStore } from '@/stores/tag';
 
 const FONT_SIZE = 16;
 

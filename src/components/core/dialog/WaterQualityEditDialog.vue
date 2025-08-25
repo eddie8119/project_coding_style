@@ -37,8 +37,8 @@ const props = defineProps<{
   modelValue: boolean; // For dialog visibility
   waterQualityValue: string; // The initial value
   waterOptionsList: { name: string; value: string }[];
-  isSubmitting: boolean;
-  isLoading: boolean;
+  isSubmitting?: boolean;
+  isLoading?: boolean;
 }>();
 
 const emit = defineEmits<{

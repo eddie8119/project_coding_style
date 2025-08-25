@@ -1,8 +1,8 @@
 export interface DatainsightsHistoryParams {
   ids: string;
   unit: string;
-  start_time?: string;
-  end_time?: string;
+  start_time?: string | number;
+  end_time?: string | number;
 }
 
 export interface StatisticsData {
@@ -62,3 +62,31 @@ export interface Measure {
 export interface MeasureData {
   data: Measure[];
 }
+
+// MeasureHistory
+export interface BasicMeasureHistory {
+  ID: string;
+  version: string;
+}
+
+export interface PhMeasureHistory extends BasicMeasureHistory {
+  ph: number;
+}
+
+export interface ORPMeasureHistory extends BasicMeasureHistory {
+  mv: number;
+}
+
+export interface NH3NMeasureHistory extends BasicMeasureHistory {
+  ppm: number;
+}
+
+export interface FlourideMeasureHistory extends BasicMeasureHistory {
+  ppm: number;
+}
+
+export type MeasureHistory =
+  | PhMeasureHistory
+  | ORPMeasureHistory
+  | NH3NMeasureHistory
+  | FlourideMeasureHistory;

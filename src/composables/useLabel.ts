@@ -31,7 +31,7 @@ export function useLabel(): UseLabelReturn {
   const {
     data: fetchedLabels,
     isLoading: isLoadingLabels,
-    refetch: refetchLabels,
+    refetch: refetchQueryLabels,
   } = useQuery<DeviceWithStatus[], Error, DeviceWithStatus[], ['labels']>({
     queryKey: ['labels'],
     queryFn: async () => {
@@ -42,20 +42,27 @@ export function useLabel(): UseLabelReturn {
     staleTime: 1000 * 60 * 5,
   });
 
+  const refetchLabels = async (): Promise<void> => {
+    await refetchQueryLabels();
+  };
+
   // fetchedLabelsAlarmRecords
   const {
     data: fetchedLabelsAlarmRecords,
     isLoading: isLoadingAlarmRecords,
-    refetch: refetchAlarmRecords,
+    refetch: refetchQueryAlarmRecords,
   } = useQuery<DeviceWithAlarms[]>({
     queryKey: ['labels', 'alarmRecords'],
     queryFn: async () => {
       const response = await labelApi.getAlarmRecords({ alarm_status: 'unresolved' });
       return response.data;
     },
-
     staleTime: 1000 * 60 * 5,
   });
+
+  const refetchAlarmRecords = async (): Promise<void> => {
+    await refetchQueryAlarmRecords();
+  };
 
   const formattedAlarmRecords = computed(() => {
     if (!fetchedLabelsAlarmRecords.value) return [];

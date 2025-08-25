@@ -33,7 +33,7 @@ export function useDevice(id: MaybeRefOrGetter<string>): UseDeviceReturn {
     data: fetchedDevice,
     isLoading,
     error,
-    refetch: refetchQuery,
+    refetch: refetchQueryDevice,
   } = useQuery({
     queryKey: ['device', id],
     queryFn: async (): Promise<Device | null> => {
@@ -58,7 +58,7 @@ export function useDevice(id: MaybeRefOrGetter<string>): UseDeviceReturn {
 
   // 使用包裝函式  不然都必須知道 QueryObserverResult 這個來自 @tanstack/vue-query 套件的特定類型。這形成了一種「洩漏抽象」的設計。
   const refetchDevice = async (): Promise<void> => {
-    await refetchQuery();
+    await refetchQueryDevice();
   };
 
   watch(fetchedDevice, (newVal) => {

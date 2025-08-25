@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <el-form
     class="flex w-full flex-col items-center gap-4 md:flex-row"
     :loading="isLoading"
@@ -121,4 +121,4 @@ const handleSearch = () => {
     entity: selectedEntity.value,
   });
 };
-</script>
+</script> -->

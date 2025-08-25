@@ -37,7 +37,7 @@ import RegisterForm from '@/components/auth/RegisterForm.vue';
 import { useFormError } from '@/composables/useFormError';
 import { useFormValidation } from '@/composables/useFormValidation';
 import router from '@/router';
-import { useAuthStore } from '@/store/auth';
+import { useAuthStore } from '@/stores/auth';
 import { registerSchema } from '@/utils/schemas/registerSchema';
 
 const { t } = useI18n();
@@ -60,7 +60,7 @@ const { value: password, handleBlur: handleBlurPassword } = useField<string>('pa
 const { value: confirmPassword, handleBlur: handleBlurConfirmPassword } =
   useField<string>('confirmPassword');
 
-const isValid = computed<boolean>(() => {
+const isValid = computed(() => {
   return (
     email.value && password.value && confirmPassword.value && Object.keys(errors.value).length === 0
   );

@@ -38,7 +38,7 @@
           <div class="grid grid-cols-1 gap-2 px-3">
             <router-link
               v-for="item in node.items"
-              :key="item.key"
+              :key="item.name"
               :to="item.route"
               class="flex items-center rounded-lg p-1 transition-colors hover:bg-black-200 hover:bg-gray-100 dark:hover:bg-black-500"
               @click="toggleHamburger"
@@ -49,15 +49,6 @@
                 class="w-5 invert dark:invert-0"
               />
               <span class="ml-2 text-center text-sm dark:text-white">{{ item.label }}</span>
-              <!-- Submenu indicator -->
-              <!-- <div v-if="item.children" class="ml-2 flex items-center text-xs text-black-400">
-                <span>{{ item.children.length }} subitems</span>
-                <img
-                  src="@/assets/icons/Vector.svg"
-                  class="ml-1 h-3 w-3 rotate-90 transform opacity-50 dark:invert"
-                  alt="expand"
-                />
-              </div> -->
             </router-link>
           </div>
         </div>

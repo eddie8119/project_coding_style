@@ -41,6 +41,7 @@ export function useDataInsights() {
       .map((device: Device) => ({
         ...device,
         ...latestMeasureByDevice[device.ID],
+        active: device.status === 'running',
       }));
   };
 
@@ -111,7 +112,13 @@ export function useDataInsights() {
     if (!ids || !unit) return null;
 
     try {
-      const response = await datainsightsApi.getMeasureHistory({ ids, unit, start_time, end_time });
+      const params = {
+        ids,
+        unit,
+        start_time: start_time?.toString(),
+        end_time: end_time?.toString(),
+      };
+      const response = await datainsightsApi.getMeasureHistory(params);
       return response.data;
     } catch (error) {
       console.error('Error fetching measure history:', error);

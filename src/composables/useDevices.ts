@@ -89,6 +89,8 @@ export function useDevices(type: ObservationType): UseDevicesReturn {
         return [];
       }
     },
+    staleTime: 0,
+    gcTime: 1000 * 60 * 5,
   });
 
   watch(fetchedDevices, (newVal) => {

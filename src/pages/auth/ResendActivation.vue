@@ -76,7 +76,7 @@ const startCooldown = () => {
   }, 1000);
 };
 
-const isValid = computed<boolean>(() => {
+const isValid = computed(() => {
   return email.value && Object.keys(errors.value).length === 0;
 });
 

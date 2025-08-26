@@ -203,7 +203,7 @@ const deviceRealMeasurementData = ref<WsData | undefined>(undefined);
 const handleStatus = ref<string | undefined>(undefined);
 const handleId = ref<string | undefined>(undefined);
 
-// topic」數量不多、處理邏輯簡單，用 if 即可
+// topic 數量不多、處理邏輯簡單，用 if 即可
 watch(wsParsedData, (newVal) => {
   if (!newVal) return;
 

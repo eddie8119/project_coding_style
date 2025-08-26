@@ -1,4 +1,10 @@
-<template>
+<template></template>
+
+<script setup lang="ts"></script>
+
+<style scoped></style>
+
+<!-- <template>
   <BasicEditDialog
     v-model="dialogVisible"
     :title="t('title.edit_device')"
@@ -112,4 +118,4 @@ const onCancel = () => {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped></style> -->

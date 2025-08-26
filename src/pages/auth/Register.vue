@@ -24,6 +24,7 @@
 </template>
 
 <script setup lang="ts">
+import { isAxiosError } from 'axios';
 import { useField } from 'vee-validate';
 import { ref, computed } from 'vue';
 import { useI18n } from 'vue-i18n';
@@ -80,23 +81,25 @@ const onSubmit = handleSubmit(async (values) => {
     showMessage.value = t('message.dialog.check_the_email');
     authStore.setPendingActivationEmail(email.value);
   } catch (error) {
-    const { email: responseEmail } = error?.response?.data;
-    const { verified } = responseEmail;
+    if (isAxiosError(error)) {
+      const emailMessage = error?.response?.data?.email;
+      const { verified } = emailMessage;
 
-    if (verified === verifiedStatus.UNVERIFIED) {
-      setErrorMessage(t('message.dialog.email_not_verified'));
+      if (verified === verifiedStatus.UNVERIFIED) {
+        setErrorMessage(t('message.dialog.email_not_verified'));
 
-      setTimeout(() => {
-        router.push({
-          name: 'resend-activation',
-          query: {
-            email: email.value,
-            from: 'register',
-          },
-        });
-      }, 3000);
-    } else {
-      handleError(error as AxiosError);
+        setTimeout(() => {
+          router.push({
+            name: 'resend-activation',
+            query: {
+              email: email.value,
+              from: 'register',
+            },
+          });
+        }, 3000);
+      } else {
+        handleError(error as AxiosError);
+      }
     }
   }
 });

@@ -23,7 +23,7 @@
     />
 
     <router-link to="/auth/forgot-password">
-      <p class="mb-2 text-sm">Forgot Password</p>
+      <p class="mb-2 text-sm">{{ t('link.forgot_password') }}</p>
     </router-link>
   </el-form>
 </template>

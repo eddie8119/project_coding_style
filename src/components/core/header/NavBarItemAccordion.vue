@@ -30,9 +30,7 @@ const props = defineProps<{
   selectedItem?: Record<string, any> | string;
 }>();
 
-const emit = defineEmits<{
-  select: [code: string];
-}>();
+const emit = defineEmits(['select']);
 </script>
 
 <style lang="scss" scoped></style>

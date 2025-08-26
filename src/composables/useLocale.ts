@@ -8,10 +8,8 @@
  * @returns {Function} handleLanguageChange - 處理語言變更並更新相關設置
  */
 
-import { ref } from 'vue';
+import { ref, type Ref } from 'vue';
 import { useI18n } from 'vue-i18n';
-
-import type { Ref } from 'vue';
 
 import { Language } from '@/i18n';
 

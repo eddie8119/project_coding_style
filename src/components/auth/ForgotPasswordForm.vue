@@ -12,7 +12,7 @@
     />
 
     <router-link to="/auth/login">
-      <p class="mb-2 text-sm">Back to Login</p>
+      <p class="mb-2 text-sm">{{ t('link.back_to_login') }}</p>
     </router-link>
   </el-form>
 </template>

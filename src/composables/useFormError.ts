@@ -11,11 +11,10 @@
  * @returns {Function} clearError - 清除錯誤信息的函數
  */
 
-import { ref } from 'vue';
+import { ref, type Ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 import type { AxiosError } from 'axios';
-import type { Ref } from 'vue';
 
 interface FormErrorOptions {
   statusCodes: number[];

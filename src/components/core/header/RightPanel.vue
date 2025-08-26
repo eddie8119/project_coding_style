@@ -16,7 +16,7 @@
         <NavBarItemAccordion
           :items="languages"
           :selected-item="currentLanguage"
-          @select="handleLanguageChange"
+          @select="(code: string) => handleLanguageSelect(code)"
         />
       </div>
 
@@ -27,7 +27,10 @@
         ref="authenticationDropdownRef"
         class="absolute right-0 top-full z-10 mt-2"
       >
-        <NavBarItemAccordion :items="authentications" @select="handleAuthenticationChange" />
+        <NavBarItemAccordion
+          :items="authentications"
+          @select="(code: string) => handleAuthenticationSelect(code)"
+        />
       </div>
     </div>
     <p class="text-sm text-black-400">
@@ -52,6 +55,7 @@ import { useAuth } from '@/composables/useAuth';
 import { useAuthentication } from '@/composables/useAuthentication';
 import { useLocale } from '@/composables/useLocale';
 import { useAuthStore } from '@/stores/auth';
+import { Language } from '@/types/language';
 import { getIconUrl } from '@/utils/assetUrl';
 
 const { t } = useI18n();
@@ -66,6 +70,17 @@ const languageDropdownRef = ref<HTMLElement | null>(null);
 const authenticationDropdownRef = ref<HTMLElement | null>(null);
 const isLanguageDropdownOpen = ref<boolean>(false);
 const isAuthenticationDropdownOpen = ref<boolean>(false);
+
+// Custom handlers that close dropdowns after selection
+const handleLanguageSelect = (code: string): void => {
+  handleLanguageChange(code as Language); //轉換
+  isLanguageDropdownOpen.value = false;
+};
+
+const handleAuthenticationSelect = (value: string): void => {
+  handleAuthenticationChange(value);
+  isAuthenticationDropdownOpen.value = false;
+};
 
 const toggleLanguage = () => {
   isAuthenticationDropdownOpen.value = false;

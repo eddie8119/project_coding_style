@@ -3,9 +3,7 @@
  *
  */
 
-import { ref } from 'vue';
-
-import type { Ref } from 'vue/dist/vue.js';
+import { ref, type Ref } from 'vue';
 
 interface UseDialogReturn<T> {
   showEditDialog: Ref<boolean>;
@@ -16,11 +14,11 @@ interface UseDialogReturn<T> {
 
 export function useDialog<T extends object>(): UseDialogReturn<T> {
   const showEditDialog = ref<boolean>(false);
-  const selectedObject = ref<T | null>(null);
+  const selectedObject = ref<T | null>(null) as Ref<T | null>;
 
   const editObject = (object: T): void => {
     showEditDialog.value = true;
-    selectedObject.value = { ...object };
+    selectedObject.value = { ...object } as T;
   };
 
   const closeDialog = (): void => {

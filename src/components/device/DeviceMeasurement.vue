@@ -24,8 +24,8 @@ import { Measurement } from '@/types/measure';
 const props = withDefaults(
   defineProps<{
     deviceRealMeasurementData?: WsData | undefined;
-    deviceLatestCalibrationData?: DeviceLatestCalibrationDataType;
-    deviceLatestMeasureData?: DeviceLatestMeasureDataType;
+    deviceLatestCalibrationData?: DeviceLatestCalibrationDataType | undefined;
+    deviceLatestMeasureData?: DeviceLatestMeasureDataType | undefined;
     observationType: ObservationType;
   }>(),
   {
@@ -77,8 +77,12 @@ const valueExtractors = {
 
   [Measurement.SLOPE]: () => safeValue(props.deviceLatestCalibrationData?.slope),
 
-  [Measurement.PPM]: () =>
-    safeValue(props.deviceRealMeasurementData?.ppm, props.deviceLatestMeasureData?.ppm),
+  [Measurement.PPM]: () => {
+    // Type guard to check if ppm exists on the WsData object
+    const wsData = props.deviceRealMeasurementData as any;
+    const realPpm = wsData && 'ppm' in wsData ? wsData.ppm : undefined;
+    return safeValue(realPpm, props.deviceLatestMeasureData?.ppm);
+  },
 
   [Measurement.SENSITIVITY]: () => safeValue(props.deviceLatestCalibrationData?.sensitivity),
 

@@ -8,10 +8,8 @@
  * @returns {Function} handleAuthenticationChange - 處理身份驗證選項變更
  */
 
-import { ref } from 'vue';
+import { ref, type Ref } from 'vue';
 import { useRouter } from 'vue-router';
-
-import type { Ref } from 'vue/dist/vue.js';
 
 import { authApi } from '@/api/auth';
 import { useAuthStore } from '@/stores/auth';

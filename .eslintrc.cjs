@@ -18,8 +18,25 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['@typescript-eslint', 'import'],
+  overrides: [
+    {
+      files: ['*.vue'],
+      parser: 'vue-eslint-parser',
+      parserOptions: {
+        parser: '@typescript-eslint/parser',
+      },
+      rules: {
+        'vue/multi-word-component-names': 'off',
+      },
+    },
+  ],
   rules: {
-    'prettier/prettier': 'warn',
+    'prettier/prettier': [
+      'warn',
+      {
+        endOfLine: 'auto',
+      },
+    ],
     'vue/valid-template-root': 'off',
     'vue/no-unused-vars': 'warn',
     '@typescript-eslint/no-unused-vars': 'warn',

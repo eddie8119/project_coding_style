@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router';
 
 import { cleanupAllAnimations } from '@/components/three/AnimationController';
-import { useAuth } from '@/composables/useAuth';
 import AppLayout from '@/layouts/AppLayout.vue';
+import { useAuthStore } from '@/stores/auth';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -200,19 +200,19 @@ router.beforeEach((to, _from, next) => {
   // 清理所有動畫控制器，防止背景資源洩漏
   cleanupAllAnimations();
 
-  const { isAdmin } = useAuth();
+  const authStore = useAuthStore();
 
   const publicPages = ['/auth/login', '/auth/register', '/auth/forgot-password'];
   const isPublicPage = publicPages.includes(to.path);
 
-  if (!isPublicPage && !isAdmin.value) {
+  if (!isPublicPage && !authStore.isAuthenticated) {
     return next({
       name: 'login',
       query: { redirect: to.fullPath },
     });
   }
 
-  if (isAdmin.value && isPublicPage) {
+  if (authStore.isAuthenticated && isPublicPage) {
     return next({ name: 'overview' });
   }
 

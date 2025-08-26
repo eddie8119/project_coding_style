@@ -1,18 +1,15 @@
-import type {
-  CalibrationData,
-  MeasureData,
-  Statistics,
-  DatainsightsHistoryParams,
-} from '@/types/datainsight';
+import type { CaliData } from '@/types/calibration';
+import type { Statistics, DatainsightsHistoryParams } from '@/types/datainsight';
+import type { Measure } from '@/types/measure';
 import type { AxiosResponse } from 'axios';
 
 import instance from '@/utils/request';
 
 export const datainsightsApi = {
-  getLatestMeasure(ids: string): Promise<AxiosResponse<MeasureData>> {
+  getLatestMeasure(ids: string): Promise<AxiosResponse<{ data: Measure[] }>> {
     return instance.get('/datainsights/latest-measure/', { params: { ids } });
   },
-  getLatestCalibration(ids: string): Promise<AxiosResponse<CalibrationData>> {
+  getLatestCalibration(ids: string): Promise<AxiosResponse<{ data: CaliData[] }>> {
     return instance.get('/datainsights/latest-calibration/', { params: { ids } });
   },
   getMeasureHistory(params: DatainsightsHistoryParams) {

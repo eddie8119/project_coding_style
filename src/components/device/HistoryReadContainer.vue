@@ -76,8 +76,8 @@
 import { ref, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 
-import type { MeasureHistory } from '@/types/datainsight';
 import type { Device } from '@/types/device';
+import type { MeasureHistory } from '@/types/measure';
 
 import HistoryChart from '@/components/core/chart/HistoryChart.vue';
 // import Loading from '@/components/core/loading/Loading.vue';

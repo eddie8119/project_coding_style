@@ -13,8 +13,9 @@
 import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 
+import type { LatestCalibrationDataType } from '@/types/calibration';
 import type { ObservationType } from '@/types/device';
-import type { DeviceLatestCalibrationDataType, DeviceLatestMeasureDataType } from '@/types/measure';
+import type { DeviceLatestMeasureDataType } from '@/types/measure';
 import type { WsData } from '@/types/websocket';
 
 import H3Title from '@/components/core/title/H3Title.vue';
@@ -24,7 +25,7 @@ import { Measurement } from '@/types/measure';
 const props = withDefaults(
   defineProps<{
     deviceRealMeasurementData?: WsData | undefined;
-    deviceLatestCalibrationData?: DeviceLatestCalibrationDataType | undefined;
+    deviceLatestCalibrationData?: LatestCalibrationDataType | undefined;
     deviceLatestMeasureData?: DeviceLatestMeasureDataType | undefined;
     observationType: ObservationType;
   }>(),
@@ -77,12 +78,8 @@ const valueExtractors = {
 
   [Measurement.SLOPE]: () => safeValue(props.deviceLatestCalibrationData?.slope),
 
-  [Measurement.PPM]: () => {
-    // Type guard to check if ppm exists on the WsData object
-    const wsData = props.deviceRealMeasurementData as any;
-    const realPpm = wsData && 'ppm' in wsData ? wsData.ppm : undefined;
-    return safeValue(realPpm, props.deviceLatestMeasureData?.ppm);
-  },
+  [Measurement.PPM]: () =>
+    safeValue(props.deviceRealMeasurementData?.ppm, props.deviceLatestMeasureData?.ppm),
 
   [Measurement.SENSITIVITY]: () => safeValue(props.deviceLatestCalibrationData?.sensitivity),
 

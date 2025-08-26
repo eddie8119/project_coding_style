@@ -44,7 +44,7 @@
 <script setup lang="ts">
 import { watch, computed } from 'vue';
 
-import type { CaliData, Measure } from '@/types/datainsight';
+import type { CaliData } from '@/types/calibration';
 import type {
   Device,
   PHDevice,
@@ -53,6 +53,7 @@ import type {
   FlourideDevice,
   RealTimeData,
 } from '@/types/device';
+import type { Measure } from '@/types/measure';
 
 import ProgressBar from '@/components/core/chart/ProgressBar.vue';
 import StatusShow from '@/components/core/StatusShow.vue';

@@ -71,7 +71,7 @@ import { ElDatePicker } from 'element-plus';
 import { computed, inject, onMounted, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 
-import type { Measure } from '@/types/datainsight';
+import type { Measure } from '@/types/measure';
 
 import { datainsightsApi } from '@/api/datainsights';
 import TextButton from '@/components/core/button/TextButton.vue';

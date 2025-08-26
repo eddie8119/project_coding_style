@@ -12,7 +12,7 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue';
 
-import type { CaliData } from '@/types/datainsight';
+import type { CaliData } from '@/types/calibration';
 import type { Device } from '@/types/device';
 
 import ProgressSpinner from '@/components/core/ProgressSpinner.vue';

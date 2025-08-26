@@ -27,9 +27,9 @@ import { useAsyncState } from '@vueuse/core';
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';
 
-import type { CaliData } from '@/types/datainsight';
+import type { CaliData } from '@/types/calibration';
 import type { StatisticsData } from '@/types/datainsight';
-import type { Measure } from '@/types/datainsight';
+import type { Measure } from '@/types/measure';
 import type { Device } from '@/types/device';
 import type { GaugeProps } from '@/types/record';
 

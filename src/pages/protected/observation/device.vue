@@ -78,9 +78,10 @@ import { watch, ref, computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRoute } from 'vue-router';
 
-import type { CaliData, Measure } from '@/types/datainsight';
+import type { CaliData } from '@/types/calibration';
 import type { Device } from '@/types/device';
 import type { ObservationType } from '@/types/device';
+import type { Measure } from '@/types/measure';
 import type { WsData } from '@/types/websocket';
 
 import RealTimeRead from '@/components/core/chart/RealTimeRead.vue';

@@ -1,5 +1,7 @@
-import type { CaliData, Measure, StatisticsData } from '@/types/datainsight';
+import type { CaliData } from '@/types/calibration';
+import type { StatisticsData } from '@/types/datainsight';
 import type { Device } from '@/types/device';
+import type { Measure } from '@/types/measure';
 import type { GaugeProps } from '@/types/record';
 
 import { datainsightsApi } from '@/api/datainsights';

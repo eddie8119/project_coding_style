@@ -6,7 +6,7 @@
 import * as echarts from 'echarts';
 import { ref, onMounted, onActivated, onDeactivated, watch, computed, nextTick } from 'vue';
 
-import type { MeasureHistory } from '@/types/datainsight';
+import type { MeasureHistory } from '@/types/measure';
 
 const chartContainer = ref<HTMLElement | null>(null);
 const chartInstance = ref<echarts.ECharts | null>(null);

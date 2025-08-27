@@ -90,7 +90,7 @@ export function useDevices(type: ObservationType): UseDevicesReturn {
       }
     },
     staleTime: 0,
-    gcTime: 1000 * 60 * 5,
+    gcTime: 1000 * 30,
   });
 
   watch(fetchedDevices, (newVal) => {

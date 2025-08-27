@@ -196,10 +196,12 @@ watch(
   { immediate: true }
 );
 
-const deviceLatestCalibrationData = computed(() => pageData.value?.latestCalibration?.[0] || []);
-const deviceLatestMeasureData = computed(() => pageData.value?.latestMeasures?.[0] || []);
+const deviceLatestCalibrationData = computed(
+  () => pageData.value?.latestCalibration?.[0] || undefined
+);
+const deviceLatestMeasureData = computed(() => pageData.value?.latestMeasures?.[0] || undefined);
 
-// WebSocket
+// 處理WebSocket
 const deviceRealMeasurementData = ref<WsData | undefined>(undefined);
 const handleStatus = ref<string | undefined>(undefined);
 const handleId = ref<string | undefined>(undefined);
@@ -216,21 +218,24 @@ watch(wsParsedData, (newVal) => {
       }
       break;
     case 'action':
-      handleStatus.value = newVal.status;
-      handleId.value = newVal.ID;
+      // 只有當 action 的 ID 與當前設備 ID 匹配時才處理
+      if (newVal.ID === id.value) {
+        handleStatus.value = newVal.status;
+        handleId.value = newVal.ID;
 
-      if (newVal.status === ProcessStatus.FINISH) {
-        ElMessage.success(t('message.success.update_success'));
-        // 故意延遲的 讓畫面稍微停一下
-        setTimeout(() => {
-          refetchDeviceAlarmsRecords();
-        }, 5000);
+        if (newVal.status === ProcessStatus.FINISH) {
+          ElMessage.success(t('message.success.update_success'));
+          // 故意延遲的 讓畫面稍微停一下
+          setTimeout(() => {
+            refetchDeviceAlarmsRecords();
+          }, 5000);
+        }
       }
       break;
   }
 });
 
-// 處理 alarm 顯示
+// 處理 alarm 介面提示
 watch(formattedDeviceAlarmRecords, (newVal) => {
   if (!newVal) return;
   if (newVal.some((record) => record.alarm_status === AlarmStatus.UNRESOLVED)) {
@@ -242,6 +247,7 @@ watch(formattedDeviceAlarmRecords, (newVal) => {
   }
 });
 
+// 編輯資訊
 const updateDeviceData = async (updatedDevice: Device) => {
   if (!fetchedDevice.value) return;
 

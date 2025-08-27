@@ -5,57 +5,68 @@
       <span v-if="lastUpdateTime" class="text-xs text-gray-500">{{ lastUpdateTime }}</span>
     </div>
     <div class="flex w-full flex-col gap-4">
-      <div class="flex items-center gap-2">
-        <el-radio-group v-model="queryMode" class="mr-2" :disabled="isLoading">
-          <el-radio-button label="days"> {{ t('label.quick_date_selector') }} </el-radio-button>
-          <el-radio-button label="custom"> {{ t('label.custom_time_range') }} </el-radio-button>
-        </el-radio-group>
+      <div class="flex w-full items-center justify-between">
+        <div class="flex w-1/2 items-center">
+          <el-radio-group v-model="queryMode" class="mr-2" :disabled="isLoading">
+            <el-radio-button label="days"> {{ t('label.quick_date_selector') }} </el-radio-button>
+            <el-radio-button label="custom"> {{ t('label.custom_time_range') }} </el-radio-button>
+          </el-radio-group>
 
-        <!-- 天數快速查詢 -->
-        <el-select
-          v-if="queryMode === 'days'"
-          v-model="selectedDays"
-          :disabled="isLoading"
-          :loading="isLoading"
-          class="max-w-[120px]"
-        >
-          <el-option
-            v-for="item in dayIntervalList"
-            :key="item"
-            :label="item.label"
-            :value="item.value"
-          />
-        </el-select>
-
-        <!-- 自訂時間查詢 -->
-        <div v-if="queryMode === 'custom'" class="flex items-center gap-2">
-          <el-date-picker
-            v-model="startDateTime"
-            type="datetime"
-            format="YYYY-MM-DD HH:mm:ss"
-            value-format="x"
-            :placeholder="t('label.start_time')"
-            class="w-[200px]"
+          <!-- 天數快速查詢 -->
+          <el-select
+            v-if="queryMode === 'days'"
+            v-model="selectedDays"
             :disabled="isLoading"
-          />
-          <span>-</span>
-          <el-date-picker
-            v-model="endDateTime"
-            type="datetime"
-            format="YYYY-MM-DD HH:mm:ss"
-            value-format="x"
-            :placeholder="t('label.end_time')"
-            class="w-[200px]"
-            :disabled="isLoading"
-          />
-          <el-button
-            type="primary"
             :loading="isLoading"
-            :disabled="!startDateTime || !endDateTime"
-            @click="fetchCustomTimeData"
+            class="max-w-[120px]"
           >
-            {{ t('button.query') }}
-          </el-button>
+            <el-option
+              v-for="item in dayIntervalList"
+              :key="item"
+              :label="item.label"
+              :value="item.value"
+            />
+          </el-select>
+
+          <!-- 自訂時間查詢 -->
+          <div v-if="queryMode === 'custom'" class="flex items-center gap-2">
+            <el-date-picker
+              v-model="startDateTime"
+              type="datetime"
+              format="YYYY-MM-DD HH:mm:ss"
+              value-format="x"
+              :placeholder="t('label.start_time')"
+              class="w-[200px]"
+              :disabled="isLoading"
+            />
+            <span>-</span>
+            <el-date-picker
+              v-model="endDateTime"
+              type="datetime"
+              format="YYYY-MM-DD HH:mm:ss"
+              value-format="x"
+              :placeholder="t('label.end_time')"
+              class="w-[200px]"
+              :disabled="isLoading"
+            />
+            <el-button
+              type="primary"
+              :loading="isLoading"
+              :disabled="!startDateTime || !endDateTime"
+              @click="fetchCustomTimeData"
+            >
+              {{ t('button.query') }}
+            </el-button>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <p>{{ t('common.download') }}:</p>
+          <TextButton variant="primary" size="sm" class="w-full sm:w-auto" @click="">
+            {{ t('button.pdf') }}
+          </TextButton>
+          <TextButton variant="primary" size="sm" class="w-full sm:w-auto" @click="">
+            {{ t('button.csv') }}
+          </TextButton>
         </div>
       </div>
 
@@ -79,6 +90,7 @@ import { useI18n } from 'vue-i18n';
 import type { Device } from '@/types/device';
 import type { MeasureHistory } from '@/types/measure';
 
+import TextButton from '@/components/core/button/TextButton.vue';
 import HistoryChart from '@/components/core/chart/HistoryChart.vue';
 // import Loading from '@/components/core/loading/Loading.vue';
 // import NoData from '@/components/core/NoData.vue';

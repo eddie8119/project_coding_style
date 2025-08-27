@@ -44,8 +44,8 @@ export function useDevice(id: MaybeRefOrGetter<string>): UseDeviceReturn {
       updateLastUpdateTime();
       return response.data.device;
     },
-    staleTime: 0, // 保持預設
-    gcTime: 1000 * 60 * 5, // 保持預設
+    staleTime: 0,
+    gcTime: 1000 * 30,
     enabled: computed(() => !!toValue(id)), // 只有當 id 存在時才執行查詢
     retry: (failureCount, error) => {
       // 自定義重試邏輯

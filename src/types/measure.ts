@@ -54,3 +54,34 @@ export type MeasureHistory =
   | ORPMeasureHistory
   | NH3NMeasureHistory
   | FlourideMeasureHistory;
+
+// LatestMeasure
+export interface BasicLatestMeasure {
+  ID: string;
+  ts: string;
+  version: string;
+}
+
+export interface PhLatestMeasure extends BasicLatestMeasure {
+  ph: number;
+  mv: number;
+  temperature: number;
+}
+
+export interface ORPLatestMeasure extends BasicLatestMeasure {
+  mv: number;
+}
+
+export interface NH3NLatestMeasure extends BasicLatestMeasure {
+  ppm: number;
+}
+
+export interface FlourideLatestMeasure extends BasicLatestMeasure {
+  ppm: number;
+}
+
+export type LatestMeasure =
+  | PhLatestMeasure
+  | ORPLatestMeasure
+  | NH3NLatestMeasure
+  | FlourideLatestMeasure;

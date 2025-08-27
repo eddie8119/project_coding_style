@@ -4,7 +4,7 @@
  * @returns {Object}
  */
 
-import { useQuery } from '@tanstack/vue-query';
+import { useQuery, useQueryClient } from '@tanstack/vue-query';
 import { computed, type Ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 
@@ -27,6 +27,7 @@ interface UseLabelReturn {
 export function useLabel(): UseLabelReturn {
   const { t } = useI18n();
   const { lastUpdateTime, updateLastUpdateTime } = useUpdateTime();
+  const queryClient = useQueryClient();
 
   const {
     data: fetchedLabels,
@@ -39,14 +40,16 @@ export function useLabel(): UseLabelReturn {
       updateLastUpdateTime();
       return response.data;
     },
-    staleTime: 1000 * 60 * 5,
+    staleTime: 0,
+    gcTime: 0,
   });
 
   const refetchLabels = async (): Promise<void> => {
+    // 添加隨機參數防止緩存
+    await queryClient.invalidateQueries({ queryKey: ['labels'] });
     await refetchQueryLabels();
   };
 
-  // fetchedLabelsAlarmRecords
   const {
     data: fetchedLabelsAlarmRecords,
     isLoading: isLoadingAlarmRecords,
@@ -57,10 +60,12 @@ export function useLabel(): UseLabelReturn {
       const response = await labelApi.getAlarmRecords({ alarm_status: 'unresolved' });
       return response.data;
     },
-    staleTime: 1000 * 60 * 5,
+    staleTime: 0, // 保持預設
+    gcTime: 0, // 保持預設
   });
 
   const refetchAlarmRecords = async (): Promise<void> => {
+    await queryClient.invalidateQueries({ queryKey: ['labels', 'alarmRecords'] });
     await refetchQueryAlarmRecords();
   };
 

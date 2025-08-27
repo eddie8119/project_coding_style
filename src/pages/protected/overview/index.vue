@@ -48,7 +48,6 @@
 </template>
 
 <script setup lang="ts">
-import { ElMessage } from 'element-plus';
 import { ref, computed, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 
@@ -61,6 +60,7 @@ import { useLabel } from '@/composables/useLabel';
 import { useWebSocket } from '@/composables/useWebSocket';
 import { ProcessStatus } from '@/types/action';
 import { ObservationType } from '@/types/device';
+import { DeviceStatus } from '@/types/device';
 
 const { t } = useI18n();
 const { fetchedLabels, refetchLabels } = useLabel();
@@ -70,7 +70,7 @@ const observationChoose = ref<ObservationType | undefined>(undefined);
 
 const threedShowItems = computed(() => {
   const allTags: {
-    type: 'warning' | 'caution';
+    type: DeviceStatus;
     label: string;
     observation: ObservationType;
   }[] = [];
@@ -82,7 +82,7 @@ const threedShowItems = computed(() => {
     const warning = item.warning || {};
     Object.values(warning).forEach((warningItem) => {
       if (warningItem.tag) {
-        allTags.push({ type: 'warning', label: warningItem.tag, observation: item.ID });
+        allTags.push({ type: DeviceStatus.WARNING, label: warningItem.tag, observation: item.ID });
       }
     });
 
@@ -90,7 +90,7 @@ const threedShowItems = computed(() => {
     const caution = item.caution || {};
     Object.values(caution).forEach((cautionItem) => {
       if (cautionItem.tag) {
-        allTags.push({ type: 'caution', label: cautionItem.tag, observation: item.ID });
+        allTags.push({ type: DeviceStatus.CAUTION, label: cautionItem.tag, observation: item.ID });
       }
     });
   });
@@ -110,11 +110,11 @@ watch(wsParsedData, (newVal) => {
     if (newVal.status === ProcessStatus.FINISH) {
       isReload.value = true;
       refetchLabels();
-      ElMessage.success(t('message.success.update_success'));
-    } else if (newVal.status === ProcessStatus.RUNNING) {
-      //復原模擬
-      isReload.value = true;
-      refetchLabels();
+
+      // 為了demo復原
+      setTimeout(() => {
+        refetchLabels();
+      }, 60000);
     }
   }
 });

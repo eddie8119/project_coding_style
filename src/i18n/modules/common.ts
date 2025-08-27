@@ -15,6 +15,7 @@ export default {
       success: 'Success',
       last_update_time: 'Last Update',
       loading: 'Loading',
+      download: 'Download',
       role: {
         admin: 'Admin',
         user: 'User',
@@ -43,6 +44,7 @@ export default {
       success: '成功',
       last_update_time: '最後更新',
       loading: '載入中',
+      download: '下載',
       role: {
         admin: '管理者',
         user: '一般用戶',
@@ -71,6 +73,7 @@ export default {
       success: '成功',
       last_update_time: '最終更新',
       loading: '読み込み中',
+      download: 'ダウンロード',
       role: {
         admin: '管理者',
         user: 'ユーザー',

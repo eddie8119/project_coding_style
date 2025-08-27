@@ -29,11 +29,12 @@ import {
 } from '@/components/three/SceneSetup';
 import { positionLists } from '@/constants/dummyData';
 import { ObservationType } from '@/types/device';
+import { DeviceStatus } from '@/types/device';
 
 const props = defineProps<{
   monitoringItems: {
     label: string;
-    type: 'warning' | 'caution';
+    type: DeviceStatus;
     observation: ObservationType;
   }[];
   observationChoose: ObservationType | undefined;
@@ -46,8 +47,8 @@ const isLoading = ref(true);
 // 定義動畫控制器
 let animationController: ReturnType<typeof createAnimationController> | null = null;
 
-const markerColorByType = (type: 'warning' | 'caution') => {
-  if (type === 'caution') return '#70480c';
+const markerColorByType = (type: DeviceStatus) => {
+  if (type === DeviceStatus.CAUTION) return '#70480c';
   return '#ff0000'; // 預設紅色
 };
 

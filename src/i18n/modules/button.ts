@@ -14,6 +14,8 @@ export default {
       activate: 'Activate',
       try_again: 'Try Again',
       query: 'Query',
+      pdf: 'PDF',
+      csv: 'CSV',
     },
   },
   'zh-TW': {
@@ -31,6 +33,8 @@ export default {
       activate: '啟用',
       try_again: '再試一次',
       query: '查詢',
+      pdf: 'PDF',
+      csv: 'CSV',
     },
   },
   ja: {
@@ -45,6 +49,8 @@ export default {
       resend: '再送信',
       activate: 'アクティベート',
       try_again: '再試行',
+      pdf: 'PDF',
+      csv: 'CSV',
     },
   },
 };

@@ -2,9 +2,11 @@ import * as THREE from 'three';
 
 import type { ObservationType } from '@/types/device';
 
+import { DeviceStatus } from '@/types/device';
+
 export interface Marker {
   position: { x: number; y: number; z: number };
-  type: 'caution' | 'warning';
+  type: DeviceStatus;
   observation: ObservationType;
   label: string;
   color: string;

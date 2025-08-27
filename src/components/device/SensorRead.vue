@@ -13,7 +13,7 @@
 import { watch, ref, computed } from 'vue';
 
 import type { ObservationType } from '@/types/device';
-import type { DeviceLatestMeasureDataType } from '@/types/measure';
+import type { LatestMeasure } from '@/types/measure';
 import type { WsData } from '@/types/websocket';
 
 import GaugeChart from '@/components/core/chart/gauge/GaugeChart.vue';
@@ -23,7 +23,7 @@ import { useUpdateTime } from '@/composables/useUpdateTime';
 
 const props = defineProps<{
   deviceMeasurementData: WsData | undefined;
-  deviceLatestMeasureData: DeviceLatestMeasureDataType | undefined;
+  deviceLatestMeasureData: LatestMeasure | undefined;
   observationType: ObservationType;
 }>();
 

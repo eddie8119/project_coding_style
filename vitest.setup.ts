@@ -1,1 +1,1 @@
-import '@testing-library/vue'
+import '@testing-library/vue';

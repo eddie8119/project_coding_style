@@ -1,5 +1,5 @@
 import { useWebSocket as useVueUseWebSocket } from '@vueuse/core';
-import { ref, onBeforeUnmount } from 'vue';
+import { onBeforeUnmount, ref } from 'vue';
 
 import type { WsData } from '@/types/websocket';
 

@@ -41,7 +41,7 @@
 <script setup lang="ts">
 import { Loading } from '@element-plus/icons-vue';
 import { isAxiosError } from 'axios';
-import { ref, onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRoute, useRouter } from 'vue-router';
 

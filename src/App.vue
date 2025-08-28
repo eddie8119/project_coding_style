@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, provide } from 'vue';
+import { provide, ref } from 'vue';
 
 import { useAuthStore } from '@/stores/auth';
 import { initTheme, setTheme } from '@/utils/theme';

@@ -26,7 +26,7 @@
 <script setup lang="ts">
 import { isAxiosError } from 'axios';
 import { useField } from 'vee-validate';
-import { ref, computed } from 'vue';
+import { computed, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 import type { RegisterData } from '@/types/user';

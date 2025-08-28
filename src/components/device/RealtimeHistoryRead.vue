@@ -10,7 +10,7 @@
 
 <script setup lang="ts">
 import { Chart, registerables } from 'chart.js';
-import { ref, onMounted, onActivated, onDeactivated } from 'vue';
+import { onActivated, onDeactivated, onMounted, ref } from 'vue';
 
 import H3Title from '@/components/core/title/H3Title.vue';
 

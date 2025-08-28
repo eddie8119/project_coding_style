@@ -1,5 +1,5 @@
 import Aura from '@primevue/themes/aura';
-import { VueQueryPlugin, QueryClient } from '@tanstack/vue-query';
+import { QueryClient, VueQueryPlugin } from '@tanstack/vue-query';
 import ElementPlus from 'element-plus';
 import 'element-plus/dist/index.css';
 import { createPinia } from 'pinia';

@@ -2,7 +2,7 @@
   <div
     class="device-card grid h-[240px] w-full min-w-0 grid-cols-3 items-center justify-center gap-4 text-center lg:h-[296px]"
   >
-    <div v-for="item in items" :key="item.label" class="min-w-0">
+    <div v-for="item in displayItems" :key="item.label" class="min-w-0">
       <H3Title :title="item.label" />
       <p class="text-4xl font-bold tracking-tight text-brand-primary">{{ item.value }}</p>
     </div>
@@ -14,19 +14,19 @@ import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 import type {
-  LatestCalibration,
-  PhLatestCalibration,
-  NH3NLatestCalibration,
   FlourideLatestCalibration,
+  LatestCalibration,
+  NH3NLatestCalibration,
+  PhLatestCalibration,
 } from '@/types/calibration';
 import type {
-  LatestMeasure,
-  PhLatestMeasure,
-  ORPLatestMeasure,
-  NH3NLatestMeasure,
   FlourideLatestMeasure,
+  LatestMeasure,
+  NH3NLatestMeasure,
+  ORPLatestMeasure,
+  PhLatestMeasure,
 } from '@/types/measure';
-import type { WsData, PhWsData, OrpWsData, Nh3nWsData, FlourideWsData } from '@/types/websocket';
+import type { FlourideWsData, Nh3nWsData, OrpWsData, PhWsData, WsData } from '@/types/websocket';
 
 import H3Title from '@/components/core/title/H3Title.vue';
 import { useLabelConvert } from '@/composables/useLabelConvert';
@@ -35,9 +35,9 @@ import { Measurement } from '@/types/measure';
 
 const props = withDefaults(
   defineProps<{
-    deviceRealMeasurementData?: WsData | undefined;
-    deviceLatestCalibrationData?: LatestCalibration | undefined;
-    deviceLatestMeasureData?: LatestMeasure | undefined;
+    deviceRealMeasurementData?: WsData;
+    deviceLatestCalibrationData?: LatestCalibration;
+    deviceLatestMeasureData?: LatestMeasure;
     observationType: ObservationType;
   }>(),
   {
@@ -50,158 +50,89 @@ const props = withDefaults(
 const { t } = useI18n();
 const { getMeasureList } = useLabelConvert();
 
+// 測量列表
 const measureLists = computed(() => {
   return getMeasureList(props.observationType as ObservationType);
 });
 
-// const safeValue = (...values: (string | number | undefined | null)[]): string => {
-//   for (const value of values) {
-//     if (value !== undefined && value !== null) return String(value);
-//   }
-//   return 'N/A';
-// };
+// 值提取器映射 - 將複雜的邏輯分離到獨立函數
+const valueExtractors = {
+  [Measurement.PH]: () => {
+    if (props.observationType !== ObservationType.PH) return 'N/A';
+    return (
+      (props.deviceRealMeasurementData as PhWsData)?.ph ??
+      (props.deviceLatestMeasureData as PhLatestMeasure)?.ph ??
+      'N/A'
+    );
+  },
 
-// Temperature formatting helper
-// const formatTemperature = (temp: number | string | undefined | null): string => {
-//   if (temp === undefined || temp === null) return 'N/A';
-//   return `${temp}°C`;
-// };
+  [Measurement.ELEC]: () => {
+    const isValidType = [ObservationType.PH, ObservationType.ORP].includes(props.observationType);
+    if (!isValidType) return 'N/A';
 
-// Value extraction strategies for better maintainability
-// const valueExtractors = {
-//   [Measurement.PH]: () =>
-//     safeValue(props.deviceRealMeasurementData?.ph, props.deviceLatestMeasureData?.ph),
+    return (
+      (props.deviceRealMeasurementData as PhWsData | OrpWsData)?.mv ??
+      (props.deviceLatestMeasureData as PhLatestMeasure | ORPLatestMeasure)?.mv ??
+      'N/A'
+    );
+  },
 
-//   [Measurement.ELEC]: () =>
-//     safeValue(props.deviceRealMeasurementData?.mv, props.deviceLatestMeasureData?.mv),
+  [Measurement.TEMP]: () => {
+    if (props.observationType !== ObservationType.PH) return 'N/A';
 
-//   [Measurement.TEMP]: () => {
-//     const realTemp = props.deviceRealMeasurementData?.temperature;
-//     const latestTemp = props.deviceLatestMeasureData?.temperature;
+    const realTemp = (props.deviceRealMeasurementData as PhWsData)?.temperature;
+    const latestTemp = (props.deviceLatestMeasureData as PhLatestMeasure)?.temperature;
 
-//     if (typeof realTemp === 'number') {
-//       return formatTemperature(realTemp);
-//     }
-//     return formatTemperature(latestTemp);
-//   },
+    const temp = realTemp ?? latestTemp;
+    return typeof temp === 'number' ? `${temp}°C` : 'N/A';
+  },
 
-//   [Measurement.ZERO]: () => safeValue(props.deviceLatestCalibrationData?.zero),
+  [Measurement.PPM]: () => {
+    const isValidType = [ObservationType.NH3N, ObservationType.FLOURIDE].includes(
+      props.observationType
+    );
+    if (!isValidType) return 'N/A';
 
-//   [Measurement.SLOPE]: () => safeValue(props.deviceLatestCalibrationData?.slope),
+    return (
+      (props.deviceRealMeasurementData as Nh3nWsData | FlourideWsData)?.ppm ??
+      (props.deviceLatestMeasureData as NH3NLatestMeasure | FlourideLatestMeasure)?.ppm ??
+      'N/A'
+    );
+  },
 
-//   [Measurement.PPM]: () =>
-//     safeValue(props.deviceRealMeasurementData?.ppm, props.deviceLatestMeasureData?.ppm),
+  [Measurement.ZERO]: () => {
+    if (props.observationType !== ObservationType.PH) return 'N/A';
+    return (props.deviceLatestCalibrationData as PhLatestCalibration)?.zero ?? 'N/A';
+  },
 
-//   [Measurement.SENSITIVITY]: () => safeValue(props.deviceLatestCalibrationData?.sensitivity),
+  [Measurement.SLOPE]: () => {
+    if (props.observationType !== ObservationType.PH) return 'N/A';
+    return (props.deviceLatestCalibrationData as PhLatestCalibration)?.slope ?? 'N/A';
+  },
 
-//   [Measurement.OFFSET]: () => safeValue(props.deviceLatestCalibrationData?.offset),
-// } as const;
+  [Measurement.SENSITIVITY]: () => {
+    const isValidType = [ObservationType.NH3N, ObservationType.FLOURIDE].includes(
+      props.observationType
+    );
+    if (!isValidType) return 'N/A';
+    return (
+      (props.deviceLatestCalibrationData as NH3NLatestCalibration | FlourideLatestCalibration)
+        ?.sensitivity ?? 'N/A'
+    );
+  },
+} as const;
 
-// const items = computed(() => {
-//   return measureLists.value.map((item) => {
-//     const extractor = valueExtractors[item.label as keyof typeof valueExtractors];
-//     const value = extractor();
+// 獲取測量值的通用函數
+const getMeasurementValue = (measurementType: string): string | number => {
+  const extractor = valueExtractors[measurementType as keyof typeof valueExtractors];
+  return extractor ? extractor() : 'N/A';
+};
 
-//     return {
-//       label: t(`device.measurement.${item.label}`),
-//       value,
-//     };
-//   });
-// });
-
-const items = computed(() => {
-  const calibrationData = props.deviceLatestCalibrationData;
-  const realMeasurementData = props.deviceRealMeasurementData;
-  const latestMeasureData = props.deviceLatestMeasureData;
-
-  return measureLists.value.map((item) => {
-    let value: string | number = 'N/A';
-
-    switch (item.label) {
-      case Measurement.PH:
-        if (props.observationType === ObservationType.PH) {
-          value =
-            (realMeasurementData as PhWsData)?.ph ??
-            (latestMeasureData as PhLatestMeasure)?.ph ??
-            'N/A';
-        }
-        break;
-
-      case Measurement.ELEC:
-        if (
-          props.observationType === ObservationType.PH ||
-          props.observationType === ObservationType.ORP
-        ) {
-          value =
-            (realMeasurementData as PhWsData | OrpWsData)?.mv ??
-            (latestMeasureData as PhLatestMeasure | ORPLatestMeasure)?.mv ??
-            'N/A';
-        }
-        break;
-
-      case Measurement.TEMP:
-        if (props.observationType === ObservationType.PH) {
-          value =
-            typeof (realMeasurementData as PhWsData)?.temperature === 'number'
-              ? `${(realMeasurementData as PhWsData)?.temperature}°C`
-              : typeof (latestMeasureData as PhLatestMeasure)?.temperature === 'number'
-                ? `${(latestMeasureData as PhLatestMeasure)?.temperature}°C`
-                : 'N/A';
-        }
-        break;
-
-      case Measurement.PPM:
-        if (
-          props.observationType === ObservationType.NH3N ||
-          props.observationType === ObservationType.FLOURIDE
-        ) {
-          value =
-            (realMeasurementData as Nh3nWsData | FlourideWsData)?.ppm ??
-            (latestMeasureData as NH3NLatestMeasure | FlourideLatestMeasure)?.ppm ??
-            'N/A';
-        }
-        break;
-
-      case Measurement.ZERO:
-        if (props.observationType === ObservationType.PH) {
-          value = calibrationData
-            ? ((calibrationData as PhLatestCalibration).zero ?? 'N/A')
-            : 'N/A';
-        }
-
-        break;
-
-      case Measurement.SLOPE:
-        if (props.observationType === ObservationType.PH) {
-          value = calibrationData
-            ? ((calibrationData as PhLatestCalibration).slope ?? 'N/A')
-            : 'N/A';
-        }
-
-        break;
-
-      case Measurement.SENSITIVITY:
-        if (
-          props.observationType === ObservationType.NH3N ||
-          props.observationType === ObservationType.FLOURIDE
-        ) {
-          value = calibrationData
-            ? ((calibrationData as NH3NLatestCalibration | FlourideLatestCalibration).sensitivity ??
-              'N/A')
-            : 'N/A';
-        }
-
-        break;
-
-      default:
-        value = 'N/A';
-    }
-
-    return {
-      label: t(`device.measurement.${item.label}`),
-      value,
-    };
-  });
+const displayItems = computed(() => {
+  return measureLists.value.map((item) => ({
+    label: t(`device.measurement.${item.label}`),
+    value: getMeasurementValue(item.label),
+  }));
 });
 
 // 原本寫成watch 但應該要 computed

@@ -18,7 +18,7 @@
  */
 
 import { useQuery } from '@tanstack/vue-query';
-import { ref, computed, watch } from 'vue';
+import { computed, ref, watch } from 'vue';
 
 import type { Device } from '@/types/device';
 import type { Ref } from 'vue/dist/vue.js';

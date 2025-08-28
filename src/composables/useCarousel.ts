@@ -1,4 +1,4 @@
-import { ref, computed, onMounted, onUnmounted, watch, nextTick } from 'vue';
+import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue';
 
 export function useCarousel(listRef: { value: any[] }) {
   const carouselContainer = ref<HTMLElement | null>(null);

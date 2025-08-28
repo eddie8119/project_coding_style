@@ -28,7 +28,7 @@
 
 <script setup lang="ts">
 import { useField } from 'vee-validate';
-import { ref, computed, onMounted } from 'vue';
+import { computed, onMounted, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRoute } from 'vue-router';
 

@@ -10,7 +10,7 @@
 
 <script setup lang="ts">
 import * as echarts from 'echarts';
-import { ref, watch, onMounted, computed, onUnmounted, onDeactivated } from 'vue';
+import { computed, onDeactivated, onMounted, onUnmounted, ref, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { onBeforeRouteUpdate } from 'vue-router';
 

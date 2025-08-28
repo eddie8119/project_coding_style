@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import { watch, ref, computed } from 'vue';
+import { computed, ref, watch } from 'vue';
 
 import type { ObservationType } from '@/types/device';
 import type { LatestMeasure } from '@/types/measure';

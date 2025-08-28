@@ -104,7 +104,7 @@
 
 <script setup lang="ts" generic="T extends Record<string, any>">
 import { Search } from '@element-plus/icons-vue';
-import { ref, computed } from 'vue';
+import { computed, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 import Pagination from '../Pagination.vue';

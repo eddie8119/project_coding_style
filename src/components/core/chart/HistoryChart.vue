@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
 import * as echarts from 'echarts';
-import { ref, onMounted, onActivated, onDeactivated, watch, computed, nextTick } from 'vue';
+import { computed, nextTick, onActivated, onDeactivated, onMounted, ref, watch } from 'vue';
 
 import type { MeasureHistory } from '@/types/measure';
 

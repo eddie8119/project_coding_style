@@ -1,4 +1,4 @@
-import type { Device, Devices, DeviceDevice } from '@/types/device';
+import type { Device, DeviceDevice, Devices } from '@/types/device';
 import type { AxiosResponse } from 'axios';
 
 import instance from '@/utils/request';

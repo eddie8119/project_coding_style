@@ -64,14 +64,14 @@
 <script setup lang="ts">
 import { toTypedSchema } from '@vee-validate/zod';
 import { ElMessage } from 'element-plus';
-import { useForm, useField } from 'vee-validate';
+import { useField, useForm } from 'vee-validate';
 import { useI18n } from 'vue-i18n';
 
 import FormInput from '../core/input/FormInput.vue';
 
 import TextButton from '@/components/core/button/TextButton.vue';
 import H2Title from '@/components/core/title/H2Title.vue';
-import { availableRoles, Role, type Member } from '@/types/role';
+import { availableRoles, type Member, Role } from '@/types/role';
 import { emailSchema } from '@/utils/schemas/emailSchema';
 
 const { t } = useI18n();

@@ -1,5 +1,5 @@
 import type { Device } from '@/types/device';
-import type { Locations, LocationDetails, Groups, Tags, GroupDetails } from '@/types/entities';
+import type { GroupDetails, Groups, LocationDetails, Locations, Tags } from '@/types/entities';
 import type { AxiosResponse } from 'axios';
 
 import instance from '@/utils/request';

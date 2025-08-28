@@ -11,7 +11,7 @@
 <script setup lang="ts">
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import { ref, onMounted, onDeactivated, onActivated, computed, watch } from 'vue';
+import { computed, onActivated, onDeactivated, onMounted, ref, watch } from 'vue';
 
 import Loading from '@/components/core/loading/Loading.vue';
 import { createAnimationController } from '@/components/three/AnimationController';
@@ -20,12 +20,12 @@ import { setupLighting } from '@/components/three/Lighting';
 import { addFixedMarkers } from '@/components/three/Markers';
 import { loadModel } from '@/components/three/ModelLoader';
 import {
-  createScene,
+  CameraViewType,
   createCamera,
   createRenderer,
+  createScene,
   handleResize,
   setCameraPosition,
-  CameraViewType,
 } from '@/components/three/SceneSetup';
 import { positionLists } from '@/constants/dummyData';
 import { ObservationType } from '@/types/device';

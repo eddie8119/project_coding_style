@@ -23,7 +23,7 @@
 import { useField } from 'vee-validate';
 import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { useRouter, useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 
 import type { LoginData } from '@/types/user';
 import type { AxiosError } from 'axios';

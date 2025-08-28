@@ -1,11 +1,11 @@
 import type {
-  RegisterData,
-  ChangePasswordData,
-  ResetPasswordData,
-  EditProfileData,
   ActivationData,
-  ResendActivationData,
+  ChangePasswordData,
+  EditProfileData,
   ForgotPasswordData,
+  RegisterData,
+  ResendActivationData,
+  ResetPasswordData,
 } from '@/types/user';
 
 import instance from '@/utils/request';

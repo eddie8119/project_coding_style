@@ -36,7 +36,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
 
 import { usersApi } from '@/api/users';
 import H1Title from '@/components/core/title/H1Title.vue';

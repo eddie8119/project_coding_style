@@ -20,7 +20,7 @@
 <script setup lang="ts">
 import { toTypedSchema } from '@vee-validate/zod';
 import { ElMessage } from 'element-plus';
-import { useForm, useField } from 'vee-validate';
+import { useField, useForm } from 'vee-validate';
 import { ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 

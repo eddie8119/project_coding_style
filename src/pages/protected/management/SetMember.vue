@@ -10,7 +10,7 @@ import { ref } from 'vue';
 
 import InviteMember from '@/components/management/InviteMember.vue';
 import MembersList from '@/components/management/MembersList.vue';
-import { Role, type Member } from '@/types/role';
+import { type Member, Role } from '@/types/role';
 
 const members = ref<Member[]>([
   { email: 'owner@example.com', role: Role.OWNER, status: 'joined' },

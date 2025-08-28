@@ -1,5 +1,5 @@
 import type { CaliData } from '@/types/calibration';
-import type { Statistics, DatainsightsHistoryParams } from '@/types/datainsight';
+import type { DatainsightsHistoryParams, Statistics } from '@/types/datainsight';
 import type { Measure } from '@/types/measure';
 import type { AxiosResponse } from 'axios';
 

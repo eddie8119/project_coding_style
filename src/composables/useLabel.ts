@@ -8,7 +8,7 @@ import { useQuery, useQueryClient } from '@tanstack/vue-query';
 import { computed, type Ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 
-import type { DeviceWithStatus, DeviceWithAlarms } from '@/types/label';
+import type { DeviceWithAlarms, DeviceWithStatus } from '@/types/label';
 
 import { labelApi } from '@/api/label';
 import { useUpdateTime } from '@/composables/useUpdateTime';

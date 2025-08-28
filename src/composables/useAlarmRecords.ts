@@ -8,7 +8,7 @@
  */
 
 import { useQuery } from '@tanstack/vue-query';
-import { watchEffect, computed } from 'vue';
+import { computed, watchEffect } from 'vue';
 
 import type { AlarmRecord } from '@/types/alarm';
 import type { Ref } from 'vue/dist/vue.js';

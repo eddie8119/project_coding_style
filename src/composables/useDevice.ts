@@ -4,10 +4,10 @@
  */
 
 import { useQuery } from '@tanstack/vue-query';
-import { ref, watch, computed, toValue } from 'vue';
+import { computed, ref, toValue, watch } from 'vue';
 
 import type { Device } from '@/types/device';
-import type { Ref, MaybeRefOrGetter } from 'vue';
+import type { MaybeRefOrGetter, Ref } from 'vue';
 
 import { deviceApi } from '@/api/device';
 import { useUpdateTime } from '@/composables/useUpdateTime';

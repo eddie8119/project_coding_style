@@ -42,15 +42,15 @@
 </template>
 
 <script setup lang="ts">
-import { watch, computed } from 'vue';
+import { computed, watch } from 'vue';
 
 import type { CaliData } from '@/types/calibration';
 import type {
   Device,
-  PHDevice,
-  ORPDevice,
-  NH3NDevice,
   FlourideDevice,
+  NH3NDevice,
+  ORPDevice,
+  PHDevice,
   RealTimeData,
 } from '@/types/device';
 import type { Measure } from '@/types/measure';

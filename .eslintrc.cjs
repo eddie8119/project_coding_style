@@ -87,5 +87,18 @@ module.exports = {
         },
       },
     ],
+    'sort-imports': [
+      'warn',
+      {
+        // 忽略 import 語句的順序（由 import/order 處理）
+        ignoreDeclarationSort: true,
+        // 只排序具名引入內部的成員
+        ignoreMemberSort: false,
+        // 成員排序方式
+        memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
+        // 忽略大小寫
+        ignoreCase: true,
+      },
+    ],
   },
 };

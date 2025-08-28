@@ -23,7 +23,7 @@ import { useRoute } from 'vue-router';
 
 import TabObservation from '@/components/core/tab/TabObservation.vue';
 import H1Title from '@/components/core/title/H1Title.vue';
-import { devicesTabList, devicesRemoteTabList } from '@/constants/tab';
+import { devicesRemoteTabList, devicesTabList } from '@/constants/tab';
 
 const props = defineProps<{
   subject: string;

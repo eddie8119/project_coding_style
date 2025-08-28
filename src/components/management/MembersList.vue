@@ -113,7 +113,7 @@ import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 import H2Title from '@/components/core/title/H2Title.vue';
-import { availableRoles, Role, type Member } from '@/types/role';
+import { availableRoles, type Member, Role } from '@/types/role';
 
 const { t } = useI18n();
 

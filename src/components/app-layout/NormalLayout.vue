@@ -24,7 +24,7 @@ import type { Tab as TabType } from '@/types/layout';
 
 import Tab from '@/components/core/tab/Tab.vue';
 import H1Title from '@/components/core/title/H1Title.vue';
-import { userTabList, scoutTabList } from '@/constants/tab';
+import { scoutTabList, userTabList } from '@/constants/tab';
 
 const props = defineProps<{
   subject: string;

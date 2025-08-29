@@ -10,7 +10,7 @@
 
 <script setup lang="ts">
 import { Chart, registerables } from 'chart.js';
-import { onActivated, onDeactivated, onMounted, ref } from 'vue';
+import { onActivated, onDeactivated, ref } from 'vue';
 
 import H3Title from '@/components/core/title/H3Title.vue';
 
@@ -116,10 +116,6 @@ function initChart() {
   // Start interval to add new data every 10 seconds
   dataUpdateInterval = window.setInterval(addPhData, 10000);
 }
-
-onMounted(() => {
-  initChart();
-});
 
 onActivated(() => {
   initChart();

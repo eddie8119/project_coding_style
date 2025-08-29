@@ -26,6 +26,7 @@ const updateTime = (): void => {
   formattedTime.value = formatDate(now);
 };
 
+// 注意這組件 是放在<keep-alive>之外的
 onMounted(() => {
   updateTime();
   timer = setInterval(updateTime, 1000);

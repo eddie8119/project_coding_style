@@ -11,7 +11,7 @@
 <script setup lang="ts">
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import { computed, onActivated, onDeactivated, onMounted, ref, watch } from 'vue';
+import { computed, onActivated, onDeactivated, ref, watch } from 'vue';
 
 import Loading from '@/components/core/loading/Loading.vue';
 import { createAnimationController } from '@/components/three/AnimationController';
@@ -214,10 +214,6 @@ const cleanupScene = () => {
   cleanup = null;
   animationController = null;
 };
-
-onMounted(() => {
-  initScene();
-});
 
 onActivated(() => {
   initScene();

@@ -23,7 +23,7 @@
 
 <script setup lang="ts">
 import { useField } from 'vee-validate';
-import { computed, onMounted, ref } from 'vue';
+import { computed, onActivated, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRoute, useRouter } from 'vue-router';
 
@@ -43,7 +43,7 @@ const errorMessage = ref<string | undefined>(undefined);
 const showMessage = ref<string | undefined>(undefined);
 const token = ref<string | undefined>(undefined);
 
-onMounted(() => {
+onActivated(() => {
   token.value = route.query.token as string;
 
   if (!token.value) {

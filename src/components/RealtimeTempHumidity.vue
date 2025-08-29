@@ -16,7 +16,7 @@
 
 <script setup lang="ts">
 import axios from 'axios';
-import { onMounted, onUnmounted, ref } from 'vue';
+import { onActivated, onDeactivated, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
@@ -91,7 +91,7 @@ const fetchWeatherData = async () => {
 
 let intervalId: ReturnType<typeof setTimeout> | null = null;
 
-onMounted(() => {
+onActivated(() => {
   // 先嘗試獲取裝置位置，然後再獲取天氣數據
   getDeviceLocation();
 
@@ -100,7 +100,7 @@ onMounted(() => {
   intervalId = setInterval(getDeviceLocation, 10 * 60 * 1000);
 });
 
-onUnmounted(() => {
+onDeactivated(() => {
   // 清除定時器
   if (intervalId) {
     clearInterval(intervalId);

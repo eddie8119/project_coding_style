@@ -17,7 +17,7 @@ import { computed } from 'vue';
 
 import type { ObservationType } from '@/types/device';
 
-import { useLabelConvert } from '@/composables/useLabelConvert';
+import { getUnitBound } from '@/utils/labelConvert';
 
 const props = defineProps<{
   value: number;
@@ -25,7 +25,6 @@ const props = defineProps<{
   observationType: ObservationType;
 }>();
 
-const { getUnitBound } = useLabelConvert();
 const unitBound = computed(() => getUnitBound(props.observationType));
 </script>
 

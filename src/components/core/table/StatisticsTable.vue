@@ -15,7 +15,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue';
+import { computed, onActivated, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 import type { StatisticsData } from '@/types/datainsight';
@@ -38,7 +38,7 @@ const { lastUpdateTime, updateLastUpdateTime } = useUpdateTime();
 // Mock tags data - in a real application, this would come from a store or API
 const tags = ref<Record<string, Tag>>({});
 
-onMounted(() => {
+onActivated(() => {
   updateLastUpdateTime();
 
   // In a real application, you would fetch tags here

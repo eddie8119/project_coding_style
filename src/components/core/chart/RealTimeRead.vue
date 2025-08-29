@@ -10,15 +10,15 @@
 
 <script setup lang="ts">
 import * as echarts from 'echarts';
-import { computed, onDeactivated, onMounted, onUnmounted, ref, watch } from 'vue';
+import { computed, onActivated, onDeactivated, ref, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { onBeforeRouteUpdate } from 'vue-router';
 
 import type { WsData } from '@/types/websocket';
 
 import H3Title from '@/components/core/title/H3Title.vue';
-import { useLabelConvert } from '@/composables/useLabelConvert';
 import { ObservationType } from '@/types/device';
+import { getMainMeasureUnit, getUnitBound } from '@/utils/labelConvert';
 
 const chartContainer = ref<HTMLElement | null>(null);
 const chartInstance = ref<echarts.ECharts | null>(null);
@@ -78,8 +78,6 @@ const timeData = computed(() =>
     return `${String(date.getMinutes()).padStart(2, '0')}:${String(date.getSeconds()).padStart(2, '0')}`;
   })
 );
-
-const { getUnitBound, getMainMeasureUnit } = useLabelConvert();
 const unitBound = computed(() => getUnitBound(props.observationType));
 const measureUnit = computed(() => getMainMeasureUnit(props.observationType));
 
@@ -87,7 +85,7 @@ const wsMeasureData = computed(() =>
   localData.value.map((item: WsData) => item[measureUnit.value.toLowerCase() as keyof WsData])
 );
 
-onMounted(() => {
+onActivated(() => {
   if (chartContainer.value) {
     localData.value = [];
     chartInstance.value = echarts.init(chartContainer.value);
@@ -98,7 +96,7 @@ onMounted(() => {
   }
 });
 
-onUnmounted(() => {
+onDeactivated(() => {
   if (chartInstance.value) {
     chartInstance.value.dispose();
   }

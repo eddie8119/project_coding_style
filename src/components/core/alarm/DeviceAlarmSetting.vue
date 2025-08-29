@@ -51,7 +51,7 @@
 
 <script setup lang="ts">
 import { useWindowSize } from '@vueuse/core';
-import { ref, computed, onMounted, watch } from 'vue';
+import { ref, computed, onActivated, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 import AlarmSettingGroup from './AlarmSettingGroup.vue';
@@ -100,7 +100,7 @@ const isDevicePowerOff = computed(() => !props.deviceData.active);
 // 警報開關
 const allAlarmActive = ref<boolean>(false);
 
-onMounted(() => {
+onActivated(() => {
   allAlarmActive.value = props.deviceData.alarm_settings.some((s: AlarmSetting) => s.active);
 });
 

@@ -8,7 +8,7 @@
           :class="{ 'rotate-90': props.isSidebarCollapsed }"
           @click="$emit('toggle-sidebar')"
         >
-          <img src="@/assets/icons/menu.svg" :alt="`menu Icon`" class="icon-hover icon-basic" />
+          <img src="@/assets/icons/Menu.svg" :alt="`menu Icon`" class="icon-hover icon-basic" />
         </button>
         <PrePage />
         <!-- <Breadcrumb /> -->

@@ -224,6 +224,9 @@ watch(wsParsedData, (newVal) => {
         handleId.value = newVal.ID;
 
         if (newVal.status === ProcessStatus.FINISH) {
+          localStatus.value = DeviceStatus.RUNNING;
+          showAlarmTitle.value = null;
+
           ElMessage.success(t('message.success.update_success'));
           // 故意延遲的 讓畫面稍微停一下
           setTimeout(() => {

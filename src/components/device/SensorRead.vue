@@ -18,8 +18,8 @@ import type { WsData } from '@/types/websocket';
 
 import GaugeChart from '@/components/core/chart/gauge/GaugeChart.vue';
 import ShowUpdateTime from '@/components/core/ShowUpdateTime.vue';
-import { useLabelConvert } from '@/composables/useLabelConvert';
 import { useUpdateTime } from '@/composables/useUpdateTime';
+import { getMainMeasureUnit, getUnitBound } from '@/utils/labelConvert';
 
 const props = defineProps<{
   deviceMeasurementData: WsData | undefined;
@@ -28,7 +28,6 @@ const props = defineProps<{
 }>();
 
 const { lastUpdateTime, updateLastUpdateTime } = useUpdateTime();
-const { getUnitBound, getMainMeasureUnit } = useLabelConvert();
 
 const unitBound = computed(() => getUnitBound(props.observationType));
 const measureUnit = computed(() => getMainMeasureUnit(props.observationType));

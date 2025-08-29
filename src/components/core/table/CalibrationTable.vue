@@ -21,7 +21,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, watch } from 'vue';
+import { onActivated, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 import ShowUpdateTime from '@/components/core/ShowUpdateTime.vue';
@@ -45,7 +45,7 @@ watch(props.latestCali, () => {
   updateLastUpdateTime();
 });
 
-onMounted(() => {
+onActivated(() => {
   updateLastUpdateTime();
 });
 </script>

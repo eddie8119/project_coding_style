@@ -29,9 +29,9 @@ import type {
 import type { FlourideWsData, Nh3nWsData, OrpWsData, PhWsData, WsData } from '@/types/websocket';
 
 import H3Title from '@/components/core/title/H3Title.vue';
-import { useLabelConvert } from '@/composables/useLabelConvert';
 import { ObservationType } from '@/types/device';
 import { Measurement } from '@/types/measure';
+import { getMeasureList } from '@/utils/labelConvert';
 
 const props = withDefaults(
   defineProps<{
@@ -48,7 +48,6 @@ const props = withDefaults(
 );
 
 const { t } = useI18n();
-const { getMeasureList } = useLabelConvert();
 
 // 測量列表
 const measureLists = computed(() => {

@@ -109,7 +109,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue';
+import { computed, onActivated, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 import type { Device } from '@/types/device';
@@ -142,7 +142,7 @@ const waterOptionsList = ref([
 
 const waterQuality = ref<string>('pure_water');
 
-onMounted(() => {
+onActivated(() => {
   switch (props.observationType) {
     case 'ph':
       waterQuality.value = 'pure_water';

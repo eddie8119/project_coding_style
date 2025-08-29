@@ -68,7 +68,7 @@
 
 <script setup lang="ts">
 import { ElDatePicker } from 'element-plus';
-import { computed, inject, onMounted, ref } from 'vue';
+import { computed, inject, onActivated, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 import type { Measure } from '@/types/measure';
@@ -101,7 +101,7 @@ const measureHistoryEndDateTime = ref<Date | string>('');
 const loading = ref<boolean>(false);
 const noDataMessage = ref<string>('');
 
-onMounted(() => {
+onActivated(() => {
   // Set default date range if not provided
   if (!measureHistoryStartDateTime.value) {
     const startDate = new Date();

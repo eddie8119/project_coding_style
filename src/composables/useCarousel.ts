@@ -1,4 +1,4 @@
-import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue';
+import { computed, nextTick, onActivated, onDeactivated, ref, watch } from 'vue';
 
 export function useCarousel(listRef: { value: any[] }) {
   const carouselContainer = ref<HTMLElement | null>(null);
@@ -25,7 +25,7 @@ export function useCarousel(listRef: { value: any[] }) {
 
   let intervalId: number | undefined;
 
-  onMounted(() => {
+  onActivated(() => {
     nextTick(() => {
       updatePageSize();
     });
@@ -37,7 +37,7 @@ export function useCarousel(listRef: { value: any[] }) {
     }, 10000);
   });
 
-  onUnmounted(() => {
+  onDeactivated(() => {
     window.removeEventListener('resize', updatePageSize);
     if (intervalId) clearInterval(intervalId);
   });

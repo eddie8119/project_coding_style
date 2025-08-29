@@ -28,7 +28,7 @@
 
 <script setup lang="ts">
 import { useField } from 'vee-validate';
-import { computed, onMounted, ref } from 'vue';
+import { computed, onActivated, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRoute } from 'vue-router';
 
@@ -62,7 +62,7 @@ const getEmail = (): void => {
   }
 };
 
-onMounted(() => {
+onActivated(() => {
   getEmail();
 });
 

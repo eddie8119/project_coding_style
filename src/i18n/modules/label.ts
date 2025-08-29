@@ -21,6 +21,11 @@ export default {
         repeat: 'Repeat',
         email: 'Email',
       },
+      user: {
+        username: 'Username',
+        email: 'Email',
+        member_since: 'Member Since',
+      },
     },
   },
   'zh-TW': {
@@ -45,6 +50,11 @@ export default {
         repeat: '重複',
         email: '電子郵件',
       },
+      user: {
+        username: '使用者名稱',
+        email: '電子郵件',
+        member_since: '加入日期',
+      },
     },
   },
   ja: {
@@ -68,6 +78,11 @@ export default {
         value: '値',
         repeat: '繰り返し',
         email: 'メール',
+      },
+      user: {
+        username: 'ユーザー名',
+        email: 'メール',
+        member_since: '会員登録日',
       },
     },
   },

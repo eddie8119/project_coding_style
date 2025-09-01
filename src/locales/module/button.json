@@ -1,0 +1,56 @@
+{
+  "en": {
+    "button": {
+      "submit": "Submit",
+      "register": "Register",
+      "login": "Login",
+      "change_password": "Change Password",
+      "forgot_password": "Forgot Password",
+      "reset_password": "Reset Password",
+      "send_reset_email": "Send Reset Email",
+      "resend_activation_email": "Resend Activation Email",
+      "edit_profile": "Edit Profile",
+      "resend": "Resend",
+      "activate": "Activate",
+      "try_again": "Try Again",
+      "query": "Query",
+      "pdf": "PDF",
+      "csv": "CSV"
+    }
+  },
+  "zh-TW": {
+    "button": {
+      "submit": "提交",
+      "register": "註冊",
+      "login": "登入",
+      "change_password": "修改密碼",
+      "forgot_password": "忘記密碼",
+      "reset_password": "重設密碼",
+      "send_reset_email": "發送重設密碼郵件",
+      "resend_activation_email": "重新發送啟用郵件",
+      "edit_profile": "編輯個人資料",
+      "resend": "重新發送",
+      "activate": "啟用",
+      "try_again": "再試一次",
+      "query": "查詢",
+      "pdf": "PDF",
+      "csv": "CSV"
+    }
+  },
+  "ja": {
+    "button": {
+      "submit": "提出",
+      "register": "登録",
+      "login": "ログイン",
+      "change_password": "パスワード変更",
+      "forgot_password": "パスワードを忘れた",
+      "resend_activation_email": "再認証メールを送信",
+      "edit_profile": "編集",
+      "resend": "再送信",
+      "activate": "アクティベート",
+      "try_again": "再試行",
+      "pdf": "PDF",
+      "csv": "CSV"
+    }
+  }
+}

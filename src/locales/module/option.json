@@ -1,0 +1,59 @@
+{
+  "en": {
+    "option": {
+      "alarm": {
+        "notice": "Notice",
+        "caution": "Caution",
+        "warning": "Warning"
+      },
+      "waterQuality": {
+        "pure_water": "Pure Water",
+        "acid_alkali": "Acid Alkali",
+        "biological_water": "Biological Water",
+        "general_acid_alkali": "General Acid Alkali",
+        "grinding_water": "Grinding Water",
+        "copper_grinding": "Copper Grinding",
+        "nh3n_water": "NH3-N Water",
+        "hydrofluoric_water": "Hydrofluoric Water"
+      }
+    }
+  },
+  "zh-TW": {
+    "option": {
+      "alarm": {
+        "notice": "通知",
+        "caution": "注意",
+        "warning": "警告"
+      },
+      "waterQuality": {
+        "pure_water": "純水域",
+        "acid_alkali": "酸鹼",
+        "biological_water": "生物水域",
+        "general_acid_alkali": "一般酸鹼",
+        "grinding_water": "研磨水域",
+        "copper_grinding": "銅系研磨",
+        "nh3n_water": "氨氮水域",
+        "hydrofluoric_water": "氫氟水域"
+      }
+    }
+  },
+  "ja": {
+    "option": {
+      "alarm": {
+        "notice": "通知",
+        "caution": "注意",
+        "warning": "警告"
+      },
+      "waterQuality": {
+        "pure_water": "純水",
+        "acid_alkali": "酸・アルカリ水",
+        "biological_water": "生物用水",
+        "general_acid_alkali": "一般酸・アルカリ水",
+        "grinding_water": "研磨水",
+        "copper_grinding": "銅研磨水",
+        "nh3n_water": "NH3-N水",
+        "hydrofluoric_water": "フッ酸水"
+      }
+    }
+  }
+}

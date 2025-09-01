@@ -1,0 +1,53 @@
+{
+  "en": {
+    "tab": {
+      "devices": "Devices",
+      "device": "Device",
+      "devices-maintenance": "Devices Maintenance",
+      "material": "Material",
+      "reagent": "Reagent",
+      "alarm-setting": "Alarm Setting",
+      "alarm-history": "Alarm History",
+      "notification": "Notification",
+      "profile": "Profile",
+      "change-password": "Change Password",
+      "edit-profile": "Edit Profile",
+      "taipei": "Taipei",
+      "hsinchu": "Hsinchu"
+    }
+  },
+  "zh-TW": {
+    "tab": {
+      "devices": "裝置群",
+      "device": "裝置",
+      "devices-maintenance": "裝置維護",
+      "material": "材料",
+      "reagent": "試劑",
+      "alarm-setting": "警報設定",
+      "alarm-history": "警報紀錄",
+      "notification": "通知",
+      "profile": "個人資料",
+      "change-password": "修改密碼",
+      "edit-profile": "編輯個人資料",
+      "taipei": "台北",
+      "hsinchu": "新竹"
+    }
+  },
+  "ja": {
+    "tab": {
+      "devices": "デバイス一覧",
+      "device": "デバイス",
+      "devices-maintenance": "デバイスメンテナンス",
+      "material": "材料",
+      "reagent": "試薬",
+      "alarm-setting": "アラーム設定",
+      "alarm-history": "アラーム履歴",
+      "notification": "通知",
+      "profile": "プロフィール",
+      "change-password": "パスワード変更",
+      "edit-profile": "プロフィール編集",
+      "taipei": "台北",
+      "hsinchu": "新竹"
+    }
+  }
+}

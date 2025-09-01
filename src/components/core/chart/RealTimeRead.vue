@@ -10,7 +10,7 @@
 
 <script setup lang="ts">
 import * as echarts from 'echarts';
-import { computed, onActivated, onDeactivated, ref, watch } from 'vue';
+import { computed, onMounted, onUnmounted, ref, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { onBeforeRouteUpdate } from 'vue-router';
 
@@ -20,9 +20,6 @@ import H3Title from '@/components/core/title/H3Title.vue';
 import { ObservationType } from '@/types/device';
 import { getMainMeasureUnit, getUnitBound } from '@/utils/labelConvert';
 
-const chartContainer = ref<HTMLElement | null>(null);
-const chartInstance = ref<echarts.ECharts | null>(null);
-
 const { t } = useI18n();
 
 const props = defineProps<{
@@ -30,6 +27,8 @@ const props = defineProps<{
   observationType: ObservationType;
 }>();
 
+const chartContainer = ref<HTMLElement | null>(null);
+const chartInstance = ref<echarts.ECharts | null>(null);
 const localData = ref<WsData[]>([]);
 
 watch(
@@ -65,7 +64,7 @@ onBeforeRouteUpdate(() => {
 });
 
 // 當元件被快取且不再活動時 (例如離開 device 頁面)，清除圖表
-onDeactivated(() => {
+onUnmounted(() => {
   resetChart();
 });
 
@@ -80,28 +79,9 @@ const timeData = computed(() =>
 );
 const unitBound = computed(() => getUnitBound(props.observationType));
 const measureUnit = computed(() => getMainMeasureUnit(props.observationType));
-
 const wsMeasureData = computed(() =>
   localData.value.map((item: WsData) => item[measureUnit.value.toLowerCase() as keyof WsData])
 );
-
-onActivated(() => {
-  if (chartContainer.value) {
-    localData.value = [];
-    chartInstance.value = echarts.init(chartContainer.value);
-    setChartOption();
-
-    // 監聽窗口大小變化
-    window.addEventListener('resize', handleResize);
-  }
-});
-
-onDeactivated(() => {
-  if (chartInstance.value) {
-    chartInstance.value.dispose();
-  }
-  window.removeEventListener('resize', handleResize);
-});
 
 const handleResize = () => {
   if (chartInstance.value) {
@@ -205,6 +185,24 @@ function setChartOption() {
 
   chartInstance.value.setOption(option);
 }
+
+onMounted(() => {
+  if (chartContainer.value) {
+    localData.value = [];
+    chartInstance.value = echarts.init(chartContainer.value);
+    setChartOption();
+
+    // 監聽窗口大小變化
+    window.addEventListener('resize', handleResize);
+  }
+});
+
+onUnmounted(() => {
+  if (chartInstance.value) {
+    chartInstance.value.dispose();
+  }
+  window.removeEventListener('resize', handleResize);
+});
 </script>
 
 <style scoped>

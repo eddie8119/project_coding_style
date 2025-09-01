@@ -10,7 +10,7 @@
 
       <div class="flex flex-col gap-4">
         <div class="mb-2 flex items-center gap-4 text-2xl font-bold">
-          <p>
+          <p class="uppercase">
             {{ localTag }}
           </p>
           |

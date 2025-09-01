@@ -1,0 +1,101 @@
+{
+  "en": {
+    "title": {
+      "register": "Register",
+      "register_success": "Register Success",
+      "resend_activation": "Resend Activation",
+      "account_activation": "Account Activation",
+      "forgot_password": "Forgot Password",
+      "reset_password": "Reset Password",
+      "edit_device": "Edit Device",
+      "edit_device_alarm": "Edit Device Alarm",
+      "edit_custom_name": "Edit Custom Name",
+      "edit_water_quality": "Edit Water Quality",
+      "alarm_detail": "Alarm Detail",
+      "handling_records": "Handling Records",
+      "overview": "Overview",
+      "monitoring": "Monitoring",
+      "factory_scene": "Factory Scene",
+      "alarm_list": "Alarm List",
+      "device": {
+        "alarm_subscription": "Alarm Subscription"
+      },
+      "subTitle": {
+        "latest_calibration": "Latest Calibration",
+        "statistics": "Statistics",
+        "measure_history": "Measure History",
+        "calibration_history": "Calibration History",
+        "replace_history": "Replace History",
+        "alarm_history": "Alarm History",
+        "real_time_read": "Real Time Read(5 minutes range)",
+        "history_read": "History Read"
+      }
+    }
+  },
+  "zh-TW": {
+    "title": {
+      "register": "註冊",
+      "register_success": "註冊成功",
+      "resend_activation": "重新發送啟用郵件",
+      "account_activation": "帳號啟用",
+      "forgot_password": "忘記密碼",
+      "reset_password": "重設密碼",
+      "edit_device": "編輯裝置",
+      "edit_device_alarm": "編輯裝置警報",
+      "edit_custom_name": "編輯自訂名稱",
+      "edit_water_quality": "編輯水域",
+      "alarm_detail": "警報詳情",
+      "handling_records": "處理紀錄",
+      "overview": "總覽",
+      "monitoring": "監控",
+      "factory_scene": "工廠場景",
+      "alarm_list": "警報清單",
+      "device": {
+        "alarm_subscription": "警報訂閱"
+      },
+      "subTitle": {
+        "latest_calibration": "最近一次校正",
+        "statistics": "統計資料",
+        "measure_history": "量測紀錄",
+        "calibration_history": "校正紀錄",
+        "replace_history": "更換紀錄",
+        "alarm_history": "警報紀錄",
+        "real_time_read": "即時觀測(5分鐘範圍)",
+        "history_read": "觀測歷史數據"
+      }
+    }
+  },
+  "ja": {
+    "title": {
+      "register": "登録",
+      "register_success": "登録成功",
+      "resend_activation": "認証メールを再送信",
+      "account_activation": "アカウント認証",
+      "forgot_password": "パスワードを忘れた",
+      "reset_password": "パスワードをリセット",
+      "edit_device": "デバイスを編集",
+      "edit_device_alarm": "デバイスアラームを編集",
+      "edit_custom_name": "カスタム名を編集",
+      "edit_water_quality": "水域を編集",
+      "alarm_detail": "アラーム詳細",
+      "handling_records": "対応記録",
+      "overview": "概要",
+      "monitoring": "モニタリング",
+      "factory_scene": "工場のシーン",
+      "alarm_list": "アラーム一覧",
+      "device": {
+        "alarm_subscription": "アラーム通知設定"
+      },
+      "subTitle": {
+        "latest_calibration": "最新の校正",
+        "statistics": "統計",
+        "measure_history": "測定履歴",
+        "calibration_history": "校正履歴",
+        "replace_history": "交換履歴",
+        "alarm_history": "アラーム履歴",
+        "real_time_read": "リアルタイム読み取り（5分範囲）",
+        "history_read": "履歴読み取り"
+      }
+    }
+  }
+}

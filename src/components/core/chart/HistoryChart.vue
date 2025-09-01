@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
 import * as echarts from 'echarts';
-import { computed, nextTick, onActivated, onDeactivated, ref, watch } from 'vue';
+import { computed, nextTick, onActivated, onDeactivated, onMounted, ref, watch } from 'vue';
 
 import type { MeasureHistory } from '@/types/measure';
 
@@ -73,6 +73,10 @@ watch(windowWidth, () => {
   if (isChartReady.value) {
     resizeChart();
   }
+});
+
+onMounted(() => {
+  initChart();
 });
 
 onActivated(() => {

@@ -1,0 +1,89 @@
+{
+  "en": {
+    "label": {
+      "time": "Time",
+      "status": "Status",
+      "device": "Device",
+      "detail": "Detail",
+      "action": "Action",
+      "note": "Note",
+      "average": "Average",
+      "day": "Day",
+      "start_time": "Start Time",
+      "end_time": "End Time",
+      "quick_date_selector": "Quick Day Selector",
+      "custom_time_range": "Custom Time Range",
+      "alarm": {
+        "type": "Type",
+        "time_interval": "Time Interval",
+        "alarm_level": "Alarm Level",
+        "value": "Value",
+        "repeat": "Repeat",
+        "email": "Email"
+      },
+      "user": {
+        "username": "Username",
+        "email": "Email",
+        "member_since": "Member Since"
+      }
+    }
+  },
+  "zh-TW": {
+    "label": {
+      "time": "時間",
+      "status": "狀態",
+      "device": "裝置",
+      "detail": "詳情",
+      "action": "操作",
+      "note": "備註",
+      "average": "平均",
+      "day": "天",
+      "start_time": "開始時間",
+      "end_time": "結束時間",
+      "quick_date_selector": "快速天數選擇器",
+      "custom_time_range": "自訂時間區間",
+      "alarm": {
+        "type": "類型",
+        "time_interval": "時間區間",
+        "alarm_level": "警報等級",
+        "value": "數值",
+        "repeat": "重複",
+        "email": "電子郵件"
+      },
+      "user": {
+        "username": "使用者名稱",
+        "email": "電子郵件",
+        "member_since": "加入日期"
+      }
+    }
+  },
+  "ja": {
+    "label": {
+      "time": "時刻",
+      "status": "ステータス",
+      "device": "デバイス",
+      "detail": "詳細",
+      "action": "操作",
+      "note": "メモ",
+      "average": "平均",
+      "day": "日",
+      "start_time": "開始時刻",
+      "end_time": "終了時刻",
+      "quick_date_selector": "クイック日付選択",
+      "custom_time_range": "カスタム時間範囲",
+      "alarm": {
+        "type": "種類",
+        "time_interval": "時間間隔",
+        "alarm_level": "アラームレベル",
+        "value": "値",
+        "repeat": "繰り返し",
+        "email": "メール"
+      },
+      "user": {
+        "username": "ユーザー名",
+        "email": "メール",
+        "member_since": "会員登録日"
+      }
+    }
+  }
+}

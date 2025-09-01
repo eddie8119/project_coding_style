@@ -1,0 +1,385 @@
+{
+  "alarm": {
+    "edit_all": "編輯所有"
+  },
+  "button": {
+    "submit": "提交",
+    "register": "註冊",
+    "login": "登入",
+    "change_password": "修改密碼",
+    "forgot_password": "忘記密碼",
+    "reset_password": "重設密碼",
+    "send_reset_email": "發送重設密碼郵件",
+    "resend_activation_email": "重新發送啟用郵件",
+    "edit_profile": "編輯個人資料",
+    "resend": "重新發送",
+    "activate": "啟用",
+    "try_again": "再試一次",
+    "query": "查詢",
+    "pdf": "PDF",
+    "csv": "CSV"
+  },
+  "column": {
+    "edit": "編輯",
+    "buy": "採購",
+    "delete": "刪除",
+    "maintain": "維護",
+    "role": "角色",
+    "status": "狀態",
+    "alarm_status": "警報狀態",
+    "action": "操作",
+    "ID": "S/N",
+    "location": "位置",
+    "product_name": "產品型號",
+    "group": "群組",
+    "tag": "點位名稱",
+    "main_unit": "單位",
+    "low_bound": "下界值",
+    "low_alarm": "下限警報",
+    "high_alarm": "上限警報",
+    "high_bound": "上界值",
+    "ts": "時間",
+    "zero": "zero",
+    "slope": "slope",
+    "unit": "單位",
+    "avg": "平均",
+    "max": "最大",
+    "max_t": "最大時間",
+    "min": "最小",
+    "min_t": "最小時間",
+    "device_name": "裝置名稱",
+    "sensor_name": "感測器型號",
+    "ph_measurement_value": "pH",
+    "mv_measurement_value": "mV",
+    "ppm_measurement_value": "ppm",
+    "temperature": "溫度(°C)",
+    "mv": "mV",
+    "ppm": "ppm",
+    "sensitivity": "電極靈敏度",
+    "offset": "偏差度",
+    "health": "健康",
+    "active": "裝置狀態",
+    "last_updated_time": "最後更新",
+    "material_name": "材料",
+    "remaining_quantity": "剩餘量",
+    "total_consumption": "總消耗量",
+    "last_replacement_time": "最後更換時間",
+    "last_purchase_time": "上次採購時間",
+    "alarm_settings": "警報設定",
+    "timestamp": "時間",
+    "severity": "嚴重程度",
+    "action_status": "動作狀態",
+    "details": "細節",
+    "buy_quantity": "採購量",
+    "replace_date": "更換日期",
+    "water_area": "水域",
+    "useing_days": "使用天數"
+  },
+  "common": {
+    "confirm": "確認",
+    "cancel": "取消",
+    "save": "儲存",
+    "delete": "刪除",
+    "edit": "編輯",
+    "back": "返回",
+    "theme": "主題",
+    "language": "語言",
+    "notification": "通知",
+    "authentication": "驗證",
+    "logout": "登出",
+    "success": "成功",
+    "last_update_time": "最後更新",
+    "loading": "載入中",
+    "download": "下載",
+    "role": {
+      "admin": "管理者",
+      "user": "一般用戶"
+    },
+    "relative": {
+      "second": "{count} 秒前",
+      "minute": "{count} 分鐘前",
+      "hour": "{count} 小時前",
+      "day": "{count} 天前"
+    }
+  },
+  "device": {
+    "site_name": "點位名稱",
+    "electrodeLife": "電極壽命",
+    "sensor_name": "感測器型號",
+    "sensor_serial": "感測器序號",
+    "customName": "自訂名稱",
+    "edit": "編輯",
+    "action": "行動",
+    "handle": "處理",
+    "sensor_remainingDays": "感測器剩餘天數",
+    "location": "位置",
+    "product_name": "產品型號",
+    "product_serial": "產品序號",
+    "water_area": "水域",
+    "senser_start_date": "感測器啟用日期",
+    "day": "天",
+    "deviceWarning": {
+      "warning": "警告",
+      "cleaning_action": "清潔行為",
+      "regeneration_action": "再生行為",
+      "replacement_action": "更換行為",
+      "_": "_",
+      "action": "操作",
+      "error": "錯誤",
+      "all": "全部"
+    },
+    "measurement": {
+      "ph": "pH",
+      "elec": "Elec(mV)",
+      "zero": "zero",
+      "temperature": "溫度(°C)",
+      "slope": "slope",
+      "humidity": "濕度",
+      "ppm": "ppm",
+      "sensitivity": "電極敏感度",
+      "offset": "偏差度"
+    },
+    "status": {
+      "pending": "未處理",
+      "handled": "已處理",
+      "cleared": "已清除",
+      "running": "運行中",
+      "caution": "注意",
+      "stopped": "停止",
+      "warning": "警告",
+      "resolved": "已解決",
+      "unresolved": "未解決",
+      "idle": "閒置",
+      "undefined": "未定義",
+      "not available": "不可用",
+      "error": "錯誤",
+      "finish": "完成"
+    },
+    "handle_action": {
+      "remote_cleaning": "建議執行遠端清洗校正",
+      "electrode_replacement": "電極部品更換",
+      "electrode_reached_life": "電極達使用壽命"
+    },
+    "warning": "警告",
+    "caution": "注意",
+    "running": "運行中",
+    "active": "啟用中",
+    "stop": "停止",
+    "times": "次",
+    "device": "裝置",
+    "devices": "裝置",
+    "devices_list_page": "裝置群",
+    "show_all_filter": "顯示全部篩選"
+  },
+  "dialog": {},
+  "dropdown": {
+    "zh-TW": "繁體中文",
+    "en": "English",
+    "ja": "日本語",
+    "user": "使用者",
+    "logout": "登出",
+    "edit": "編輯",
+    "detail": "詳細"
+  },
+  "label": {
+    "time": "時間",
+    "status": "狀態",
+    "device": "裝置",
+    "detail": "詳情",
+    "action": "操作",
+    "note": "備註",
+    "average": "平均",
+    "day": "天",
+    "start_time": "開始時間",
+    "end_time": "結束時間",
+    "quick_date_selector": "快速天數選擇器",
+    "custom_time_range": "自訂時間區間",
+    "alarm": {
+      "type": "類型",
+      "time_interval": "時間區間",
+      "alarm_level": "警報等級",
+      "value": "數值",
+      "repeat": "重複",
+      "email": "電子郵件"
+    },
+    "user": {
+      "username": "使用者名稱",
+      "email": "電子郵件",
+      "member_since": "加入日期"
+    }
+  },
+  "link": {
+    "back_to_home": "返回首頁",
+    "back_to_forgot_password": "返回忘記密碼",
+    "forgot_password": "忘記密碼",
+    "back_to_login": "返回登入"
+  },
+  "management": {
+    "roles": {
+      "owner": "擁有者",
+      "admin": "管理員",
+      "editor": "編輯者",
+      "viewer": "檢視者"
+    },
+    "inviteMember": "邀請成員",
+    "collaborator": "協作者",
+    "role": "角色",
+    "send": "發送",
+    "invite": "邀請",
+    "remove": "移除",
+    "status": {
+      "pending": "待處理",
+      "joined": "已加入"
+    },
+    "messages": {
+      "inviteSent": "邀請已發送"
+    },
+    "errors": {
+      "emailExists": "電子郵件已存在",
+      "inviteFailed": "邀請失敗"
+    }
+  },
+  "message": {
+    "dialog": {
+      "activation_success": "啟用成功！",
+      "activation_error": "啟用失敗",
+      "activating": "啟用中...",
+      "check_email_for_activation": "請查看您的電子郵件以完成啟用",
+      "no_email_received": "尚未收到電子郵件",
+      "check_the_email": "請檢查您的電子郵件",
+      "change_password_success": "密碼變更成功！",
+      "change_password_failed": "密碼變更失敗，請稍後再試"
+    },
+    "sign": {
+      "loading_weather_data": "正在載入天氣資料...",
+      "no_change": "無變更",
+      "no_alarm": "無警報"
+    },
+    "success": {
+      "update_success": "更新成功！"
+    },
+    "error": {
+      "update_failed": "更新失敗",
+      "failed_to_fetch_weather_data": "取得天氣資料失敗"
+    }
+  },
+  "nav": {
+    "group": {
+      "home": "首頁",
+      "main": "主",
+      "observation_items": "觀測項目",
+      "management": "管理"
+    },
+    "menu": {
+      "dashboard": "儀表板",
+      "entitySearch": "實體搜尋",
+      "devices": "裝置",
+      "overview": "概況",
+      "ph": "酸鹼值",
+      "orp": "氧化還原電位",
+      "nh3n": "氨氮",
+      "flouride": "氟鹽",
+      "set-member": "成員設定"
+    }
+  },
+  "notification": {
+    "email": "電子郵件",
+    "phone": "電話",
+    "name": "名稱",
+    "section_title": {
+      "subscriber_info": "訂閱者資訊",
+      "device_selection": "裝置選擇",
+      "time_range_settings": "時間範圍設定"
+    }
+  },
+  "observation": {
+    "ph": "酸鹼值",
+    "orp": "氧化還原電位",
+    "sqm": "SQM",
+    "mac": "MAC",
+    "nh3n": "氨氮",
+    "flouride": "氟鹽"
+  },
+  "option": {
+    "alarm": {
+      "notice": "通知",
+      "caution": "注意",
+      "warning": "警告"
+    },
+    "waterQuality": {
+      "pure_water": "純水域",
+      "acid_alkali": "酸鹼",
+      "biological_water": "生物水域",
+      "general_acid_alkali": "一般酸鹼",
+      "grinding_water": "研磨水域",
+      "copper_grinding": "銅系研磨",
+      "nh3n_water": "氨氮水域",
+      "hydrofluoric_water": "氫氟水域"
+    }
+  },
+  "pagination": {
+    "total": "共 {total} 筆",
+    "pageSize": "條/頁"
+  },
+  "placeholder": {
+    "auth": {
+      "email": "電子郵件",
+      "password": "密碼",
+      "confirm_password": "確認密碼",
+      "old_password": "舊密碼",
+      "new_password": "新密碼",
+      "new_confirm_password": "確認新密碼",
+      "username": "使用者名稱"
+    },
+    "email": "電子郵件",
+    "name": "姓名",
+    "phone": "電話",
+    "search": "搜尋"
+  },
+  "tab": {
+    "devices": "裝置群",
+    "device": "裝置",
+    "devices-maintenance": "裝置維護",
+    "material": "材料",
+    "reagent": "試劑",
+    "alarm-setting": "警報設定",
+    "alarm-history": "警報紀錄",
+    "notification": "通知",
+    "profile": "個人資料",
+    "change-password": "修改密碼",
+    "edit-profile": "編輯個人資料",
+    "taipei": "台北",
+    "hsinchu": "新竹"
+  },
+  "title": {
+    "register": "註冊",
+    "register_success": "註冊成功",
+    "resend_activation": "重新發送啟用郵件",
+    "account_activation": "帳號啟用",
+    "forgot_password": "忘記密碼",
+    "reset_password": "重設密碼",
+    "edit_device": "編輯裝置",
+    "edit_device_alarm": "編輯裝置警報",
+    "edit_custom_name": "編輯自訂名稱",
+    "edit_water_quality": "編輯水域",
+    "alarm_detail": "警報詳情",
+    "handling_records": "處理紀錄",
+    "overview": "總覽",
+    "monitoring": "監控",
+    "factory_scene": "工廠場景",
+    "alarm_list": "警報清單",
+    "device": {
+      "alarm_subscription": "警報訂閱"
+    },
+    "subTitle": {
+      "latest_calibration": "最近一次校正",
+      "statistics": "統計資料",
+      "measure_history": "量測紀錄",
+      "calibration_history": "校正紀錄",
+      "replace_history": "更換紀錄",
+      "alarm_history": "警報紀錄",
+      "real_time_read": "即時觀測(5分鐘範圍)",
+      "history_read": "觀測歷史數據"
+    }
+  }
+}

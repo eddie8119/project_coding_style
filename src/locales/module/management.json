@@ -1,0 +1,85 @@
+{
+  "en": {
+    "management": {
+      "inviteMember": "Invite Member",
+      "collaborator": "Collaborator",
+      "membersList": "Members List",
+      "role": "Role",
+      "send": "Send",
+      "invite": "Invite",
+      "remove": "Remove",
+      "status": {
+        "pending": "Pending",
+        "joined": "Joined"
+      },
+      "roles": {
+        "owner": "Owner",
+        "admin": "Admin",
+        "editor": "Editor",
+        "viewer": "Viewer"
+      },
+      "messages": {
+        "inviteSent": "Invite sent successfully"
+      },
+      "errors": {
+        "emailExists": "Email already exists",
+        "inviteFailed": "Failed to invite member"
+      }
+    }
+  },
+  "zh-TW": {
+    "management": {
+      "roles": {
+        "owner": "擁有者",
+        "admin": "管理員",
+        "editor": "編輯者",
+        "viewer": "檢視者"
+      },
+      "inviteMember": "邀請成員",
+      "collaborator": "協作者",
+      "role": "角色",
+      "send": "發送",
+      "invite": "邀請",
+      "remove": "移除",
+      "status": {
+        "pending": "待處理",
+        "joined": "已加入"
+      },
+      "messages": {
+        "inviteSent": "邀請已發送"
+      },
+      "errors": {
+        "emailExists": "電子郵件已存在",
+        "inviteFailed": "邀請失敗"
+      }
+    }
+  },
+  "ja": {
+    "management": {
+      "inviteMember": "メンバーを招待",
+      "collaborator": "共同編集者",
+      "membersList": "メンバー一覧",
+      "role": "役割",
+      "send": "送信",
+      "invite": "招待",
+      "remove": "削除",
+      "status": {
+        "pending": "保留中",
+        "joined": "参加済み"
+      },
+      "roles": {
+        "owner": "オーナー",
+        "admin": "管理者",
+        "editor": "編集者",
+        "viewer": "閲覧者"
+      },
+      "messages": {
+        "inviteSent": "招待が正常に送信されました"
+      },
+      "errors": {
+        "emailExists": "このメールアドレスは既に存在します",
+        "inviteFailed": "メンバーの招待に失敗しました"
+      }
+    }
+  }
+}

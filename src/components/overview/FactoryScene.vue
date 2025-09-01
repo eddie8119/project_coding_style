@@ -48,7 +48,7 @@ const isLoading = ref(true);
 let animationController: ReturnType<typeof createAnimationController> | null = null;
 
 const markerColorByType = (type: DeviceStatus) => {
-  if (type === DeviceStatus.CAUTION) return '#70480c';
+  if (type === DeviceStatus.CAUTION) return '#0050be';
   return '#ff0000'; // 預設紅色
 };
 

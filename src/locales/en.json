@@ -1,0 +1,388 @@
+{
+  "alarm": {
+    "edit_all": "Edit All"
+  },
+  "button": {
+    "submit": "Submit",
+    "register": "Register",
+    "login": "Login",
+    "change_password": "Change Password",
+    "forgot_password": "Forgot Password",
+    "reset_password": "Reset Password",
+    "send_reset_email": "Send Reset Email",
+    "resend_activation_email": "Resend Activation Email",
+    "edit_profile": "Edit Profile",
+    "resend": "Resend",
+    "activate": "Activate",
+    "try_again": "Try Again",
+    "query": "Query",
+    "pdf": "PDF",
+    "csv": "CSV"
+  },
+  "column": {
+    "edit": "Edit",
+    "buy": "Buy",
+    "delete": "Delete",
+    "maintain": "Maintain",
+    "role": "Role",
+    "status": "Status",
+    "alarm_status": "Alarm Status",
+    "action": "Action",
+    "ID": "S/N",
+    "location": "Location",
+    "product_name": "Product Name",
+    "group": "Group",
+    "tag": "Tag Name",
+    "main_unit": "Unit",
+    "low_bound": "Low Bound",
+    "low_alarm": "Low Alarm",
+    "high_alarm": "High Alarm",
+    "high_bound": "High Bound",
+    "ts": "Time",
+    "zero": "Zero",
+    "slope": "Slope",
+    "unit": "Unit",
+    "avg": "Avg",
+    "max": "Max",
+    "max_t": "Max Time",
+    "min": "Min",
+    "min_t": "Min Time",
+    "device_name": "Device Name",
+    "sensor_name": "Sensor Name",
+    "ph_measurement_value": "pH",
+    "mv_measurement_value": "mV",
+    "ppm_measurement_value": "ppm",
+    "temperature": "Temperature(°C)",
+    "mv": "mV",
+    "ppm": "ppm",
+    "sensitivity": "Sensitivity",
+    "offset": "Offset",
+    "health": "Health",
+    "active": "Device Active",
+    "last_updated_time": "Last Updated",
+    "material_name": "Material",
+    "remaining_quantity": "Remaining Quantity",
+    "total_consumption": "Total Consumption",
+    "last_replacement_time": "Last Replacement Time",
+    "last_purchase_time": "Last Purchase Time",
+    "alarm_settings": "Alarm Settings",
+    "timestamp": "Timestamp",
+    "severity": "Severity",
+    "action_status": "Action Status",
+    "details": "Details",
+    "buy_quantity": "Buy Quantity",
+    "water_area": "Water Quality",
+    "useing_days": "Remaining Days",
+    "replace_date": "Replace Date"
+  },
+  "common": {
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "back": "Back",
+    "theme": "Theme",
+    "language": "Language",
+    "notification": "Notification",
+    "authentication": "Authentication",
+    "logout": "Logout",
+    "success": "Success",
+    "last_update_time": "Last Update",
+    "loading": "Loading",
+    "download": "Download",
+    "role": {
+      "admin": "Admin",
+      "user": "User"
+    },
+    "relative": {
+      "second": "{count} second",
+      "minute": "{count} minute ",
+      "hour": "{count} hour",
+      "day": "{count} day "
+    }
+  },
+  "device": {
+    "site_name": "Tag Name",
+    "electrodeLife": "Electrode Life",
+    "sensor_name": "Sensor Model",
+    "sensor_serial": "Sensor Serial Number",
+    "customName": "Custom Name",
+    "edit": "Edit",
+    "action": "Action",
+    "handle": "Handle",
+    "sensor_remainingDays": "Sensor Remaining Days",
+    "location": "Location",
+    "product_name": "Product",
+    "product_serial": "Product Serial Number",
+    "water_area": "Water Quality",
+    "senser_start_date": "Sensor Start Date",
+    "day": "day",
+    "deviceWarning": {
+      "warning": "Warning",
+      "cleaning_action": "Cleaning Warning",
+      "regeneration_action": "Regeneration Warning",
+      "replacement_action": "Replacement Warning",
+      "_": "_",
+      "action": "Action",
+      "error": "Error",
+      "all": "All"
+    },
+    "measurement": {
+      "ph": "pH",
+      "elec": "Elec(mV)",
+      "zero": "Zero",
+      "temperature": "Temperature(°C)",
+      "slope": "Slope",
+      "humidity": "Humidity",
+      "ppm": "ppm",
+      "sensitivity": "sensitivity",
+      "offset": "offset"
+    },
+    "status": {
+      "pending": "Pending",
+      "handled": "Handled",
+      "cleared": "Cleared",
+      "running": "Running",
+      "caution": "Caution",
+      "stopped": "Stopped",
+      "warning": "Warning",
+      "resolved": "Resolved",
+      "unresolved": "Unresolved",
+      "idle": "Idle",
+      "undefined": "Undefined",
+      "not available": "Not Available",
+      "error": "Error",
+      "finish": "finish"
+    },
+    "handle_action": {
+      "remote_cleaning": "Suggested to perform remote cleaning and calibration",
+      "electrode_replacement": "Electrode component replacement",
+      "electrode_reached_life": "Electrode has reached its service life"
+    },
+    "warning": "Warning",
+    "caution": "Caution",
+    "running": "Running",
+    "active": "Active",
+    "stop": "Stop",
+    "times": "times",
+    "device": "device",
+    "devices": "devices",
+    "devices_list_page": "devices list page",
+    "show_all_filter": "show all filter"
+  },
+  "dialog": {},
+  "dropdown": {
+    "zh-TW": "繁體中文",
+    "en": "English",
+    "ja": "日本語",
+    "user": "User",
+    "logout": "Logout",
+    "edit": "Edit",
+    "detail": "Detail"
+  },
+  "label": {
+    "time": "Time",
+    "status": "Status",
+    "device": "Device",
+    "detail": "Detail",
+    "action": "Action",
+    "note": "Note",
+    "average": "Average",
+    "day": "Day",
+    "start_time": "Start Time",
+    "end_time": "End Time",
+    "quick_date_selector": "Quick Day Selector",
+    "custom_time_range": "Custom Time Range",
+    "alarm": {
+      "type": "Type",
+      "time_interval": "Time Interval",
+      "alarm_level": "Alarm Level",
+      "value": "Value",
+      "repeat": "Repeat",
+      "email": "Email"
+    },
+    "user": {
+      "username": "Username",
+      "email": "Email",
+      "member_since": "Member Since"
+    }
+  },
+  "link": {
+    "back_to_home": "Back to Home",
+    "back_to_forgot_password": "Back to Forgot Password",
+    "forgot_password": "Forgot Password",
+    "back_to_login": "Back to Login"
+  },
+  "management": {
+    "inviteMember": "Invite Member",
+    "collaborator": "Collaborator",
+    "membersList": "Members List",
+    "role": "Role",
+    "send": "Send",
+    "invite": "Invite",
+    "remove": "Remove",
+    "status": {
+      "pending": "Pending",
+      "joined": "Joined"
+    },
+    "roles": {
+      "owner": "Owner",
+      "admin": "Admin",
+      "editor": "Editor",
+      "viewer": "Viewer"
+    },
+    "messages": {
+      "inviteSent": "Invite sent successfully"
+    },
+    "errors": {
+      "emailExists": "Email already exists",
+      "inviteFailed": "Failed to invite member"
+    }
+  },
+  "message": {
+    "dialog": {
+      "activation_success": "Activation successful!",
+      "activation_error": "Activation failed",
+      "activating": "Activating...",
+      "check_email_for_activation": "Check your email for activation",
+      "no_email_received": "No email received",
+      "check_the_email": "Check the email",
+      "change_password_success": "Password changed successfully!",
+      "change_password_failed": "Failed to change password, please try again later"
+    },
+    "sign": {
+      "loading_weather_data": "Loading weather data...",
+      "no_change": "No change",
+      "no_alarm": "No alarm"
+    },
+    "success": {
+      "update_success": "Update successful!"
+    },
+    "error": {
+      "update_failed": "Update failed",
+      "failed_to_fetch_weather_data": "Failed to fetch weather data"
+    }
+  },
+  "nav": {
+    "group": {
+      "home": "Home",
+      "main": "Main",
+      "observation_items": "Observation Items",
+      "management": "Management"
+    },
+    "menu": {
+      "dashboard": "Dashboard",
+      "entitySearch": "Entity Search",
+      "devices": "Devices",
+      "overview": "Overview",
+      "ph": "pH",
+      "orp": "ORP",
+      "sqm": "SQM",
+      "mac": "MAC",
+      "nh3n": "NH3-N",
+      "flouride": "F-",
+      "set-member": "Set Member"
+    }
+  },
+  "notification": {
+    "email": "Email",
+    "phone": "Phone",
+    "name": "Name",
+    "section_title": {
+      "subscriber_info": "Subscriber Info",
+      "device_selection": "Device Selection",
+      "time_range_settings": "Time Range Settings"
+    }
+  },
+  "observation": {
+    "ph": "pH",
+    "orp": "ORP",
+    "sqm": "SQM",
+    "mac": "MAC",
+    "nh3n": "NH3-N",
+    "flouride": "F-"
+  },
+  "option": {
+    "alarm": {
+      "notice": "Notice",
+      "caution": "Caution",
+      "warning": "Warning"
+    },
+    "waterQuality": {
+      "pure_water": "Pure Water",
+      "acid_alkali": "Acid Alkali",
+      "biological_water": "Biological Water",
+      "general_acid_alkali": "General Acid Alkali",
+      "grinding_water": "Grinding Water",
+      "copper_grinding": "Copper Grinding",
+      "nh3n_water": "NH3-N Water",
+      "hydrofluoric_water": "Hydrofluoric Water"
+    }
+  },
+  "pagination": {
+    "total": "Total {total}",
+    "pageSize": "items/page"
+  },
+  "placeholder": {
+    "auth": {
+      "email": "Email",
+      "password": "Password",
+      "confirm_password": "Confirm Password",
+      "old_password": "Old Password",
+      "new_password": "New Password",
+      "new_confirm_password": "Confirm New Password",
+      "username": "Username"
+    },
+    "email": "Email",
+    "name": "Name",
+    "phone": "Phone",
+    "search": "Search"
+  },
+  "tab": {
+    "devices": "Devices",
+    "device": "Device",
+    "devices-maintenance": "Devices Maintenance",
+    "material": "Material",
+    "reagent": "Reagent",
+    "alarm-setting": "Alarm Setting",
+    "alarm-history": "Alarm History",
+    "notification": "Notification",
+    "profile": "Profile",
+    "change-password": "Change Password",
+    "edit-profile": "Edit Profile",
+    "taipei": "Taipei",
+    "hsinchu": "Hsinchu"
+  },
+  "title": {
+    "register": "Register",
+    "register_success": "Register Success",
+    "resend_activation": "Resend Activation",
+    "account_activation": "Account Activation",
+    "forgot_password": "Forgot Password",
+    "reset_password": "Reset Password",
+    "edit_device": "Edit Device",
+    "edit_device_alarm": "Edit Device Alarm",
+    "edit_custom_name": "Edit Custom Name",
+    "edit_water_quality": "Edit Water Quality",
+    "alarm_detail": "Alarm Detail",
+    "handling_records": "Handling Records",
+    "overview": "Overview",
+    "monitoring": "Monitoring",
+    "factory_scene": "Factory Scene",
+    "alarm_list": "Alarm List",
+    "device": {
+      "alarm_subscription": "Alarm Subscription"
+    },
+    "subTitle": {
+      "latest_calibration": "Latest Calibration",
+      "statistics": "Statistics",
+      "measure_history": "Measure History",
+      "calibration_history": "Calibration History",
+      "replace_history": "Replace History",
+      "alarm_history": "Alarm History",
+      "real_time_read": "Real Time Read(5 minutes range)",
+      "history_read": "History Read"
+    }
+  }
+}

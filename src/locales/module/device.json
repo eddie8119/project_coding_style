@@ -51,12 +51,13 @@
         "undefined": "Undefined",
         "not available": "Not Available",
         "error": "Error",
-        "finish": "finish"
+        "finish": "finish",
+        "failed": "Failed"
       },
       "handle_action": {
         "remote_cleaning": "Suggested to perform remote cleaning and calibration",
-        "electrode_replacement": "Electrode component replacement",
-        "electrode_reached_life": "Electrode has reached its service life"
+        "electrode_replacement": "Electrode component replacement. Please contact HSWE",
+        "electrode_reached_life": "Electrode has reached its service life. Please contact HSWE"
       },
       "warning": "Warning",
       "caution": "Caution",
@@ -122,12 +123,13 @@
         "undefined": "未定義",
         "not available": "不可用",
         "error": "錯誤",
-        "finish": "完成"
+        "finish": "完成",
+        "failed": "失敗"
       },
       "handle_action": {
         "remote_cleaning": "建議執行遠端清洗校正",
-        "electrode_replacement": "電極部品更換",
-        "electrode_reached_life": "電極達使用壽命"
+        "electrode_replacement": "電極部品需更換。請聯絡幸瑋",
+        "electrode_reached_life": "電極達使用壽命。請聯絡幸瑋"
       },
       "warning": "警告",
       "caution": "注意",
@@ -193,12 +195,13 @@
         "undefined": "未定義",
         "not available": "利用不可",
         "error": "エラー",
-        "finish": "完成"
+        "finish": "完成",
+        "failed": "失敗"
       },
       "handle_action": {
         "remote_cleaning": "遠隔洗浄・校正の実行を推奨",
-        "electrode_replacement": "電極部品の交換",
-        "electrode_reached_life": "電極の使用寿命に達しました"
+        "electrode_replacement": "電極部品の交換。幸瑋にご連絡ください",
+        "electrode_reached_life": "電極の使用寿命に達しました。幸瑋にご連絡ください"
       },
       "warning": "警告",
       "caution": "注意",

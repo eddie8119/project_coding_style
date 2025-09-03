@@ -17,7 +17,7 @@ module.exports = {
     parser: '@typescript-eslint/parser', // Parser for <script> blocks
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint', 'import'],
+  plugins: ['vue', '@typescript-eslint', 'import'],
   overrides: [
     {
       files: ['*.vue'],
@@ -26,7 +26,7 @@ module.exports = {
         parser: '@typescript-eslint/parser',
       },
       rules: {
-        'vue/multi-word-component-names': 'off',
+        // 'vue/multi-word-component-names': 'off',
       },
     },
   ],
@@ -37,7 +37,7 @@ module.exports = {
         endOfLine: 'auto',
       },
     ],
-    'vue/valid-template-root': 'off',
+    'vue/valid-template-root': 'error',
     'vue/no-unused-vars': 'warn',
     '@typescript-eslint/no-unused-vars': 'warn',
 
@@ -98,6 +98,15 @@ module.exports = {
         memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
         // 忽略大小寫
         ignoreCase: true,
+      },
+    ],
+    'vue/composition-api-order': [
+      'error',
+      {
+        order: ['defineProps', 'defineEmits', 'defineExpose', 'defineOptions'],
+        groups: {
+          import: false, // 關掉 import 檢查
+        },
       },
     ],
   },

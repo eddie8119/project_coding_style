@@ -49,7 +49,7 @@ export function setupAutoRotation(
 } {
   const autoRotateState = { value: true };
   const isPausedState = { value: false }; // 用於外部控制的暫停狀態
-  const rotationSpeed = 0.005;
+  const rotationSpeed = 0.003; // 降低旋轉速度，原值為 0.005
   let userInteracting = false;
   let interactionTimeout: number | undefined;
 

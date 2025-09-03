@@ -6,7 +6,7 @@
     </div>
     <div class="flex w-full flex-col gap-4">
       <div class="flex w-full items-center justify-between">
-        <div class="flex w-[80%] items-center">
+        <div class="flex w-[85%] items-center">
           <el-radio-group v-model="queryMode" class="mr-2" :disabled="isLoading">
             <el-radio-button label="days"> {{ t('label.quick_date_selector') }} </el-radio-button>
             <el-radio-button label="custom"> {{ t('label.custom_time_range') }} </el-radio-button>

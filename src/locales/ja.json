@@ -150,12 +150,13 @@
       "undefined": "未定義",
       "not available": "利用不可",
       "error": "エラー",
-      "finish": "完成"
+      "finish": "完成",
+      "failed": "失敗"
     },
     "handle_action": {
       "remote_cleaning": "遠隔洗浄・校正の実行を推奨",
-      "electrode_replacement": "電極部品の交換",
-      "electrode_reached_life": "電極の使用寿命に達しました"
+      "electrode_replacement": "電極部品の交換。幸瑋にご連絡ください",
+      "electrode_reached_life": "電極の使用寿命に達しました。幸瑋にご連絡ください"
     },
     "warning": "警告",
     "caution": "注意",

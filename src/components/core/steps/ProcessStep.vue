@@ -108,7 +108,7 @@ const statusText = computed(() => {
   flex-direction: column;
   align-items: center;
   position: relative;
-  width: 160px; /* Increased width to give titles more space */
+  width: 210px; /* Increased width to give titles more space */
 }
 
 .step-circle {

@@ -32,6 +32,7 @@
           :handle-id="handleId"
           :observation-type="props.observationType"
           :show-alarm-content="showAlarmContent"
+          :show-alarm-severity="showAlarmSeverity"
         />
 
         <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
@@ -74,7 +75,7 @@
 
 <script setup lang="ts">
 import { ElMessage } from 'element-plus';
-import { computed, ref, watch } from 'vue';
+import { computed, nextTick, ref, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRoute } from 'vue-router';
 
@@ -137,9 +138,12 @@ const pageData = ref<{
 const localTag = ref<string>('');
 const localStatus = ref<DeviceStatus>(DeviceStatus.STOPPED);
 const localDeviceActionStatus = ref<DeviceActionStatus | undefined>(undefined);
+// 為了傳遞HandleProcess需要的變數
 const showAlarmTitle = ref<string | null>(null);
 const showAlarmContent = ref<string | null>(null);
+const showAlarmSeverity = ref<string | null>(null);
 
+// 儀器只要不是 NOT_AVAILABLE 就可以做操作
 const isShowHandleProcess = computed(() => {
   return localDeviceActionStatus.value !== DeviceActionStatus.NOT_AVAILABLE;
 });
@@ -157,6 +161,7 @@ const initFetchData = async () => {
     const results = await Promise.allSettled([
       fetchLatestCalibration(id.value),
       fetchLatestMeasure(id.value),
+      refetchDeviceAlarmsRecords(),
     ]);
 
     const latestCalibration =
@@ -188,6 +193,9 @@ watch(
       localDeviceActionStatus.value = newVal.action_status;
       try {
         pageData.value = await initFetchData();
+        await nextTick();
+        updateAlarmDisplay();
+        // 確保 updateAlarmDisplay 總是在 formattedDeviceAlarmRecords 的資料完全更新後才執行
       } catch (error) {
         console.error('Failed to fetch initial data:', error);
       }
@@ -206,17 +214,36 @@ const deviceRealMeasurementData = ref<WsData | undefined>(undefined);
 const handleStatus = ref<string | undefined>(undefined);
 const handleId = ref<string | undefined>(undefined);
 
+// 更新警報介面顯示
+const updateAlarmDisplay = () => {
+  if (
+    formattedDeviceAlarmRecords.value &&
+    formattedDeviceAlarmRecords.value.some(
+      (record) => record.alarm_status === AlarmStatus.UNRESOLVED
+    )
+  ) {
+    showAlarmTitle.value = formattedDeviceAlarmRecords.value[0].details.split(':')[0];
+    showAlarmContent.value = formattedDeviceAlarmRecords.value[0].details.split(':')[1];
+    showAlarmSeverity.value = formattedDeviceAlarmRecords.value[0].severity;
+  } else {
+    showAlarmTitle.value = null;
+    showAlarmContent.value = null;
+  }
+};
+
 // topic 數量不多、處理邏輯簡單，用 if 即可
-watch(wsParsedData, (newVal) => {
+watch(wsParsedData, async (newVal) => {
   if (!newVal) return;
 
   // 先檢查 app 類型，再處理不同狀態
   switch (newVal.app) {
+    // 這個是為了觀測化學式即時監測
     case 'real-time':
       if (newVal.ID === id.value) {
         deviceRealMeasurementData.value = newVal;
       }
       break;
+    // 這個是為了觀測儀器校正的狀態變化
     case 'action':
       // 只有當 action 的 ID 與當前設備 ID 匹配時才處理
       if (newVal.ID === id.value) {
@@ -229,24 +256,13 @@ watch(wsParsedData, (newVal) => {
 
           ElMessage.success(t('message.success.update_success'));
           // 故意延遲的 讓畫面稍微停一下
-          setTimeout(() => {
-            refetchDeviceAlarmsRecords();
+          setTimeout(async () => {
+            await refetchDeviceAlarmsRecords();
+            updateAlarmDisplay();
           }, 5000);
         }
       }
       break;
-  }
-});
-
-// 處理 alarm 介面提示
-watch(formattedDeviceAlarmRecords, (newVal) => {
-  if (!newVal) return;
-  if (newVal.some((record) => record.alarm_status === AlarmStatus.UNRESOLVED)) {
-    showAlarmTitle.value = newVal[0].details.split(':')[0];
-    showAlarmContent.value = newVal[0].details.split(':')[1];
-  } else {
-    showAlarmTitle.value = null;
-    showAlarmContent.value = null;
   }
 });
 
@@ -263,7 +279,7 @@ const updateDeviceData = async (updatedDevice: Device) => {
 
     await patchDevice(fetchedDevice.value.ID, changes);
     applyLocalUpdate(changes);
-    refetchDevice();
+    await refetchDevice();
     ElMessage.success(t('message.success.update_success'));
   } catch (error) {
     console.error('Failed to update device:', error);

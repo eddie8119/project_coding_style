@@ -23,7 +23,7 @@ interface UseAlarmRecordsReturn {
   isLoading: Ref<boolean>;
   lastUpdateTime: Ref<string | null>;
   formattedDeviceAlarmRecords: Ref<AlarmRecord[] | null>;
-  refetchDeviceAlarmsRecords: () => void;
+  refetchDeviceAlarmsRecords: () => Promise<void>;
 }
 
 export function useAlarmRecords(id: string): UseAlarmRecordsReturn {
@@ -31,7 +31,7 @@ export function useAlarmRecords(id: string): UseAlarmRecordsReturn {
     data: fetchedDeviceAlarmsRecords,
     isLoading,
     isSuccess,
-    refetch: refetchDeviceAlarmsRecords,
+    refetch: refetchQueryAlarmsRecords,
   } = useQuery({
     queryKey: ['device-alarm-records', id],
     queryFn: async () => {
@@ -46,6 +46,10 @@ export function useAlarmRecords(id: string): UseAlarmRecordsReturn {
     staleTime: 1000 * 60 * 5,
     enabled: computed(() => !!id),
   });
+
+  const refetchDeviceAlarmsRecords = async (): Promise<void> => {
+    await refetchQueryAlarmsRecords();
+  };
 
   watchEffect(() => {
     if (isSuccess.value) {

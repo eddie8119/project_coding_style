@@ -54,13 +54,11 @@ const props = defineProps({
 });
 
 const emit = defineEmits(['update:modelValue', 'submit', 'cancel']);
-
-const { t } = useI18n();
-
 const dialogVisible = computed({
   get: () => props.modelValue,
   set: (value) => emit('update:modelValue', value),
 });
+const { t } = useI18n();
 
 const onSubmit = () => {
   emit('submit');

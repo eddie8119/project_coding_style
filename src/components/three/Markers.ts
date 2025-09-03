@@ -87,7 +87,7 @@ function createLabelSprite(label: string, color: string = '#ff0000'): THREE.Spri
   const texture = new THREE.CanvasTexture(canvas);
   const spriteMaterial = new THREE.SpriteMaterial({ map: texture });
   const sprite = new THREE.Sprite(spriteMaterial);
-  sprite.scale.set(0.5, 0.5, 1);
+  sprite.scale.set(1.2, 1.2, 1); // 白色標籤區域尺寸
 
   return sprite;
 }

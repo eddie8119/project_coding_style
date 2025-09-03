@@ -59,7 +59,8 @@ export const useAuthentication = (): UseAuthenticationReturn => {
   ];
 
   const handleAuthenticationChange = (value: string) => {
-    currentAuthentication.value = value;
+    if (value === 'user') resetProfileAction();
+    if (value === 'logout') logoutAction();
   };
 
   return {

@@ -1,38 +1,38 @@
 <template>
   <div class="flex items-center gap-2 md:gap-3">
     <ShowNowTime />
-    <div v-for="nav in navItems" :key="nav.id" class="relative flex items-center">
-      <button @click="nav.action">
+    <div v-for="nav in navItems" :key="nav.id" class="flex items-center">
+      <!-- 下拉選項 -->
+      <el-dropdown
+        v-if="nav.dropdownItems"
+        :trigger="'click'"
+        @command="(command) => nav.action(command)"
+      >
+        <button class="flex items-center">
+          <img
+            :src="getIconUrl(nav.icon)"
+            :alt="`${nav.name}-Icon`"
+            class="icon-hover icon-basic"
+          />
+        </button>
+        <template #dropdown>
+          <el-dropdown-menu>
+            <el-dropdown-item
+              v-for="item in nav.dropdownItems"
+              :key="item.value"
+              :command="item.value"
+            >
+              {{ t(`dropdown.${item.label}`) }}
+            </el-dropdown-item>
+          </el-dropdown-menu>
+        </template>
+      </el-dropdown>
+      <!-- 沒有下拉選項 -->
+      <div v-else>
         <img :src="getIconUrl(nav.icon)" :alt="`${nav.name}-Icon`" class="icon-hover icon-basic" />
-      </button>
-
-      <!-- Language Dropdown -->
-      <div
-        v-if="nav.name === 'Global'"
-        v-show="isLanguageDropdownOpen"
-        ref="languageDropdownRef"
-        class="absolute right-0 top-full z-10 mt-2"
-      >
-        <NavBarItemAccordion
-          :items="languages"
-          :selected-item="currentLanguage"
-          @select="(code: string) => handleLanguageSelect(code)"
-        />
-      </div>
-
-      <!-- Authentication Dropdown -->
-      <div
-        v-if="nav.name === 'Authentication'"
-        v-show="isAuthenticationDropdownOpen"
-        ref="authenticationDropdownRef"
-        class="absolute right-0 top-full z-10 mt-2"
-      >
-        <NavBarItemAccordion
-          :items="authentications"
-          @select="(code: string) => handleAuthenticationSelect(code)"
-        />
       </div>
     </div>
+    <!-- 顯示身分 -->
     <p class="text-sm text-black-400">
       {{ isAdmin ? t('common.role.admin') : t('common.role.user') }}
     </p>
@@ -41,12 +41,11 @@
 </template>
 
 <script setup lang="ts">
-import { onClickOutside } from '@vueuse/core';
-import { computed, ref } from 'vue';
+import { ElDropdown, ElDropdownItem, ElDropdownMenu } from 'element-plus';
+import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 import MobileNav from './MobileNav.vue';
-import NavBarItemAccordion from './NavBarItemAccordion.vue';
 import ShowNowTime from './ShowNowTime.vue';
 
 import type { NavItem } from '@/types/layout';
@@ -60,62 +59,27 @@ import { getIconUrl } from '@/utils/assetUrl';
 
 const { t } = useI18n();
 const authStore = useAuthStore();
-const { currentLanguage, languages, handleLanguageChange } = useLocale();
+const { languages, handleLanguageChange } = useLocale();
 const { authentications, handleAuthenticationChange } = useAuthentication();
 const { isAdmin } = useAuth();
 
-// const toggleTheme = inject('toggleTheme') as () => void;
-
-const languageDropdownRef = ref<HTMLElement | null>(null);
-const authenticationDropdownRef = ref<HTMLElement | null>(null);
-const isLanguageDropdownOpen = ref<boolean>(false);
-const isAuthenticationDropdownOpen = ref<boolean>(false);
-
-// Custom handlers that close dropdowns after selection
+// 為了解決 型別切換
 const handleLanguageSelect = (code: string): void => {
-  handleLanguageChange(code as Language); //轉換
-  isLanguageDropdownOpen.value = false;
+  handleLanguageChange(code as Language);
 };
-
-const handleAuthenticationSelect = (value: string): void => {
-  handleAuthenticationChange(value);
-  isAuthenticationDropdownOpen.value = false;
-};
-
-const toggleLanguage = () => {
-  isAuthenticationDropdownOpen.value = false;
-  isLanguageDropdownOpen.value = !isLanguageDropdownOpen.value;
-};
-
-const toggleAuthentication = () => {
-  isLanguageDropdownOpen.value = false;
-  isAuthenticationDropdownOpen.value = !isAuthenticationDropdownOpen.value;
-};
-
-// 點擊外部關閉彈窗
-onClickOutside(languageDropdownRef, () => {
-  isLanguageDropdownOpen.value = false;
-});
-
-onClickOutside(authenticationDropdownRef, () => {
-  isAuthenticationDropdownOpen.value = false;
-});
 
 const navItems = computed<NavItem[]>(() => {
   const baseItems: NavItem[] = [
-    // {
-    //   id: 0,
-    //   name: 'LightSet',
-    //   icon: 'LightSet',
-    //   label: t('common.theme'),
-    //   action: toggleTheme,
-    // },
     {
       id: 1,
       name: 'Global',
       icon: 'Global',
       label: t('common.language'),
-      action: toggleLanguage,
+      action: handleLanguageSelect,
+      dropdownItems: languages.map((lang) => ({
+        label: lang.label,
+        value: lang.code,
+      })),
     },
   ];
 
@@ -133,7 +97,11 @@ const navItems = computed<NavItem[]>(() => {
         name: 'Authentication',
         icon: 'UserCircle',
         label: t('common.authentication'),
-        action: toggleAuthentication,
+        action: handleAuthenticationChange,
+        dropdownItems: authentications.map((auth) => ({
+          label: auth.label,
+          value: auth.code,
+        })),
       }
     );
   }

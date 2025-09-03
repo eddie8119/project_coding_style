@@ -21,7 +21,7 @@ interface LanguageItem {
 interface UseLocaleReturn {
   currentLanguage: Ref<Language>;
   languages: LanguageItem[];
-  handleLanguageChange: (lang: Language) => void;
+  handleLanguageChange: (value: Language) => void;
 }
 
 export const useLocale = (): UseLocaleReturn => {
@@ -34,11 +34,11 @@ export const useLocale = (): UseLocaleReturn => {
     { code: Language.JA, label: Language.JA },
   ];
 
-  const handleLanguageChange = (lang: Language) => {
-    locale.value = lang;
-    currentLanguage.value = lang;
-    localStorage.setItem('language', lang);
-    document.documentElement.lang = lang; //識別網站語言
+  const handleLanguageChange = (value: Language) => {
+    locale.value = value;
+    currentLanguage.value = value;
+    localStorage.setItem('language', value);
+    document.documentElement.lang = value; //識別網站語言
   };
 
   return {

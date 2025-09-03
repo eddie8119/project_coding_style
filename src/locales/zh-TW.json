@@ -153,12 +153,13 @@
       "undefined": "未定義",
       "not available": "不可用",
       "error": "錯誤",
-      "finish": "完成"
+      "finish": "完成",
+      "failed": "失敗"
     },
     "handle_action": {
       "remote_cleaning": "建議執行遠端清洗校正",
-      "electrode_replacement": "電極部品更換",
-      "electrode_reached_life": "電極達使用壽命"
+      "electrode_replacement": "電極部品需更換。請聯絡幸瑋",
+      "electrode_reached_life": "電極達使用壽命。請聯絡幸瑋"
     },
     "warning": "警告",
     "caution": "注意",

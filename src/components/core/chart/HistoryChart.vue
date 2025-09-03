@@ -8,16 +8,18 @@ import { computed, nextTick, onActivated, onDeactivated, onMounted, ref, watch }
 
 import type { MeasureHistory } from '@/types/measure';
 
-const chartContainer = ref<HTMLElement | null>(null);
-const chartInstance = ref<echarts.ECharts | null>(null);
-const lastUpdateTime = ref<string>('');
-const isChartReady = ref<boolean>(false);
+import { createHistoryChartOption } from '@/config/chart/historyChartOptions';
 
 const props = defineProps<{
   measureHistoryData: MeasureHistory[];
   unit: string;
   mainLabel: string;
 }>();
+
+const chartContainer = ref<HTMLElement | null>(null);
+const chartInstance = ref<echarts.ECharts | null>(null);
+const lastUpdateTime = ref<string>('');
+const isChartReady = ref<boolean>(false);
 
 const resizeChart = () => {
   if (chartInstance.value && isChartReady.value) {
@@ -75,13 +77,13 @@ watch(windowWidth, () => {
   }
 });
 
-onMounted(() => {
-  initChart();
+onMounted(async () => {
+  await initChart();
 });
 
-onActivated(() => {
+onActivated(async () => {
   if (!chartInstance.value) {
-    initChart();
+    await initChart();
   }
 });
 
@@ -92,135 +94,91 @@ onDeactivated(() => {
 function setChartOption() {
   if (!chartInstance.value) return;
 
-  // props.measureHistoryData 不是一個陣列（可能是 undefined 或 null），所以不能用 ...props.measureHistor
-  // 防呆：確保 measureHistoryData 是陣列
-  const data = Array.isArray(props.measureHistoryData) ? props.measureHistoryData : [];
+  // Sort data and insert nulls for time breaks
+  const sortedData = Array.isArray(props.measureHistoryData) ? [...props.measureHistoryData] : [];
 
-  // Create a sorted copy to avoid mutating the prop and ensure the line chart is drawn correctly.
-  const sortedData = [...data].sort((a, b) => parseInt(a.version) - parseInt(b.version));
+  const timeData: (string | null)[] = [];
+  const unitData: (number | null)[] = [];
+  const markAreaData: [{ name: string; xAxis: string }, { xAxis: string }][] = [];
+  const timeThreshold = 5 * 60 * 1000; // 5-minute threshold for a break
 
-  const timeData = sortedData.map((item: MeasureHistory) => {
-    const date = new Date(parseInt(item.version));
-    return `${date.getMonth() + 1}/${date.getDate()} ${date.getHours().toString().padStart(2, '0')}:${date.getMinutes().toString().padStart(2, '0')}`;
-  });
+  if (sortedData.length > 0) {
+    // Always add the first data point
+    const firstItem = sortedData[0];
+    const firstDate = new Date(parseInt(firstItem.version));
+    timeData.push(
+      `${firstDate.getMonth() + 1}/${firstDate.getDate()} ${firstDate.getHours().toString().padStart(2, '0')}:${firstDate.getMinutes().toString().padStart(2, '0')}`
+    );
+    unitData.push(parseFloat(firstItem[props.unit as keyof MeasureHistory] as string));
 
-  const unitData = sortedData.map((item: MeasureHistory) =>
-    parseFloat(item[props.unit as keyof MeasureHistory] as string)
-  );
+    // Process the rest of the data to find breaks
+    for (let i = 1; i < sortedData.length; i++) {
+      const prevItem = sortedData[i - 1];
+      const currentItem = sortedData[i];
+      const prevTimestamp = parseInt(prevItem.version);
+      const currentTimestamp = parseInt(currentItem.version);
+
+      // If the gap is too large, insert a break and create a markArea
+      if (currentTimestamp - prevTimestamp > timeThreshold) {
+        const prevDate = new Date(prevTimestamp);
+        const prevDateString = `${prevDate.getMonth() + 1}/${prevDate.getDate()} ${prevDate.getHours().toString().padStart(2, '0')}:${prevDate.getMinutes().toString().padStart(2, '0')}`;
+
+        const currentDate = new Date(currentTimestamp);
+        const currentDateString = `${currentDate.getMonth() + 1}/${currentDate.getDate()} ${currentDate.getHours().toString().padStart(2, '0')}:${currentDate.getMinutes().toString().padStart(2, '0')}`;
+
+        markAreaData.push([{ name: 'N/A', xAxis: prevDateString }, { xAxis: currentDateString }]);
+
+        timeData.push(null);
+        unitData.push(null);
+      }
+
+      // Add the current data point
+      const currentDate = new Date(currentTimestamp);
+      timeData.push(
+        `${currentDate.getMonth() + 1}/${currentDate.getDate()} ${currentDate.getHours().toString().padStart(2, '0')}:${currentDate.getMinutes().toString().padStart(2, '0')}`
+      );
+      unitData.push(parseFloat(currentItem[props.unit as keyof MeasureHistory] as string));
+    }
+  }
 
   const yMin = computed(() => {
-    if (!unitData.length) return 0;
-    return Math.floor(Math.min(...unitData) * 0.98); // 下緣留2%
+    const validData = unitData.filter((d): d is number => d !== null);
+    if (!validData.length) return 0;
+    return Math.floor(Math.min(...validData) * 0.98); // 下緣留2%
   });
   const yMax = computed(() => {
-    if (!unitData.length) return 10;
-    return Math.ceil(Math.max(...unitData) * 1.02); // 上緣留2%
+    const validData = unitData.filter((d): d is number => d !== null);
+    if (!validData.length) return 10;
+    return Math.ceil(Math.max(...validData) * 1.02); // 上緣留2%
   });
 
-  const baseOption = {
-    tooltip: {
-      trigger: 'axis',
-      axisPointer: { animation: false },
+  const option = createHistoryChartOption(
+    {
+      timeData,
+      unitData,
+      yMin: yMin.value,
+      yMax: yMax.value,
+      markAreaData,
     },
-    toolbox: {
-      feature: {
-        dataZoom: { show: false },
-        restore: {},
-        saveAsImage: {},
-      },
-    },
-    axisPointer: {
-      link: [{ xAxisIndex: 'all' }],
-    },
-  };
+    props.unit
+  );
 
-  const option = {
-    ...baseOption,
-    legend: {
-      data: [props.unit],
-      left: 10,
-    },
-    dataZoom: [
-      { show: true, realtime: true, start: 0, end: 100, xAxisIndex: 0 },
-      { type: 'inside', realtime: true, start: 0, end: 100, xAxisIndex: 0 },
-    ],
-    grid: {
-      left: 60,
-      right: 50,
-      bottom: 80,
-    },
-    xAxis: [
-      {
-        type: 'category',
-        boundaryGap: false,
-        axisLine: { onZero: true },
-        axisLabel: {
-          interval: 0,
-          rotate: 45,
-          fontSize: 12,
-          formatter: function (value: string, index: number) {
-            const total = timeData.length;
-            // 只顯示 15 個標籤
-            const showEvery = Math.ceil(total / 15);
-            if (index % showEvery === 0) {
-              return value; // 或 value.split(' ')[1] 只顯示時間
-            }
-            return '';
-          },
-        },
-        data: timeData,
-      },
-    ],
-    yAxis: [
-      {
-        name: props.unit,
-        type: 'value',
-        max: yMax.value,
-        min: yMin.value,
-      },
-    ],
-    series: [
-      {
-        name: props.unit,
-        type: 'line',
-        // smooth: true,
-        symbol: 'none',
-        // sampling: 'lttb',
-        data: unitData,
-        lineStyle: {
-          width: 1,
-          color: '#0050be',
-        },
-        itemStyle: {
-          color: '#0050be',
-        },
-        markPoint: {
-          data: [
-            { type: 'max', name: '最高點', itemStyle: { color: '#0050be' } },
-            {
-              type: 'min',
-              name: '最低點',
-              itemStyle: { color: '#0050be' },
-              symbolRotate: 180,
-            },
-          ],
-        },
-        markLine: {
-          data: [
-            { type: 'max', name: '最高點', itemStyle: { color: '5dd65c' } },
-            {
-              type: 'min',
-              name: '最低點',
-              itemStyle: { color: '#0050be' },
-              symbolRotate: 180,
-            },
-          ],
-        },
-      },
-    ],
-  };
-
+  // 使用 notMerge: true 確保完全重新渲染圖表
   chartInstance.value.setOption(option, true);
+
+  // 在設置選項後，明確重置 dataZoom 狀態
+  // 但是沒發揮作用
+  nextTick(() => {
+    if (chartInstance.value) {
+      chartInstance.value.dispatchAction({
+        type: 'dataZoom',
+        start: 0,
+        end: 100,
+        // xAxisIndex: 0
+      });
+    }
+  });
+
   lastUpdateTime.value = new Date().toLocaleString();
 }
 
@@ -228,7 +186,9 @@ function setChartOption() {
 watch(
   () => props.measureHistoryData,
   () => {
-    setChartOption();
+    if (isChartReady.value) {
+      setChartOption();
+    }
   },
   { deep: true }
 );

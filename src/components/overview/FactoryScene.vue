@@ -14,11 +14,14 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { computed, onActivated, onDeactivated, ref, watch } from 'vue';
 
 import Loading from '@/components/core/loading/Loading.vue';
-import { createAnimationController } from '@/components/three/AnimationController';
-import { createControls, setupAutoRotation } from '@/components/three/Controls';
-import { setupLighting } from '@/components/three/Lighting';
-import { addFixedMarkers } from '@/components/three/Markers';
-import { loadModel } from '@/components/three/ModelLoader';
+import { positionLists } from '@/constants/dummyData';
+import { ObservationType } from '@/types/device';
+import { DeviceStatus } from '@/types/device';
+import { createAnimationController } from '@/utils/three/AnimationController';
+import { createControls, setupAutoRotation } from '@/utils/three/Controls';
+import { setupLighting } from '@/utils/three/Lighting';
+import { addFixedMarkers } from '@/utils/three/Markers';
+import { loadModel } from '@/utils/three/ModelLoader';
 import {
   CameraViewType,
   createCamera,
@@ -26,10 +29,7 @@ import {
   createScene,
   handleResize,
   setCameraPosition,
-} from '@/components/three/SceneSetup';
-import { positionLists } from '@/constants/dummyData';
-import { ObservationType } from '@/types/device';
-import { DeviceStatus } from '@/types/device';
+} from '@/utils/three/SceneSetup';
 
 const props = defineProps<{
   monitoringItems: {
@@ -76,7 +76,7 @@ let cameraRef: THREE.PerspectiveCamera | null = null;
 let controlsRef: OrbitControls | null = null;
 
 // 初始化場景
-async function initScene() {
+const initScene = async () => {
   if (!sceneContainer.value) return;
   isLoading.value = true;
 
@@ -205,7 +205,7 @@ async function initScene() {
       };
     }
   );
-}
+};
 
 const cleanupScene = () => {
   if (cleanup) {

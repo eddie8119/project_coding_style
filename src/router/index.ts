@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router';
 
-import { cleanupAllAnimations } from '@/components/three/AnimationController';
 import AppLayout from '@/layouts/AppLayout.vue';
 import { useAuthStore } from '@/stores/auth';
+import { cleanupAllAnimations } from '@/utils/three/AnimationController';
 
 const routes: Array<RouteRecordRaw> = [
   {

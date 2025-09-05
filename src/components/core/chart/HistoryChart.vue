@@ -3,10 +3,10 @@
 </template>
 
 <script setup lang="ts">
-import * as echarts from 'echarts';
 import { computed, nextTick, onActivated, onDeactivated, onMounted, ref, watch } from 'vue';
 
 import type { MeasureHistory } from '@/types/measure';
+import type { ECharts } from 'echarts';
 
 import { createHistoryChartOption } from '@/config/chart/historyChartOptions';
 
@@ -17,9 +17,11 @@ const props = defineProps<{
 }>();
 
 const chartContainer = ref<HTMLElement | null>(null);
-const chartInstance = ref<echarts.ECharts | null>(null);
+const chartInstance = ref<ECharts | null>(null);
 const lastUpdateTime = ref<string>('');
 const isChartReady = ref<boolean>(false);
+
+let resizeObserver: ResizeObserver | null = null;
 
 const resizeChart = () => {
   if (chartInstance.value && isChartReady.value) {
@@ -31,67 +33,7 @@ const resizeChart = () => {
   }
 };
 
-let resizeObserver: ResizeObserver | null = null;
-
-async function initChart() {
-  try {
-    if (chartContainer.value && !chartInstance.value) {
-      await nextTick();
-      chartInstance.value = echarts.init(chartContainer.value);
-      setChartOption();
-      resizeObserver = new ResizeObserver(resizeChart);
-      resizeObserver.observe(chartContainer.value);
-      isChartReady.value = true;
-    }
-  } catch (error) {
-    console.error('Chart initialization failed:', error);
-    isChartReady.value = false;
-  }
-}
-
-function cleanupChart() {
-  if (resizeObserver && chartContainer.value) {
-    resizeObserver.unobserve(chartContainer.value);
-    resizeObserver.disconnect();
-    resizeObserver = null;
-  }
-  if (chartInstance.value) {
-    try {
-      chartInstance.value.dispose();
-    } catch (error) {
-      console.warn('Chart dispose failed:', error);
-    } finally {
-      chartInstance.value = null;
-      isChartReady.value = false;
-    }
-  }
-}
-
-const windowWidth = computed(() => {
-  return window.innerWidth;
-});
-
-watch(windowWidth, () => {
-  if (isChartReady.value) {
-    resizeChart();
-  }
-});
-
-onMounted(async () => {
-  await initChart();
-});
-
-onActivated(async () => {
-  if (!chartInstance.value) {
-    await initChart();
-  }
-});
-
-onDeactivated(() => {
-  cleanupChart();
-});
-
-function setChartOption() {
+const setChartOption = () => {
   if (!chartInstance.value) return;
 
   // Sort data and insert nulls for time breaks
@@ -180,7 +122,66 @@ function setChartOption() {
   });
 
   lastUpdateTime.value = new Date().toLocaleString();
-}
+};
+
+const initChart = async () => {
+  try {
+    if (chartContainer.value && !chartInstance.value) {
+      const echarts = await import('echarts');
+      await nextTick();
+      chartInstance.value = echarts.init(chartContainer.value);
+      setChartOption();
+      resizeObserver = new ResizeObserver(resizeChart);
+      resizeObserver.observe(chartContainer.value);
+      isChartReady.value = true;
+    }
+  } catch (error) {
+    console.error('Chart initialization failed:', error);
+    isChartReady.value = false;
+  }
+};
+
+const cleanupChart = () => {
+  if (resizeObserver && chartContainer.value) {
+    resizeObserver.unobserve(chartContainer.value);
+    resizeObserver.disconnect();
+    resizeObserver = null;
+  }
+  if (chartInstance.value) {
+    try {
+      chartInstance.value.dispose();
+    } catch (error) {
+      console.warn('Chart dispose failed:', error);
+    } finally {
+      chartInstance.value = null;
+      isChartReady.value = false;
+    }
+  }
+};
+
+const windowWidth = computed(() => {
+  return window.innerWidth;
+});
+
+watch(windowWidth, () => {
+  if (isChartReady.value) {
+    resizeChart();
+  }
+});
+
+onMounted(async () => {
+  await initChart();
+});
+
+onActivated(async () => {
+  if (!chartInstance.value) {
+    await initChart();
+  }
+});
+
+onDeactivated(() => {
+  cleanupChart();
+});
 
 // Watch for data changes and update the chart
 watch(

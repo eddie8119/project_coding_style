@@ -4,7 +4,6 @@
 
 <script setup lang="ts">
 import { useWindowSize } from '@vueuse/core';
-import * as echarts from 'echarts';
 import { onMounted, ref, watch } from 'vue';
 
 const props = defineProps({
@@ -116,8 +115,9 @@ const updateChart = () => {
   }
 };
 
-onMounted(() => {
+onMounted(async () => {
   if (gauge.value) {
+    const echarts = await import('echarts');
     chart.value = echarts.init(gauge.value);
     updateChart();
   }

@@ -5,8 +5,8 @@
       <span v-if="lastUpdateTime" class="text-xs text-gray-500">{{ lastUpdateTime }}</span>
     </div>
     <div class="flex w-full flex-col gap-4">
-      <div class="flex w-full items-center justify-between">
-        <div class="flex w-[85%] items-center">
+      <div class="flex w-full flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+        <div class="flex flex-row items-center lg:w-[85%]">
           <el-radio-group v-model="queryMode" class="mr-2" :disabled="isLoading">
             <el-radio-button label="days"> {{ t('label.quick_date_selector') }} </el-radio-button>
             <el-radio-button label="custom"> {{ t('label.custom_time_range') }} </el-radio-button>
@@ -36,7 +36,7 @@
               format="YYYY-MM-DD HH:mm:ss"
               value-format="x"
               :placeholder="t('label.start_time')"
-              class="w-[200px]"
+              class="w-full md:max-w-[140px] lg:max-w-[200px]"
               :disabled="isLoading"
             />
             <span>-</span>
@@ -46,7 +46,7 @@
               format="YYYY-MM-DD HH:mm:ss"
               value-format="x"
               :placeholder="t('label.end_time')"
-              class="w-[200px]"
+              class="w-full md:max-w-[140px] lg:max-w-[200px]"
               :disabled="isLoading"
             />
             <el-button
@@ -59,14 +59,18 @@
             </el-button>
           </div>
         </div>
-        <div class="flex items-center gap-2">
+        <div
+          class="flex w-full flex-col items-start gap-2 sm:flex-row sm:items-center md:w-auto md:justify-end"
+        >
           <p>{{ t('common.download') }}:</p>
-          <TextButton variant="primary" size="sm" class="w-full sm:w-auto" @click="">
-            {{ t('button.pdf') }}
-          </TextButton>
-          <TextButton variant="primary" size="sm" class="w-full sm:w-auto" @click="">
-            {{ t('button.csv') }}
-          </TextButton>
+          <div class="flex w-full gap-2 sm:w-auto">
+            <TextButton variant="primary" size="sm" class="flex-1 sm:flex-none" @click="">
+              {{ t('button.pdf') }}
+            </TextButton>
+            <TextButton variant="primary" size="sm" class="flex-1 sm:flex-none" @click="">
+              {{ t('button.csv') }}
+            </TextButton>
+          </div>
         </div>
       </div>
 

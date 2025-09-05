@@ -165,6 +165,21 @@ const initFetchData = async () => {
   }
 };
 
+const handleRealTimeUpdate = (realTimeData: RealTimeData) => {
+  const idx = devices.value.findIndex((device: Device) => device.ID === realTimeData.ID);
+  if (idx === -1) return;
+
+  const deviceToUpdate = devices.value[idx];
+  const dataToUpdate = { ...realTimeData };
+
+  delete (dataToUpdate as Partial<RealTimeData>).app;
+  delete (dataToUpdate as Partial<RealTimeData>).version;
+
+  devices.value[idx] = { ...deviceToUpdate, ...dataToUpdate };
+  devices.value = [...devices.value];
+  updateLastUpdateTime();
+};
+
 watch(
   fetchedDevices,
   async (newDevices) => {
@@ -176,21 +191,13 @@ watch(
 );
 
 watch(wsParsedData, (newVal) => {
+  // 確認 newVal 存在
   if (!newVal || (newVal as RealTimeData).app !== 'real-time') return;
 
-  const realTimeData = newVal as RealTimeData;
-  const idx = devices.value.findIndex((device: Device) => device.ID === realTimeData.ID);
-
-  if (idx !== -1) {
-    const deviceToUpdate = devices.value[idx];
-    const dataToUpdate = { ...realTimeData };
-
-    delete (dataToUpdate as Partial<RealTimeData>).app;
-    delete (dataToUpdate as Partial<RealTimeData>).version;
-
-    devices.value[idx] = { ...deviceToUpdate, ...dataToUpdate };
-    devices.value = [...devices.value];
-    updateLastUpdateTime();
+  switch (newVal.app) {
+    case 'real-time':
+      handleRealTimeUpdate(newVal as RealTimeData);
+      break;
   }
 });
 </script>

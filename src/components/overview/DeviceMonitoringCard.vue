@@ -86,7 +86,7 @@ const emit = defineEmits<{
   (e: 'observation-change', val: ObservationType): void;
 }>();
 
-function handleChoose() {
+const handleChoose = () => {
   emit('observation-change', itemData.value.ID);
-}
+};
 </script>

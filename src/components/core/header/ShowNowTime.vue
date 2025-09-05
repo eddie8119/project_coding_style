@@ -5,25 +5,14 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from 'vue';
 
+import { formatDateTimeWithSeconds } from '@/utils/dateTime';
 const formattedTime = ref<string>('');
-
-// 製作時間格式函式
-function formatDate(date: Date): string {
-  const pad = (n: number) => n.toString().padStart(2, '0');
-  const year = date.getFullYear();
-  const month = pad(date.getMonth() + 1);
-  const day = pad(date.getDate());
-  const hour = pad(date.getHours());
-  const minute = pad(date.getMinutes());
-  const second = pad(date.getSeconds());
-  return `${year}-${month}-${day} ${hour}:${minute}:${second}`;
-}
 
 let timer: ReturnType<typeof setInterval>;
 
 const updateTime = (): void => {
   const now = new Date();
-  formattedTime.value = formatDate(now);
+  formattedTime.value = formatDateTimeWithSeconds(now);
 };
 
 // 注意這組件 是放在<keep-alive>之外的

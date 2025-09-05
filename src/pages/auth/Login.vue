@@ -34,6 +34,7 @@ import LoginForm from '@/components/auth/LoginForm.vue';
 import { useFormError } from '@/composables/useFormError';
 import { useFormValidation } from '@/composables/useFormValidation';
 import { useAuthStore } from '@/stores/auth';
+import { setAccessToken, setRefreshToken } from '@/utils/auth';
 import { loginSchema } from '@/utils/schemas/loginSchema';
 
 const { t } = useI18n();
@@ -63,8 +64,8 @@ const onSubmit = handleSubmit(async (values) => {
     const response = await authApi.login(values as unknown as LoginData);
     if (response.status === 200) {
       const { tokens, role } = response.data;
-      localStorage.setItem('refresh_token', tokens.refresh);
-      localStorage.setItem('access_token', tokens.access);
+      setRefreshToken(tokens.refresh);
+      setAccessToken(tokens.access);
       localStorage.setItem('access_role', role);
       authStore.login(role);
       router.replace(route.query.redirect?.toString() || '/overview');

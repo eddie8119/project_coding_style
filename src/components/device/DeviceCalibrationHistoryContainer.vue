@@ -28,7 +28,7 @@ const { fetchCalibrationHistory } = useDataInsights();
 const isLoading = ref(false);
 const calibrationHistoryData = ref<CaliData[]>([]);
 
-async function initFetchData(deviceId: string) {
+const initFetchData = async (deviceId: string) => {
   if (!deviceId) return;
   isLoading.value = true;
   try {
@@ -40,7 +40,7 @@ async function initFetchData(deviceId: string) {
   } finally {
     isLoading.value = false;
   }
-}
+};
 
 watch(
   () => props.fetchedDevice,

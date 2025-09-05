@@ -59,9 +59,9 @@ const emit = defineEmits<{
   (e: 'change', value: string | number | null): void;
 }>();
 
-function updateValue(value: string | number | null) {
+const updateValue = (value: string | number | null) => {
   emit('update:modelValue', value);
-}
+};
 
 const handleChange = (value: string | number | null) => {
   emit('change', value);

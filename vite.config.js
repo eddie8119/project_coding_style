@@ -1,8 +1,9 @@
+/// <reference types="vitest" />
 import path from 'path';
 
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite';
 import vue from '@vitejs/plugin-vue';
-import { defineConfig } from 'vite';
+import { defineConfig } from 'vitest/config';
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -25,6 +26,18 @@ export default defineConfig({
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
+            if (id.includes('vue')) {
+              return 'vue';
+            }
+            if (id.includes('vue-router')) {
+              return 'vue-router';
+            }
+            if (id.includes('pinia')) {
+              return 'pinia';
+            }
+            if (id.includes('lodash')) {
+              return 'lodash';
+            }
             return 'vendor';
           }
         },

@@ -47,7 +47,7 @@ const addPhData = () => {
   }
 };
 
-function initChart() {
+const initChart = () => {
   if (!chartRef.value) return;
 
   chartInstance = new Chart(chartRef.value, {
@@ -115,7 +115,7 @@ function initChart() {
 
   // Start interval to add new data every 10 seconds
   dataUpdateInterval = window.setInterval(addPhData, 10000);
-}
+};
 
 onActivated(() => {
   initChart();

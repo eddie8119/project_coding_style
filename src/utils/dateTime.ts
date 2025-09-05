@@ -37,16 +37,16 @@ export const formatDateTime = (date: string | Date): string => {
  * @param date - 日期字串或 Date 物件
  * @returns 格式化後的日期時間字串
  */
-export const formatDateTimeWithSeconds = (date: string | Date): string => {
-  const d = new Date(date);
-  const year = d.getFullYear();
-  const month = String(d.getMonth() + 1).padStart(2, '0');
-  const day = String(d.getDate()).padStart(2, '0');
-  const hours = String(d.getHours()).padStart(2, '0');
-  const minutes = String(d.getMinutes()).padStart(2, '0');
-  const seconds = String(d.getSeconds()).padStart(2, '0');
+export const formatDateTimeWithSeconds = (date: Date): string => {
+  const pad = (n: number) => n.toString().padStart(2, '0');
+  const year = date.getFullYear();
+  const month = pad(date.getMonth() + 1);
+  const day = pad(date.getDate());
+  const hour = pad(date.getHours());
+  const minute = pad(date.getMinutes());
+  const second = pad(date.getSeconds());
 
-  return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+  return `${year}-${month}-${day} ${hour}:${minute}:${second}`;
 };
 
 // t: (key: string, values?: Record<string, unknown>) => string

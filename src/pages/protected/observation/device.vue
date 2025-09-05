@@ -76,6 +76,7 @@
 <script setup lang="ts">
 import { ElMessage } from 'element-plus';
 import { computed, nextTick, ref, watch } from 'vue';
+import { defineAsyncComponent } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRoute } from 'vue-router';
 
@@ -83,19 +84,29 @@ import type { CaliData } from '@/types/calibration';
 import type { Device } from '@/types/device';
 import type { ObservationType } from '@/types/device';
 import type { Measure } from '@/types/measure';
-import type { WsData } from '@/types/websocket';
+import type { ActionWsData, WsData } from '@/types/websocket';
 
-import RealTimeRead from '@/components/core/chart/RealTimeRead.vue';
+const RealTimeRead = defineAsyncComponent(() => import('@/components/core/chart/RealTimeRead.vue'));
+const DeviceAlarmHistoryBulletinBoard = defineAsyncComponent(
+  () => import('@/components/core/situationRoom/DeviceAlarmHistoryBulletinBoard.vue')
+);
+const DeviceBasicInfo = defineAsyncComponent(
+  () => import('@/components/device/DeviceBasicInfo.vue')
+);
+const DeviceMeasurement = defineAsyncComponent(
+  () => import('@/components/device/DeviceMeasurement.vue')
+);
+const DeviceReplaceHistory = defineAsyncComponent(
+  () => import('@/components/device/DeviceReplaceHistory.vue')
+);
+const HandleProcess = defineAsyncComponent(() => import('@/components/device/HandleProcess.vue'));
+const HistoryReadContainer = defineAsyncComponent(
+  () => import('@/components/device/HistoryReadContainer.vue')
+);
+const SensorRead = defineAsyncComponent(() => import('@/components/device/SensorRead.vue'));
 import Loading from '@/components/core/loading/Loading.vue';
 import ShowUpdateTime from '@/components/core/ShowUpdateTime.vue';
-import DeviceAlarmHistoryBulletinBoard from '@/components/core/situationRoom/DeviceAlarmHistoryBulletinBoard.vue';
 import StatusShow from '@/components/core/StatusShow.vue';
-import DeviceBasicInfo from '@/components/device/DeviceBasicInfo.vue';
-import DeviceMeasurement from '@/components/device/DeviceMeasurement.vue';
-import DeviceReplaceHistory from '@/components/device/DeviceReplaceHistory.vue';
-import HandleProcess from '@/components/device/HandleProcess.vue';
-import HistoryReadContainer from '@/components/device/HistoryReadContainer.vue';
-import SensorRead from '@/components/device/SensorRead.vue';
 import { useAlarmRecords } from '@/composables/useAlarmRecords';
 import { useAuth } from '@/composables/useAuth';
 import { useDataInsights } from '@/composables/useDataInsights';
@@ -154,7 +165,27 @@ const isHasUnresolved = computed<boolean>(() => {
   );
 });
 
-const initFetchData = async () => {
+watch(
+  fetchedDevice,
+  async (newVal) => {
+    if (newVal) {
+      localTag.value = newVal.tag ?? t('device.no_tag');
+      localStatus.value = newVal.status;
+      localDeviceActionStatus.value = newVal.action_status;
+      try {
+        pageData.value = await initFetchData();
+        await nextTick();
+        updateAlarmDisplay();
+        // 確保 updateAlarmDisplay 總是在 formattedDeviceAlarmRecords 的資料完全更新後才執行
+      } catch (error) {
+        console.error('Failed to fetch initial data:', error);
+      }
+    }
+  },
+  { immediate: true }
+);
+
+async function initFetchData() {
   try {
     if (!id.value) return { latestCalibration: [], latestMeasures: [] };
 
@@ -182,27 +213,7 @@ const initFetchData = async () => {
     console.error('Failed to fetch data:', error);
     return { latestCalibration: [], latestMeasures: [] };
   }
-};
-
-watch(
-  fetchedDevice,
-  async (newVal) => {
-    if (newVal) {
-      localTag.value = newVal.tag ?? t('device.no_tag');
-      localStatus.value = newVal.status;
-      localDeviceActionStatus.value = newVal.action_status;
-      try {
-        pageData.value = await initFetchData();
-        await nextTick();
-        updateAlarmDisplay();
-        // 確保 updateAlarmDisplay 總是在 formattedDeviceAlarmRecords 的資料完全更新後才執行
-      } catch (error) {
-        console.error('Failed to fetch initial data:', error);
-      }
-    }
-  },
-  { immediate: true }
-);
+}
 
 const deviceLatestCalibrationData = computed(
   () => pageData.value?.latestCalibration?.[0] || undefined
@@ -214,8 +225,44 @@ const deviceRealMeasurementData = ref<WsData | undefined>(undefined);
 const handleStatus = ref<string | undefined>(undefined);
 const handleId = ref<string | undefined>(undefined);
 
+// topic 數量不多、處理邏輯簡單，用 if 即可
+watch(wsParsedData, async (newVal) => {
+  if (!newVal) return;
+  if (newVal.ID !== id.value) return;
+
+  // 先檢查 app 類型，再處理不同狀態
+  switch (newVal.app) {
+    // 這個是為了觀測化學式即時監測
+    case 'real-time':
+      handleRealTimeData(newVal);
+      break;
+    // 這個是為了觀測儀器校正的狀態變化
+    case 'action':
+      await handleActionData(newVal);
+
+      break;
+  }
+});
+
+async function handleActionData(newVal: ActionWsData) {
+  // 只有當 action 的 ID 與當前設備 ID 匹配時才處理
+  if (newVal.ID === id.value) {
+    handleStatus.value = newVal.status;
+    handleId.value = newVal.ID;
+
+    if (newVal.status === ProcessStatus.FINISH) {
+      localStatus.value = DeviceStatus.RUNNING;
+      showAlarmTitle.value = null;
+
+      ElMessage.success(t('message.success.update_success'));
+      // 故意延遲的 讓畫面稍微停一下
+      await delayAndRefresh();
+    }
+  }
+}
+
 // 更新警報介面顯示
-const updateAlarmDisplay = () => {
+function updateAlarmDisplay() {
   if (
     formattedDeviceAlarmRecords.value &&
     formattedDeviceAlarmRecords.value.some(
@@ -229,45 +276,22 @@ const updateAlarmDisplay = () => {
     showAlarmTitle.value = null;
     showAlarmContent.value = null;
   }
-};
+}
 
-// topic 數量不多、處理邏輯簡單，用 if 即可
-watch(wsParsedData, async (newVal) => {
-  if (!newVal) return;
-
-  // 先檢查 app 類型，再處理不同狀態
-  switch (newVal.app) {
-    // 這個是為了觀測化學式即時監測
-    case 'real-time':
-      if (newVal.ID === id.value) {
-        deviceRealMeasurementData.value = newVal;
-      }
-      break;
-    // 這個是為了觀測儀器校正的狀態變化
-    case 'action':
-      // 只有當 action 的 ID 與當前設備 ID 匹配時才處理
-      if (newVal.ID === id.value) {
-        handleStatus.value = newVal.status;
-        handleId.value = newVal.ID;
-
-        if (newVal.status === ProcessStatus.FINISH) {
-          localStatus.value = DeviceStatus.RUNNING;
-          showAlarmTitle.value = null;
-
-          ElMessage.success(t('message.success.update_success'));
-          // 故意延遲的 讓畫面稍微停一下
-          setTimeout(async () => {
-            await refetchDeviceAlarmsRecords();
-            updateAlarmDisplay();
-          }, 5000);
-        }
-      }
-      break;
+function handleRealTimeData(newVal: WsData) {
+  if (newVal.ID === id.value) {
+    deviceRealMeasurementData.value = newVal;
   }
-});
+}
+
+async function delayAndRefresh() {
+  await new Promise((resolve) => setTimeout(resolve, 15000));
+  await refetchDeviceAlarmsRecords();
+  updateAlarmDisplay();
+}
 
 // 編輯資訊
-const updateDeviceData = async (updatedDevice: Device) => {
+async function updateDeviceData(updatedDevice: Device) {
   if (!fetchedDevice.value) return;
 
   try {
@@ -285,7 +309,7 @@ const updateDeviceData = async (updatedDevice: Device) => {
     console.error('Failed to update device:', error);
     ElMessage.error(t('message.error.update_failed'));
   }
-};
+}
 </script>
 
 <style scoped></style>

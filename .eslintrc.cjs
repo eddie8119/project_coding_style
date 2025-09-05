@@ -6,8 +6,8 @@ module.exports = {
     node: true,
   },
   extends: [
-    'plugin:vue/vue3-recommended',
     'eslint:recommended',
+    'plugin:vue/vue3-recommended',
     '@vue/typescript/recommended',
     'plugin:prettier/recommended', //自動關閉衝突 Integrates Prettier, must be last
   ],
@@ -18,18 +18,7 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['vue', '@typescript-eslint', 'import'],
-  overrides: [
-    {
-      files: ['*.vue'],
-      parser: 'vue-eslint-parser',
-      parserOptions: {
-        parser: '@typescript-eslint/parser',
-      },
-      rules: {
-        // 'vue/multi-word-component-names': 'off',
-      },
-    },
-  ],
+
   rules: {
     'prettier/prettier': [
       'warn',
@@ -109,5 +98,27 @@ module.exports = {
         },
       },
     ],
+
   },
+  overrides: [
+    {
+      files: ['*.vue'],
+      parser: 'vue-eslint-parser',
+      parserOptions: {
+        parser: '@typescript-eslint/parser',
+      },
+      rules: {
+        // 確保 Composition API 方法用箭頭函式
+        'func-style': ['error', 'expression', { allowArrowFunctions: true }],
+        // 'vue/multi-word-component-names': 'off',
+      },
+    },
+    {
+      files: ['*.ts', '*.tsx'],
+      parser: '@typescript-eslint/parser',
+      rules: {
+        'func-style': 'off',
+      },
+    },
+  ],
 };

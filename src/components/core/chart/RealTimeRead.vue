@@ -9,12 +9,12 @@
 </template>
 
 <script setup lang="ts">
-import * as echarts from 'echarts';
 import { computed, onMounted, onUnmounted, ref, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { onBeforeRouteUpdate } from 'vue-router';
 
 import type { WsData } from '@/types/websocket';
+import type { ECharts, EChartsOption } from 'echarts';
 
 import H3Title from '@/components/core/title/H3Title.vue';
 import { ObservationType } from '@/types/device';
@@ -28,7 +28,7 @@ const props = defineProps<{
 }>();
 
 const chartContainer = ref<HTMLElement | null>(null);
-const chartInstance = ref<echarts.ECharts | null>(null);
+const chartInstance = ref<ECharts | null>(null);
 const localData = ref<WsData[]>([]);
 
 watch(
@@ -89,11 +89,11 @@ const handleResize = () => {
   }
 };
 
-function setChartOption() {
+const setChartOption = () => {
   if (!chartInstance.value) return;
   const unitDisplayName = measureUnit.value;
 
-  const option: echarts.EChartsOption = {
+  const option: EChartsOption = {
     tooltip: {
       trigger: 'axis',
       axisPointer: {
@@ -184,10 +184,11 @@ function setChartOption() {
   };
 
   chartInstance.value.setOption(option);
-}
+};
 
-onMounted(() => {
+onMounted(async () => {
   if (chartContainer.value) {
+    const echarts = await import('echarts');
     localData.value = [];
     chartInstance.value = echarts.init(chartContainer.value);
     setChartOption();

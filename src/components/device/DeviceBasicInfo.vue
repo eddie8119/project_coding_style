@@ -204,6 +204,6 @@ const updateWaterQuality = (newWaterQuality: string) => {
 
 <style scoped>
 .device-card {
-  @apply flex h-[140px] flex-col rounded-xl bg-primary-blue p-4 dark:bg-black-500;
+  @apply flex flex-col rounded-xl bg-primary-blue p-4 dark:bg-black-500;
 }
 </style>

@@ -3,9 +3,13 @@
 </template>
 
 <script setup lang="ts">
+import { defineAsyncComponent } from 'vue';
+
 import type { ObservationType } from '@/types/device';
 
-import DevicesBulletinBoard from '@/components/core/situationRoom/DevicesBulletinBoard.vue';
+const DevicesBulletinBoard = defineAsyncComponent(
+  () => import('@/components/core/situationRoom/DevicesBulletinBoard.vue')
+);
 
 const props = defineProps<{
   observationType: ObservationType;

@@ -1,0 +1,89 @@
+{
+  "en": {
+    "helpCenter": {
+      "title": {
+        "contact": "Contact",
+        "suggestion": "Suggested Details",
+        "timeline": "Processing Timeline"
+      },
+      "contact": {
+        "email": "Support Email",
+        "website": "Official Website",
+        "socials": "Social Media"
+      },
+      "suggestion": {
+        "issue_detail": "Issue description & reproduction steps",
+        "expected_vs_actual": "Expected behavior vs. actual result",
+        "attachments": "Screenshots or recordings (if any)"
+      },
+      "timeline": {
+        "normal": "Typical response time: 1–2 business days",
+        "high_priority": "High-impact issues: prioritized handling"
+      },
+      "actions": {
+        "open_email": "Open email composer",
+        "open_instagram": "Open Instagram",
+        "open_youtube": "Open Youtube",
+        "open_website": "Open Website"
+      }
+    }
+  },
+  "zh-TW": {
+    "helpCenter": {
+      "title": {
+        "contact": "聯繫",
+        "suggestion": "建議填寫內容",
+        "timeline": "處理時程"
+      },
+      "contact": {
+        "email": "信箱",
+        "website": "官方網站",
+        "socials": "社群媒體"
+      },
+      "suggestion": {
+        "issue_detail": "問題描述與重現步驟",
+        "expected_vs_actual": "預期行為與實際結果",
+        "attachments": "截圖或錄影連結（若有）"
+      },
+      "timeline": {
+        "normal": "一般回覆時間: 1-2 個工作天",
+        "high_priority": "重大影響問題: 優先處理"
+      },
+      "actions": {
+        "open_email": "開啟郵件撰寫",
+        "open_instagram": "開啟 Instagram",
+        "open_youtube": "開啟 Youtube",
+        "open_website": "開啟官網"
+      }
+    }
+  },
+  "ja": {
+    "helpCenter": {
+      "title": {
+        "contact": "連絡",
+        "suggestion": "提案内容",
+        "timeline": "処理タイムライン"
+      },
+      "contact": {
+        "email": "メールアドレス",
+        "website": "公式サイト",
+        "socials": "ソーシャルメディア"
+      },
+      "suggestion": {
+        "issue_detail": "問題の詳細と再現手順",
+        "expected_vs_actual": "期待される動作と実際の結果",
+        "attachments": "スクリーンショットまたは録画（ある場合）"
+      },
+      "timeline": {
+        "normal": "通常の応答時間：1〜2営業日",
+        "high_priority": "重大な問題：優先的に対応"
+      },
+      "actions": {
+        "open_email": "メールを開く",
+        "open_instagram": "Instagramを開く",
+        "open_youtube": "Youtubeを開く",
+        "open_website": "ウェブサイトを開く"
+      }
+    }
+  }
+}

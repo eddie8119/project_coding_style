@@ -1,0 +1,23 @@
+{
+  "en": {
+    "project": {
+      "project": "Project",
+      "construction": "Construction",
+      "material": "Material"
+    }
+  },
+  "zh-TW": {
+    "project": {
+      "project": "專案",
+      "construction": "工程",
+      "material": "材料"
+    }
+  },
+  "ja": {
+    "project": {
+      "project": "プロジェクト",
+      "construction": "工事",
+      "material": "材料"
+    }
+  }
+}

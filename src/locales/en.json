@@ -1,0 +1,939 @@
+{
+  "billing": {
+    "pricing": "Pricing",
+    "pricingDescription": "Choose the perfect plan for your needs. All plans include access to our core features.",
+    "mySubscription": "My Subscription",
+    "subscriptionDescription": "Manage your subscription and billing information.",
+    "featured": "Most Popular",
+    "currentPlan": "Current Plan",
+    "selectPlan": "Select Plan",
+    "contactSales": "Contact Sales",
+    "processing": "Processing...",
+    "currency": {
+      "usd": "USD"
+    },
+    "starter": {
+      "title": "Starter",
+      "subtitle": "Ideal for solo designers or new studios",
+      "feature1": "Up to 10 active projects and 2 collaborators",
+      "feature2": "Essential Gantt and schedule views",
+      "feature3": "Upload 4 floor plans/PDFs per project"
+    },
+    "professional": {
+      "title": "Professional",
+      "subtitle": "Designed for growing studios and multi-site teams",
+      "feature1": "Up to 15 active projects and 5 collaborators",
+      "feature2": "Upload 10 floor plans/PDFs per project",
+      "feature3": "Full Gantt, schedule, and on-site markup tools",
+      "feature4": "Centralized documents & floor plans (20GB storage)",
+      "feature5": "Custom project types with Excel/image export"
+    },
+    "enterprise": {
+      "title": "Enterprise",
+      "subtitle": "For large interior firms with multiple crews",
+      "feature1": "Unlimited active projects and collaborators",
+      "feature2": "Enterprise-grade permissions and multi-team control",
+      "feature3": "Custom workflows with dedicated support",
+      "note": "Custom pricing tailored to your workload"
+    },
+    "noPlans": "No pricing plans available at this time.",
+    "disabled": "Billing is currently disabled. Please contact support.",
+    "faq": "Frequently Asked Questions",
+    "faq1Question": "Can I change my plan anytime?",
+    "faq1Answer": "Yes, you can upgrade or downgrade your plan at any time. Changes will take effect at the next billing cycle.",
+    "faq2Question": "What payment methods do you accept?",
+    "faq2Answer": "We accept all major credit cards and debit cards through Stripe.",
+    "faq3Question": "Is there a free trial?",
+    "faq3Answer": "Contact our sales team to discuss trial options for your organization.",
+    "noActiveSubscription": "No Active Subscription",
+    "noActiveSubscriptionDesc": "You don't have an active subscription yet. Browse our plans to get started.",
+    "browsePlans": "Browse Plans",
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive",
+      "cancelled": "Cancelled",
+      "past_due": "Past Due"
+    },
+    "currentPeriodStart": "Current Period Start",
+    "currentPeriodEnd": "Current Period End",
+    "cancelledAtPeriodEnd": "Your subscription will be cancelled on {date}",
+    "managePayment": "Manage Payment Method",
+    "cancelSubscription": "Cancel Subscription",
+    "resumeSubscription": "Resume Subscription",
+    "billingHistory": "Billing History",
+    "billingHistoryDesc": "View and download your invoices.",
+    "viewInvoices": "View Invoices",
+    "confirmCancel": "Are you sure you want to cancel your subscription? You will lose access to premium features at the end of your billing period.",
+    "interval": {
+      "month": "month",
+      "year": "year"
+    }
+  },
+  "button": {
+    "cancel": "Cancel",
+    "copy": "Copy",
+    "edit": "Edit",
+    "remove": "Remove",
+    "save": "Save",
+    "add": "Add",
+    "add_task": "Add Task",
+    "add_material": "Add Material",
+    "submit": "Submit",
+    "register": "Register",
+    "login": "Login",
+    "back_to_login": "Back to Login",
+    "change_password": "Change Password",
+    "forgot_password": "Forgot Password",
+    "reset_password": "Reset Password",
+    "send_reset_email": "Send Reset Email",
+    "resend_activation_email": "Resend Activation Email",
+    "edit_profile": "Edit Profile",
+    "create_project": "Create Project",
+    "go_to_create_task": "Go to create task",
+    "upload_gantt_chart": "Upload Project Gantt Chart",
+    "move_to_project": "Move to project",
+    "moved_to_project": "Moved to project",
+    "delete_completed": "Delete Completed",
+    "add_construction_type": "Add Construction Type",
+    "resend": "Resend",
+    "activate": "Activate",
+    "accept": "Accept",
+    "reject": "Reject",
+    "accept_invitation": "Accept Invitation",
+    "back_to_home": "Back to Home",
+    "try_again": "Try Again",
+    "upload_retry": "Upload Retry",
+    "hide": "Hide",
+    "show_more": "Show More",
+    "open_new_tab": "Open in New Tab",
+    "copy_email": "Copy Email",
+    "download": "Download",
+    "download_image": "Download Image",
+    "download_excel": "Download Excel",
+    "download_demo": "Load sample data",
+    "go_to_demo": "Start the demo experience",
+    "progress_template_download": "Excel Template Download",
+    "batch_download": "Batch Download",
+    "batch_update": "Batch Update",
+    "clear_all": "Clear All",
+    "select_all": "Select All",
+    "view_full_day": "View Full Day Schedule",
+    "select_clear": "Clear Select",
+    "select_restore": "Restore Select",
+    "fold": {
+      "expand": "Expand",
+      "collapse": "Collapse",
+      "expand_all": "Expand All",
+      "collapse_all": "Collapse All"
+    },
+    "advanced_filter": {
+      "hide": "Hide Advanced Filter",
+      "show": "Show Advanced Filter"
+    },
+    "upload_result": {
+      "hide": "Hide Upload Result",
+      "show": "Show Upload Result"
+    },
+    "floor_plan": {
+      "add_image": "Add Image",
+      "replace_image": "Replace This Image",
+      "delete_image": "Delete This Image",
+      "confirm_delete": "Confirm Deleting This Image",
+      "cancel": "Cancel",
+      "fit_screen": "Fit Screen",
+      "toggle_sidebar": "Toggle Sidebar"
+    },
+    "pin": {
+      "cancel": "Remove Pin",
+      "add": "Add Pin"
+    },
+    "sso": {
+      "google": "Sign in with Google",
+      "facebook": "Sign in with Facebook",
+      "apple": "Sign in with Apple"
+    }
+  },
+  "column": {
+    "edit": "Edit",
+    "title": "Name",
+    "type": "Type",
+    "task_done_progress": "Task Completion Progress",
+    "task_todo_left": "Remaining Tasks",
+    "task_in_progress": "Tasks In Progress",
+    "created_at": "Created At",
+    "floor_plan_urls": "Floor Plan",
+    "owner": "Creator",
+    "collaborators": "Collaborators",
+    "construction_planning_period": "Construction Planning Period",
+    "total_planning_amount": "Total Material Budget",
+    "total_usage_amount": "Material Usage Amount",
+    "email": "Email",
+    "role": "Role",
+    "action": "Action",
+    "download_excel": "Report"
+  },
+  "common": {
+    "no": "No",
+    "keyword": "Keyword",
+    "cancel": "Cancel",
+    "save": "Save",
+    "add": "Add",
+    "delete": "Delete",
+    "edit": "Edit",
+    "back": "Back",
+    "theme": "Theme",
+    "language": "Language",
+    "light_set": "Brightness Theme",
+    "notification": "Notification",
+    "authentication": "Authentication",
+    "logout": "Logout",
+    "success": "Success",
+    "last_update_time": "Last Update",
+    "loading": "Loading",
+    "download": "Download",
+    "unclassified": "Unclassified",
+    "optional": "Optional",
+    "role": {
+      "admin": "Admin",
+      "user": "User"
+    },
+    "relative": {
+      "second": "{count} second",
+      "minute": "{count} minute ",
+      "hour": "{count} hour",
+      "day": "{count} day "
+    }
+  },
+  "date": {
+    "january": "January",
+    "february": "February",
+    "march": "March",
+    "april": "April",
+    "may": "May",
+    "june": "June",
+    "july": "July",
+    "august": "August",
+    "september": "September",
+    "october": "October",
+    "november": "November",
+    "december": "December",
+    "sunday_short": "Su",
+    "monday_short": "Mo",
+    "tuesday_short": "Tu",
+    "wednesday_short": "We",
+    "thursday_short": "Th",
+    "friday_short": "Fr",
+    "saturday_short": "Sa"
+  },
+  "description": {
+    "project_collaborator_management": "Manage collaborators for your projects. Add, remove, or change roles for different projects.",
+    "manage_project_collaborators_owner": "As the project owner, you can manage collaborators, set their roles, and control access.",
+    "manage_project_collaborators_member": "You are a collaborator on this project. View the project's collaborator list.",
+    "auth": {
+      "demo_hint": "Preview the core features with the demo first."
+    }
+  },
+  "dialog": {
+    "delete_confirm": "Do you confirm the deletion",
+    "share_project_link": "Share Project Link",
+    "move_note_to_project": "Select Project, Move Note",
+    "enable_project_sharing": "Enable Project Sharing",
+    "share_description": "Share this project with others.",
+    "collaborators_description": "Collaborators are users who can access your projects.",
+    "global_collaborators_description": "Global collaborators are collaborators who can access all projects."
+  },
+  "dropdown": {
+    "zh-TW": "繁體中文",
+    "en": "English",
+    "ja": "日本語",
+    "user": "User",
+    "logout": "Logout",
+    "edit": "Edit",
+    "detail": "Detail",
+    "floor_plan_preview_icon": {
+      "button_title": "{count} floor plans",
+      "tooltip_title": "Floor plan preview ({count} images)",
+      "tooltip_hint": "Click the icon to view all floor plans",
+      "image_alt": "Floor plan {index}"
+    }
+  },
+  "error": {
+    "login_failed": "Login failed",
+    "register_failed": "Register failed",
+    "resend_activation_failed": "Resend activation failed",
+    "activation_failed": "Activation failed",
+    "change_password_failed": "Failed to change password",
+    "reset_password_failed": "Reset password failed",
+    "update_failed": "Update failed"
+  },
+  "excel": {
+    "section": {
+      "project_info": "Project Info",
+      "construction": "Construction Areas"
+    },
+    "label": {
+      "project_name": "Project Name",
+      "project_type": "Project Type",
+      "created_at": "Created At",
+      "updated_at": "Updated At",
+      "property": "Property",
+      "value": "Value"
+    },
+    "columns": {
+      "index": "Index",
+      "task_title": "Task Title",
+      "status": "Status",
+      "description": "Description",
+      "material_name": "Material Name",
+      "unit_price": "Unit Price",
+      "quantity": "Quantity",
+      "construction_type": "Construction Type",
+      "created_at": "Created At",
+      "due_date": "Due Date",
+      "reminder_date": "Reminder Date"
+    },
+    "progress_template": {
+      "sheet_name": "Construction Progress Template",
+      "month": "Month",
+      "special_holiday": "Special Holidays",
+      "date": "Date",
+      "construction_payment_remittance": "Construction Payment Remittance",
+      "pre_construction_preparation": "Preparation & Others",
+      "protection_protection_demolition": "Protection / Demolition",
+      "weekday": "Weekday",
+      "sample_placeholder": "Sample format: start documenting here"
+    },
+    "download": {
+      "gantt_image_suffix": "gantt",
+      "gantt_excel_suffix": "schedule",
+      "progress_template": "Progress Template"
+    }
+  },
+  "helpCenter": {
+    "title": {
+      "contact": "Contact",
+      "suggestion": "Suggested Details",
+      "timeline": "Processing Timeline"
+    },
+    "contact": {
+      "email": "Support Email",
+      "website": "Official Website",
+      "socials": "Social Media"
+    },
+    "suggestion": {
+      "issue_detail": "Issue description & reproduction steps",
+      "expected_vs_actual": "Expected behavior vs. actual result",
+      "attachments": "Screenshots or recordings (if any)"
+    },
+    "timeline": {
+      "normal": "Typical response time: 1–2 business days",
+      "high_priority": "High-impact issues: prioritized handling"
+    },
+    "actions": {
+      "open_email": "Open email composer",
+      "open_instagram": "Open Instagram",
+      "open_youtube": "Open Youtube",
+      "open_website": "Open Website"
+    }
+  },
+  "label": {
+    "search": "Search",
+    "time": "Time",
+    "construction": "Construction",
+    "name": "Name",
+    "type": "Type",
+    "end": "End",
+    "reminder": "Reminder",
+    "end_date_time": "End Date",
+    "reminder_date_time": "Reminder Datetime",
+    "role": "Role",
+    "detail": "Detail",
+    "total": "Total",
+    "action": "Action",
+    "note": "Note",
+    "content": "Content",
+    "average": "Average",
+    "day": "Day",
+    "unit": "Unit",
+    "start_time": "Start Time",
+    "end_time": "End Time",
+    "reminder_time": "Reminder Time",
+    "date_range": "Date Range",
+    "filter": "Filter",
+    "quick_select": "Direct input or rapid repeated clicking",
+    "or": "Or",
+    "timeline_view": "Timeline View",
+    "switch_view": "Switch Schedule View",
+    "title": "Title",
+    "description": "Description",
+    "status": {
+      "status": "Status",
+      "overdue": "Overdue",
+      "reminding": "Reminding"
+    },
+    "legend": {
+      "design_phase": "Design planning phase",
+      "onsite_phase": "On-site construction phase"
+    },
+    "time_status": {
+      "all": "All",
+      "unscheduled": "Unscheduled",
+      "overdue": "Overdue Not Completed",
+      "today": "Today Left",
+      "this_week": "This Week Left",
+      "this_month": "This Month Left"
+    },
+    "owner": "Owner",
+    "collaborator_role": "Collaborator",
+    "collaborator_count": "{count} collaborators",
+    "projects": "projects",
+    "collaborator": {
+      "global": "Global",
+      "global_default": "Global Default",
+      "global_managed": "Managed globally"
+    },
+    "invitation": {
+      "project": "Project",
+      "global": "Global",
+      "expires_at": "Expires at",
+      "project_invitation": "Project Invitation",
+      "global_invitation": "Global Collaboration Invitation"
+    },
+    "user": {
+      "name": "Username",
+      "email": "Email",
+      "member_since": "Member Since",
+      "phone": "Phone",
+      "company": "Company"
+    },
+    "project": {
+      "project": "Project",
+      "project_name": "Project Name",
+      "project_type": "Project Type",
+      "construction": "Construction",
+      "floor_plan": "Floor Plan",
+      "uploaded_images_count": "Uploaded {count} images"
+    },
+    "task": {
+      "task": "Task",
+      "task_display": "Task Display",
+      "due_date_range": "Filter by expiration days range",
+      "status": "All Tasks Status"
+    },
+    "material": {
+      "name": "Material Name",
+      "quantity": "Quantity",
+      "unit_price": "Unit Price",
+      "default_unit_price": "Default Unit Price",
+      "price_amount": "Total Amount",
+      "price": "Amount",
+      "unit": "Unit",
+      "note": "Note",
+      "received_date": "Received Date",
+      "cumulative_completion_rate": "Cumulative Completion Rate",
+      "total_quantity": "Total Quantity",
+      "total_usage_price": "Total Material Usage Cost",
+      "total_planning_amount": "Planned Total Expense",
+      "total_price": "Total Material Expense",
+      "planning_total_quantity": "Planned Total Quantity",
+      "planning_total_price": "Planned Total Expense",
+      "total_cost": "Total Material Cost",
+      "usage": "Material Usage",
+      "usage_accumulation": "Usage Accumulation",
+      "add_usage": "Add Material Usage",
+      "add_new_library": "Create Material Library",
+      "add_new_planning_library": "Create Budget Material",
+      "add_new": "Add Material"
+    },
+    "planning": {
+      "item": "Planning Item",
+      "upload_preview": "Upload content preview",
+      "projects_display": "Projects Schedule Planning Overview",
+      "demo": "No file has been uploaded yet. You can first view the sample Gantt chart.",
+      "demo_project_name": "Construction Progress Demo",
+      "demo_planning_note": "Planning note",
+      "demo_task_note": "Task note",
+      "planning_material": "Material Budget Planning"
+    },
+    "pin": {
+      "pinned": "Pinned",
+      "not_pinned": "Not pinned",
+      "pin_task": "Pin Task",
+      "remove_all": "Remove All Pins",
+      "cancel_pinning": "Cancel Pinning"
+    },
+    "setting": {
+      "existing_list": "Existing List"
+    },
+    "actions": {
+      "enable": "Enable",
+      "disable": "Disable"
+    },
+    "upload_area": {
+      "hint": "Click or drag to upload a floor plan",
+      "supported_formats": "Supports JPG, PNG, PDF (first page only)"
+    },
+    "construction_type": {
+      "3D_Drawing": "3D/Drawing",
+      "protection_demolition": "Protection/Demolition",
+      "electromechanical": "Electromechanical",
+      "hydropower": "Hydropower",
+      "flooring": "Flooring",
+      "masonry": "Masonry",
+      "door_frame": "Door Frame",
+      "light_partition": "Light Partition",
+      "woodwork": "Woodwork",
+      "metal": "Metal",
+      "glass": "Glass",
+      "painting": "Painting",
+      "flooring_material": "Flooring Material",
+      "waterproofing": "Waterproofing",
+      "bathroom_fixtures": "Bathroom Fixtures",
+      "kitchen_cabinet": "Kitchen Cabinet",
+      "air_conditioning": "Air Conditioning",
+      "structural_reinforcement": "Structural Reinforcement"
+    }
+  },
+  "link": {
+    "back_to_home": "Back to Home",
+    "back_to_forgot_password": "Back to Forgot Password",
+    "forgot_password": "Forgot Password",
+    "back_to_login": "Back to Login",
+    "register": "Register",
+    "website": "Website"
+  },
+  "message": {
+    "no_owned_projects": "You haven't created any projects yet",
+    "no_collaborating_projects": "You are not a collaborator on any projects yet",
+    "collaborator_updated": "Collaborator role updated successfully",
+    "collaborator_removed": "Collaborator removed successfully",
+    "update_collaborator_failed": "Failed to update collaborator role",
+    "remove_collaborator_failed": "Failed to remove collaborator",
+    "invalid_email": "Please enter a valid email address",
+    "no_done": "No done",
+    "no_undone": "No undone",
+    "no_tasks": "No tasks yet",
+    "no_plan": "No floor plans yet",
+    "no_tasks_for_day": "No tasks scheduled for this day",
+    "no_unscheduled_task": "No unscheduled tasks",
+    "sso_processing": "Processing your SSO login, please wait...",
+    "sso_success": "SSO login successful! Redirecting...",
+    "dialog": {
+      "activation_success": "Activation successful!",
+      "activation_error": "Activation failed",
+      "activating": "Activating...",
+      "check_email_for_activation": "Check your email for activation",
+      "no_email_received": "No email received",
+      "check_the_email": "Check the email",
+      "whitelist_notice": "This email isn't included in the beta list. We'll notify you as soon as we officially launch.",
+      "change_password_success": "Password changed successfully!",
+      "change_password_failed": "Failed to change password, please try again later",
+      "restore_input_query": "Clear the search box to display all tasks again."
+    },
+    "auth": {
+      "invalid_credentials": "Incorrect email or password",
+      "too_many_attempts": "Too many attempts, please try again later",
+      "email_unverified": "Email address not verified",
+      "account_locked": "Account has been locked"
+    },
+    "sign": {
+      "no_todo": "No todo",
+      "no_done": "No done",
+      "no_undone": "No undone",
+      "no_change": "No change",
+      "no_alarm": "No alarm",
+      "no_collaborators": "No project collaborators",
+      "no_global_collaborators": "No company collaborators",
+      "no_invitations": "No pending invitations",
+      "link_copied": "Link copied",
+      "share_disabled_hint": "Share disabled",
+      "delete_construction_content": "This will also delete all its related tasks.",
+      "confirm_delete_input": "To confirm deletion, please type:"
+    },
+    "invitation": {
+      "sent": "Invitation sent successfully",
+      "accepted": "Invitation accepted",
+      "rejected": "Invitation rejected",
+      "cancelled": "Invitation cancelled",
+      "send_failed": "Failed to send invitation",
+      "accept_failed": "Failed to accept invitation",
+      "reject_failed": "Failed to reject invitation",
+      "cancel_failed": "Failed to cancel invitation",
+      "already_exists": "An invitation already exists for this user",
+      "invited_by": "Invited by {name}",
+      "invited_you": "invited you to collaborate",
+      "login_required": "Please login or register to accept this invitation",
+      "ready_to_accept": "You are about to accept this collaboration invitation",
+      "invalid_token": "Invalid invitation link",
+      "not_found": "Invitation not found or already processed",
+      "expired": "This invitation has expired",
+      "load_failed": "Failed to load invitation details"
+    },
+    "upload": {
+      "unsupported_format": "File {fileName} is not a supported format",
+      "process_failed": "Failed to process file {fileName}",
+      "success": "Successfully uploaded {count} floor plans",
+      "failed": "Failed to upload floor plans"
+    },
+    "material": {
+      "group": {
+        "unclassified": "Uncategorized"
+      },
+      "empty": "No materials added yet",
+      "batch_update": {
+        "success": "Batch update successful",
+        "failed": "Batch update failed"
+      },
+      "add": {
+        "missing_task": "Cannot find a related task to add the material",
+        "missing_name": "Please enter a material name",
+        "success": "Material added successfully",
+        "failed": "Failed to add material"
+      },
+      "update": {
+        "success": "Material updated successfully",
+        "failed": "Failed to update material"
+      },
+      "delete": {
+        "success": "Material deleted successfully",
+        "failed": "Failed to delete material"
+      }
+    },
+    "success": {
+      "create": "Create successfully",
+      "update": "Update successfully",
+      "deleted": "Deleted successfully",
+      "change": "Changed successfully"
+    },
+    "error": {
+      "failed_to_fetch_weather_data": "Failed to fetch weather data",
+      "page_not_found_description": "Sorry, the page you are looking for does not exist.",
+      "created": "Failed to create",
+      "update": "Failed to update",
+      "deleted": "Failed to delete",
+      "change": "Failed to change",
+      "login": "Login failed",
+      "register": "Register failed",
+      "activate_account": "Activate account failed",
+      "resend_activation": "Resend activation failed",
+      "change_password": "Change password failed",
+      "reset_password": "Reset password failed"
+    },
+    "sso": {
+      "missing_params": "Missing required authorization parameters",
+      "invalid_format": "Invalid authorization parameter format",
+      "unsupported_provider": "Unsupported SSO provider",
+      "login_failed": "SSO login failed",
+      "generic_error": "An error occurred during the SSO login process",
+      "oauth_error": "Google returned an error: {error}"
+    }
+  },
+  "meta": {
+    "defaults": {
+      "title": "KaiJi Notebook | Interior Construction Management Software",
+      "description": "KaiJi Notebook combines site logs, task tracking, and schedule planning so interior construction teams collaborate smoothly and cut rework."
+    },
+    "routes": {
+      "overview": {
+        "title": "KaiJi | Site Overview | Interior Notebook",
+        "description": "Track what work remains on every job site so you can plan vendor coordination with confidence."
+      },
+      "schedule": {
+        "title": "KaiJi | Schedule View | Interior Notebook",
+        "description": "Lay out tasks on a timeline so everyone knows what happens when and maintains a clear sense of timing."
+      },
+      "englishLanding": {
+        "title": "KaiJi | Interior Construction Management Software",
+        "description": "KaiJi helps interior construction teams capture site updates, plan schedules, and keep every renovation on track with one collaborative workspace."
+      }
+    }
+  },
+  "nav": {
+    "group": {
+      "schedule_assistant": "Schedule Assistant",
+      "main": "Main",
+      "construction_planning": "Construction Planning Phase",
+      "construction_work": "Construction Work Phase",
+      "setting": "Setting",
+      "other": "Other"
+    },
+    "menu": {
+      "overview": "Quick View ",
+      "schedule": "Schedule",
+      "set-member": "Set Member",
+      "set_common": "Set Common",
+      "help_center": "User Assistance",
+      "planning_implementation": "Planning Gantt Chart",
+      "to_do": "Construction Task",
+      "quick_draft": "Quick Draft",
+      "teaching": "Video Tutorials"
+    }
+  },
+  "notification": {
+    "email": "Email",
+    "phone": "Phone",
+    "name": "Name",
+    "section_title": {
+      "subscriber_info": "Subscriber Info",
+      "device_selection": "Device Selection",
+      "time_range_settings": "Time Range Settings"
+    }
+  },
+  "option": {
+    "alarm": {
+      "notice": "Notice",
+      "caution": "Caution",
+      "warning": "Warning"
+    },
+    "projectType": {
+      "residential": "Residential",
+      "luxury": "Luxury",
+      "commercial": "Commercial",
+      "office": "Office",
+      "retail": "Retail / Shop",
+      "restaurant": "Restaurant",
+      "hospitality": "Hospitality",
+      "education": "Education",
+      "medical": "Medical",
+      "public": "Public",
+      "exhibition": "Exhibition",
+      "industrial": "Industrial",
+      "renovation": "Renovation",
+      "showroom": "Showroom",
+      "undefined": "Unknown"
+    },
+    "status": {
+      "all": "All",
+      "todo": "Todo",
+      "inProgress": "In Progress",
+      "done": "Done"
+    },
+    "role": {
+      "viewer": "Viewer",
+      "editor": "Editor",
+      "manager": "Manager"
+    },
+    "display": {
+      "all": "Show All",
+      "content": "Content Only",
+      "materials": "Materials Only"
+    }
+  },
+  "pagination": {
+    "total": "Total {total}",
+    "pageSize": "items/page"
+  },
+  "placeholder": {
+    "auth": {
+      "name": "Name",
+      "email": "Email",
+      "password": "Password",
+      "confirm_password": "Confirm Password",
+      "old_password": "Old Password",
+      "new_password": "New Password",
+      "new_confirm_password": "Confirm New Password",
+      "username": "Username"
+    },
+    "email": "Email",
+    "name": "Name",
+    "phone": "Phone",
+    "company": "Company",
+    "search": "Search",
+    "select": "Select",
+    "select_received_date": "Received date",
+    "select_date_and_time": "Select date and time",
+    "project": {
+      "project": "Please select project",
+      "project_name": "Project name",
+      "project_type": "Project type",
+      "construction": "Select construction",
+      "addContainer": "Add container",
+      "task": "Enter task",
+      "taskDescription": "Enter task description",
+      "add_construction": "Add a construction",
+      "add_unit": "Add a unit",
+      "add_project_type": "Add a project type",
+      "add_new": "Add a new"
+    },
+    "material": {
+      "name": "Material Name",
+      "select_planning_name": "Select a planned material",
+      "quantity": "Quantity",
+      "unit_price": "Unit Price",
+      "unit": "Select Unit",
+      "note": "Note",
+      "planning_total_quantity": "Planned Total Quantity"
+    },
+    "draft": {
+      "todo": "Enter todo"
+    }
+  },
+  "project": {
+    "project": "Project",
+    "construction": "Construction",
+    "material": "Material"
+  },
+  "setting": {
+    "construction": "Construction",
+    "unit": "Unit",
+    "projectType": "Project Type",
+    "inviteMember": "Invite Member",
+    "collaborator": "Collaborator",
+    "membersList": "Members List",
+    "role": "Role",
+    "send": "Send",
+    "invite": "Invite",
+    "remove": "Remove",
+    "status": {
+      "pending": "Pending",
+      "joined": "Joined"
+    },
+    "roles": {
+      "owner": "Owner",
+      "admin": "Admin",
+      "editor": "Editor",
+      "viewer": "Viewer"
+    },
+    "info": {
+      "empty_overview_data": "No tasks have been created yet",
+      "empty_task_description": "Please go to the 'Construction Task Execution' page to create pending tasks",
+      "empty_common_data": "No shared data has been created",
+      "empty_project_description": "Please go to the 'Project Planning' page to upload the project schedule first",
+      "empty_common_description": "It is recommended to go to the 'Project Planning' page to upload the project Gantt chart. The system will automatically import the construction items from the Gantt chart. You can also enter it manually below.",
+      "go_to_planning_projects": "Go to upload project planning",
+      "go_to_upload_plan": "Go to upload project plan",
+      "go_to_create_task": "Go to create task"
+    },
+    "messages": {
+      "inviteSent": "Invite sent successfully"
+    },
+    "errors": {
+      "emailExists": "Email already exists",
+      "inviteFailed": "Failed to invite member"
+    }
+  },
+  "subtitle": {
+    "todo": "As your job site keeps changing, note cards capture every detail and keep your schedule organized.",
+    "planning_implementation": "Upload a construction schedule Excel file and automatically create a project Gantt chart in the system.",
+    "setting_common": "All your common preferences can be managed here in one place."
+  },
+  "tab": {
+    "projects": "Projects List",
+    "project": "Project",
+    "projects-download": "Projects Download",
+    "floor-plan": "Floor Plan",
+    "profile": "Profile",
+    "change-password": "Change Password",
+    "all": "All",
+    "schedule": {
+      "reminderDateTime": "Reminder Schedule",
+      "endDateTime": "End Schedule",
+      "all": "All"
+    },
+    "tasks": {
+      "with_pin": "With Pin",
+      "without_pin": "Without Pin",
+      "all": "All"
+    }
+  },
+  "title": {
+    "welcome": "Welcome to KaiJi",
+    "register": "Register",
+    "register_success": "Register Success",
+    "resend_activation": "Resend Activation",
+    "account_activation": "Account Activation",
+    "forgot_password": "Forgot Password",
+    "reset_password": "Reset Password",
+    "overview_remaining_task": "Quick View of Remaining Tasks",
+    "schedule": "Schedule",
+    "unscheduled_task": "Unscheduled Task",
+    "reminder_upcoming_task_in_10_days": "Upcoming Tasks Within 10 Days",
+    "user": "User",
+    "todo": "Construction Task Execution",
+    "quick_draft": "Quick Draft",
+    "plan": "Plan",
+    "planning_implementation": "Project Planning Gantt Chart",
+    "setting": "Setting",
+    "help_center": "User Assistance",
+    "teaching": "Video Tutorials",
+    "setting_common": "Common Settings",
+    "share": "Share",
+    "manage_project_collaborators": "Manage Project Collaborators",
+    "manage_global_collaborators": "Manage Global Collaborators",
+    "project_collaborator_management": "Project Collaborator Management",
+    "material": "Material",
+    "material_construction": "Construction Material Usage",
+    "material_library": "Material Library",
+    "owned_projects": "My Projects",
+    "collaborating_projects": "Projects I Collaborate On",
+    "manage_collaborators": "Manage Collaborators",
+    "collaboration_invitation": "Collaboration Invitation",
+    "invitation_error": "Invitation Error",
+    "delete_confirm": "Delete Confirm",
+    "create_project": "Create Project",
+    "create_construction": "Create Construction",
+    "move_note": "Move Note",
+    "batch_download": "Batch Download",
+    "edit_task": "Edit Task",
+    "add_task": "Add Task",
+    "edit_planning": "Edit Planning",
+    "create_planning": "Create Planning",
+    "sso_processing": "Processing SSO Login",
+    "sso_success": "SSO Login Successful",
+    "sso_error": "SSO Login Failed",
+    "page_not_found": "Page Not Found",
+    "edit_note": "Edit Note",
+    "subTitle": {}
+  },
+  "upload": {
+    "parsing_excel": "Parsing Excel file",
+    "upload_failed": "Upload failed",
+    "process_excel_file": "Upload construction progress Excel file",
+    "invalid_excel_type": "Please upload an Excel file (.xlsx or .xls)",
+    "parse_failed": "File parsing failed, please check the file format",
+    "supported_formats": "Supported formats",
+    "description": "Drag a file here or click to select one",
+    "description_cover": "(Uploading again to the same project will overwrite the existing data.)",
+    "progress_template_hint": "Please download this template. The column structure must follow this Excel template so the system can parse it correctly and create the project Gantt chart.",
+    "edit_planning_gantt_bar": "Click the progress bar / + button to create or edit information."
+  },
+  "validation": {
+    "name_required": "Name is required",
+    "phone_required": "Phone is required",
+    "company_required": "Company is required",
+    "description_required": "Description is required",
+    "construction_required": "Construction is required",
+    "unit_required": "Unit is required",
+    "project_type_required": "Project type is required",
+    "input_required": "This is required",
+    "email": {
+      "required": "Email is required",
+      "invalid": "Invalid email address"
+    },
+    "title": {
+      "required": "Title is required",
+      "max_length": "Title cannot exceed 10 characters"
+    },
+    "material": {
+      "required": "Material is required"
+    },
+    "input": {
+      "required": "This field is required"
+    },
+    "password": {
+      "min": "At least {min} characters",
+      "uppercase": "Must contain at least 1 uppercase letter",
+      "special": "Must contain at least 1 special character (e.g. !#$%&)",
+      "alphanumeric": "Must contain alphanumeric characters",
+      "mismatch": "Passwords do not match"
+    },
+    "quantity": {
+      "required": "Quantity is required",
+      "positive": "Quantity must be greater than 0"
+    },
+    "unit_price": {
+      "required": "Unit price is required",
+      "negative": "Unit price cannot be negative"
+    }
+  }
+}

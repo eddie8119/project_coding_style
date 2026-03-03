@@ -1,0 +1,873 @@
+{
+  "billing": {},
+  "button": {
+    "cancel": "キャンセル",
+    "remove": "削除",
+    "copy": "コピー",
+    "edit": "編集",
+    "save": "保存",
+    "add": "追加",
+    "add_task": "タスク追加",
+    "add_material": "材料を追加",
+    "submit": "送信",
+    "register": "登録",
+    "login": "ログイン",
+    "back_to_login": "ログインに戻る",
+    "change_password": "パスワード変更",
+    "forgot_password": "パスワードをお忘れですか",
+    "reset_password": "パスワードリセット",
+    "send_reset_email": "リセットメールを送信",
+    "resend_activation_email": "認証メールを再送",
+    "edit_profile": "プロフィール編集",
+    "create_project": "プロジェクト作成",
+    "go_to_create_task": "タスク作成へ移動",
+    "upload_gantt_chart": "ガントチャートをアップロード",
+    "move_to_project": "プロジェクトへ移動",
+    "moved_to_project": "プロジェクトへ移動しました",
+    "delete_completed": "完了項目を削除",
+    "add_construction_type": "工事種別を追加",
+    "resend": "再送",
+    "activate": "有効化",
+    "accept": "承認",
+    "reject": "拒否",
+    "accept_invitation": "招待を承認",
+    "back_to_home": "ホームに戻る",
+    "try_again": "再試行",
+    "upload_retry": "再アップロード",
+    "hide": "隠す",
+    "show_more": "もっと見る",
+    "open_new_tab": "新しいタブで開く",
+    "copy_email": "メールアドレスをコピー",
+    "download": "ダウンロード",
+    "download_image": "画像をダウンロード",
+    "download_excel": "Excelをダウンロード",
+    "download_demo": "サンプルデータをロード",
+    "go_to_demo": "デモに移動",
+    "progress_template_download": "進捗テンプレートをダウンロード",
+    "batch_download": "一括ダウンロード",
+    "batch_update": "一括更新",
+    "clear_all": "すべてクリア",
+    "select_all": "すべて選択",
+    "view_full_day": "1日のスケジュールを表示",
+    "select_clear": "選択をクリア",
+    "select_restore": "選択を復元",
+    "fold": {
+      "expand": "展開",
+      "collapse": "折りたたむ",
+      "expand_all": "すべて展開",
+      "collapse_all": "すべて折りたたむ"
+    },
+    "advanced_filter": {
+      "hide": "高度なフィルタを隠す",
+      "show": "高度なフィルタ"
+    },
+    "upload_result": {
+      "hide": "アップロード結果を隠す",
+      "show": "アップロード結果を表示"
+    },
+    "floor_plan": {
+      "add_image": "画像を追加",
+      "replace_image": "画像を置換",
+      "delete_image": "画像を削除",
+      "confirm_delete": "画像の削除を確認",
+      "cancel": "キャンセル",
+      "fit_screen": "画面に合わせる",
+      "toggle_sidebar": "サイドバーを切り替え"
+    },
+    "pin": {
+      "cancel": "ピンを解除",
+      "add": "ピンを追加"
+    },
+    "sso": {
+      "google": "Googleでログイン",
+      "facebook": "Facebookでログイン",
+      "apple": "Appleでログイン"
+    }
+  },
+  "column": {
+    "edit": "編集",
+    "title": "名称",
+    "type": "タイプ",
+    "task_done_progress": "タスク完了進捗",
+    "task_todo_left": "残りタスク",
+    "task_in_progress": "進行中タスク",
+    "created_at": "作成日時",
+    "floor_plan_urls": "平面図",
+    "owner": "作成者",
+    "collaborators": "共同作業者",
+    "construction_planning_period": "工事計画期間",
+    "total_planning_amount": "材料予算金額",
+    "total_usage_amount": "材料使用金額",
+    "email": "メールアドレス",
+    "role": "役割",
+    "action": "操作",
+    "download_excel": "レポート"
+  },
+  "common": {
+    "no": "なし",
+    "keyword": "キーワード",
+    "confirm": "確認",
+    "cancel": "キャンセル",
+    "save": "保存",
+    "add": "追加",
+    "delete": "削除",
+    "edit": "編集",
+    "back": "戻る",
+    "theme": "テーマ",
+    "language": "言語",
+    "light_set": "ライトテーマ",
+    "notification": "通知",
+    "authentication": "認証",
+    "logout": "ログアウト",
+    "success": "成功",
+    "last_update_time": "最終更新",
+    "loading": "読み込み中",
+    "download": "ダウンロード",
+    "unclassified": "未分類",
+    "optional": "任意",
+    "role": {
+      "admin": "管理者",
+      "user": "ユーザー"
+    },
+    "relative": {
+      "second": "{count} 秒前",
+      "minute": "{count} 分前",
+      "hour": "{count} 時間前",
+      "day": "{count} 日前"
+    }
+  },
+  "date": {
+    "january": "1月",
+    "february": "2月",
+    "march": "3月",
+    "april": "4月",
+    "may": "5月",
+    "june": "6月",
+    "july": "7月",
+    "august": "8月",
+    "september": "9月",
+    "october": "10月",
+    "november": "11月",
+    "december": "12月",
+    "sunday_short": "日",
+    "monday_short": "月",
+    "tuesday_short": "火",
+    "wednesday_short": "水",
+    "thursday_short": "木",
+    "friday_short": "金",
+    "saturday_short": "土"
+  },
+  "description": {
+    "project_collaborator_management": "プロジェクトのコラボレーター権限を管理します。プロジェクトごとにコラボレーターを追加、削除、または役割を変更できます。",
+    "manage_project_collaborators_owner": "プロジェクトの所有者として、コラボレーターの管理、役割の設定、アクセス権の制御が可能です。",
+    "manage_project_collaborators_member": "あなたはこのプロジェクトのコラボレーターです。プロジェクトのコラボレーターリストを表示します。",
+    "auth": {
+      "demo_hint": "まずはデモで主な機能を確認しましょう。"
+    }
+  },
+  "dialog": {
+    "delete_confirm": "削除してもよろしいですか",
+    "share_project_link": "プロジェクトリンクを共有",
+    "move_note_to_project": "プロジェクトを選択してノートを移動",
+    "enable_project_sharing": "プロジェクト共有を有効化",
+    "share_description": "このプロジェクトを他の人と共有します。",
+    "collaborators_description": "コラボレーターはプロジェクトにアクセスできるユーザーです。",
+    "global_collaborators_description": "グローバルコラボレーターはすべてのプロジェクトにアクセスできるコラボレーターです。"
+  },
+  "dropdown": {
+    "zh-TW": "繁體中文",
+    "en": "English",
+    "ja": "日本語",
+    "user": "ユーザー",
+    "logout": "ログアウト",
+    "edit": "編集",
+    "detail": "詳細",
+    "floor_plan_preview_icon": {
+      "button_title": "{count} 枚の間取り図",
+      "tooltip_title": "間取り図プレビュー（全 {count} 枚）",
+      "tooltip_hint": "アイコンをクリックしてすべての間取り図を表示",
+      "image_alt": "{index} 枚目の間取り図"
+    }
+  },
+  "error": {
+    "login_failed": "ログインに失敗しました",
+    "register_failed": "登録に失敗しました",
+    "resend_activation_failed": "アクティベーションメールの再送信に失敗しました",
+    "activation_failed": "アクティベーションに失敗しました",
+    "change_password_failed": "パスワードの変更に失敗しました",
+    "reset_password_failed": "パスワードのリセットに失敗しました",
+    "update_failed": "更新に失敗しました"
+  },
+  "excel": {
+    "section": {
+      "project_info": "プロジェクト情報",
+      "construction": "施工エリア"
+    },
+    "label": {
+      "project_name": "プロジェクト名",
+      "project_type": "プロジェクトタイプ",
+      "created_at": "作成日時",
+      "updated_at": "更新日時",
+      "property": "属性",
+      "value": "値"
+    },
+    "columns": {
+      "index": "No.",
+      "task_title": "タスク名",
+      "status": "ステータス",
+      "description": "説明",
+      "material_name": "材料名",
+      "unit_price": "単価",
+      "quantity": "数量",
+      "construction_type": "施工タイプ",
+      "created_at": "作成日時",
+      "due_date": "期限",
+      "reminder_date": "リマインダー日"
+    },
+    "progress_template": {
+      "sheet_name": "工事進捗テンプレート",
+      "month": "月",
+      "special_holiday": "特別な祝日",
+      "date": "日付",
+      "construction_payment_remittance": "工事代金振込",
+      "pre_construction_preparation": "事前準備/その他",
+      "protection_protection_demolition": "養生・解体",
+      "weekday": "曜日",
+      "sample_placeholder": "記入例：ここから入力を開始"
+    },
+    "download": {
+      "gantt_image_suffix": "工程表",
+      "gantt_excel_suffix": "工程表",
+      "progress_template": "進捗テンプレート"
+    }
+  },
+  "helpCenter": {
+    "title": {
+      "contact": "連絡",
+      "suggestion": "提案内容",
+      "timeline": "処理タイムライン"
+    },
+    "contact": {
+      "email": "メールアドレス",
+      "website": "公式サイト",
+      "socials": "ソーシャルメディア"
+    },
+    "suggestion": {
+      "issue_detail": "問題の詳細と再現手順",
+      "expected_vs_actual": "期待される動作と実際の結果",
+      "attachments": "スクリーンショットまたは録画（ある場合）"
+    },
+    "timeline": {
+      "normal": "通常の応答時間：1〜2営業日",
+      "high_priority": "重大な問題：優先的に対応"
+    },
+    "actions": {
+      "open_email": "メールを開く",
+      "open_instagram": "Instagramを開く",
+      "open_youtube": "Youtubeを開く",
+      "open_website": "ウェブサイトを開く"
+    }
+  },
+  "label": {
+    "search": "検索",
+    "time": "時間",
+    "construction": "工事",
+    "name": "名称",
+    "end": "期限",
+    "type": "タイプ",
+    "reminder": "リマインダー",
+    "end_date_time": "終了日時",
+    "reminder_date_time": "リマインダー日時",
+    "role": "役割",
+    "detail": "詳細",
+    "total": "合計",
+    "action": "操作",
+    "note": "備考",
+    "content": "内容",
+    "average": "平均",
+    "day": "日",
+    "unit": "単位",
+    "start_time": "開始時間",
+    "end_time": "終了時間",
+    "reminder_time": "リマインダー時間",
+    "date_range": "日付範囲",
+    "filter": "フィルタ",
+    "quick_select": "直接入力またはクイック選択",
+    "or": "または",
+    "timeline_view": "タイムラインビュー",
+    "switch_view": "スケジュールビューを切り替え",
+    "title": "タイトル",
+    "description": "説明",
+    "status": {
+      "status": "ステータス",
+      "overdue": "期限切れ",
+      "reminding": "リマインダー中"
+    },
+    "legend": {
+      "design_phase": "設計・計画フェーズ",
+      "onsite_phase": "現場施工フェーズ"
+    },
+    "time_status": {
+      "all": "すべて",
+      "unscheduled": "未定",
+      "overdue": "期限切れ未完了",
+      "today": "今日の残り",
+      "this_week": "今週の残り",
+      "this_month": "今月の残り"
+    },
+    "owner": "所有者",
+    "collaborator_role": "コラボレーター",
+    "collaborator_count": "{count} 人のコラボレーター",
+    "projects": "プロジェクト",
+    "collaborator": {
+      "global": "グローバル",
+      "global_default": "グローバルデフォルト",
+      "global_managed": "グローバル管理"
+    },
+    "invitation": {
+      "project": "プロジェクト",
+      "global": "グローバル",
+      "expires_at": "有効期限",
+      "project_invitation": "プロジェクト招待",
+      "global_invitation": "グローバルコラボレーション招待"
+    },
+    "user": {
+      "name": "ユーザー名",
+      "email": "メールアドレス",
+      "member_since": "登録日",
+      "phone": "電話番号",
+      "company": "会社"
+    },
+    "project": {
+      "project": "プロジェクト",
+      "project_name": "プロジェクト名",
+      "project_type": "プロジェクトタイプ",
+      "construction": "工事",
+      "floor_plan": "間取り図",
+      "uploaded_images_count": "{count} 枚の画像をアップロード済み"
+    },
+    "task": {
+      "task": "タスク",
+      "task_display": "タスク表示",
+      "due_date_range": "期限日数フィルター",
+      "status": "全タスクステータス"
+    },
+    "material": {
+      "name": "材料名",
+      "quantity": "数量",
+      "unit_price": "単価",
+      "default_unit_price": "デフォルト単価",
+      "price_amount": "金額合計",
+      "price": "金額",
+      "unit": "単位",
+      "note": "備考",
+      "received_date": "受領日",
+      "cumulative_completion_rate": "累積完了率",
+      "total_quantity": "総数量",
+      "total_usage_price": "材料使用金額合計",
+      "total_planning_amount": "予算総費用",
+      "total_price": "材料費用合計",
+      "planning_total_quantity": "予算総数量",
+      "planning_total_price": "予算総費用",
+      "total_cost": "材料コスト総計",
+      "usage": "材料使用",
+      "usage_accumulation": "使用累積",
+      "add_usage": "材料使用を追加",
+      "add_new_library": "材料ライブラリを作成",
+      "add_new_planning_library": "予算用の材料を作成",
+      "add_new": "材料を追加"
+    },
+    "planning": {
+      "item": "計画項目",
+      "upload_preview": "アップロード内容プレビュー",
+      "projects_display": "プロジェクト施工計画一覧",
+      "demo": "まだファイルがアップロードされていません。サンプルをご覧ください。",
+      "demo_project_name": "工事進捗デモ",
+      "demo_planning_note": "計画メモ",
+      "demo_task_note": "タスクメモ",
+      "planning_material": "材料予算計画"
+    },
+    "pin": {
+      "pinned": "ピン済み",
+      "not_pinned": "未ピン",
+      "pin_task": "ピンを追加",
+      "remove_all": "すべてのピンを削除",
+      "cancel_pinning": "ピン留めをキャンセル"
+    },
+    "setting": {
+      "existing_list": "既存リスト"
+    },
+    "actions": {
+      "enable": "有効化",
+      "disable": "無効化"
+    },
+    "upload_area": {
+      "hint": "クリックまたはドラッグして間取り図をアップロード",
+      "supported_formats": "JPG、PNG、PDF（1ページ目のみ）に対応"
+    },
+    "construction_type": {
+      "3D_Drawing": "3D/図面",
+      "protection_demolition": "養生/解体",
+      "electromechanical": "機電",
+      "hydropower": "水道/電気",
+      "flooring": "床工事",
+      "masonry": "左官",
+      "door_frame": "ドア枠",
+      "light_partition": "軽量間仕切り",
+      "woodwork": "木工事",
+      "metal": "金属",
+      "glass": "ガラス",
+      "painting": "塗装",
+      "flooring_material": "床材",
+      "waterproofing": "防水",
+      "bathroom_fixtures": "衛生設備",
+      "kitchen_cabinet": "キッチン",
+      "air_conditioning": "空調",
+      "structural_reinforcement": "構造補強"
+    },
+    "date_break": "日付の中断"
+  },
+  "link": {
+    "back_to_home": "ホームに戻る",
+    "back_to_forgot_password": "「パスワードをお忘れの場合」の画面に戻る",
+    "forgot_password": "パスワードをお忘れの方はこちら",
+    "back_to_login": "ログインに戻る",
+    "register": "新規登録",
+    "website": "ウェブサイト"
+  },
+  "message": {
+    "no_owned_projects": "まだプロジェクトを作成していません",
+    "no_collaborating_projects": "まだどのプロジェクトのコラボレーターでもありません",
+    "collaborator_updated": "コラボレーターの役割を更新しました",
+    "collaborator_removed": "コラボレーターを削除しました",
+    "update_collaborator_failed": "コラボレーターの役割更新に失敗しました",
+    "remove_collaborator_failed": "コラボレーターの削除に失敗しました",
+    "invalid_email": "有効なメールアドレスを入力してください",
+    "no_done": "完了項目なし",
+    "no_undone": "未完了項目なし",
+    "no_tasks": "タスクがありません",
+    "no_plan": "間取り図はまだありません",
+    "no_tasks_for_day": "この日のタスクはありません",
+    "no_unscheduled_task": "すべてのタスクがスケジュール済みです",
+    "sso_processing": "SSOログインを処理中、お待ちください...",
+    "sso_success": "SSOログイン成功！リダイレクト中...",
+    "dialog": {
+      "activation_success": "アクティベーションに成功しました！",
+      "activation_error": "アクティベーションに失敗しました",
+      "activating": "アクティベート中...",
+      "check_email_for_activation": "認証メールをご確認ください",
+      "no_email_received": "メールが届いていません",
+      "check_the_email": "メールを確認してください",
+      "whitelist_notice": "このメールアドレスは今回のベータ体験対象外です。正式リリース後、最優先でご案内いたします。",
+      "change_password_success": "パスワードの変更に成功しました！",
+      "change_password_failed": "パスワードの変更に失敗しました。後でもう一度お試しください。",
+      "restore_input_query": "検索ボックスをクリアすると、すべてのタスクが再表示されます。"
+    },
+    "auth": {
+      "invalid_credentials": "メールアドレスまたはパスワードが正しくありません",
+      "too_many_attempts": "試行回数が多すぎます。しばらくしてから再試行してください",
+      "email_unverified": "メールアドレスが確認されていません",
+      "account_locked": "アカウントがロックされています"
+    },
+    "sign": {
+      "no_todo": "ToDoなし",
+      "no_done": "完了項目なし",
+      "no_undone": "未完了項目なし",
+      "no_change": "変更なし",
+      "no_alarm": "アラームなし",
+      "no_collaborators": "プロジェクトコラボレーターなし",
+      "no_global_collaborators": "グローバルコラボレーターなし",
+      "no_invitations": "保留中の招待なし",
+      "link_copied": "リンクをコピーしました",
+      "share_disabled_hint": "共有機能は無効です",
+      "delete_construction_content": "およびその中のタスクデータも削除されます",
+      "confirm_delete_input": "削除を確認するには、以下に入力してください:"
+    },
+    "invitation": {
+      "sent": "招待を送信しました",
+      "accepted": "招待を承認しました",
+      "rejected": "招待を拒否しました",
+      "cancelled": "招待をキャンセルしました",
+      "send_failed": "招待の送信に失敗しました",
+      "accept_failed": "招待の承認に失敗しました",
+      "reject_failed": "招待の拒否に失敗しました",
+      "cancel_failed": "招待のキャンセルに失敗しました",
+      "already_exists": "このユーザーには既に保留中の招待があります",
+      "invited_by": "{name} からの招待",
+      "invited_you": "があなたをコラボレーションに招待しました",
+      "login_required": "この招待を承認するにはログインまたは登録してください",
+      "ready_to_accept": "このコラボレーション招待を承認しようとしています",
+      "invalid_token": "無効な招待リンク",
+      "not_found": "招待が見つからないか、既に処理されています",
+      "expired": "この招待は期限切れです",
+      "load_failed": "招待の詳細の読み込みに失敗しました"
+    },
+    "upload": {
+      "unsupported_format": "ファイル {fileName} はサポートされていない形式です",
+      "process_failed": "ファイル {fileName} の処理に失敗しました",
+      "success": "{count} 枚の間取り図をアップロードしました",
+      "failed": "間取り図のアップロードに失敗しました"
+    },
+    "material": {
+      "group": {
+        "unclassified": "未分類"
+      },
+      "empty": "まだ材料が追加されていません",
+      "batch_update": {
+        "success": "一括更新が成功しました",
+        "failed": "一括更新に失敗しました"
+      },
+      "add": {
+        "missing_task": "対応するタスクが見つからず、材料を追加できません",
+        "missing_name": "材料名を入力してください",
+        "success": "材料を追加しました",
+        "failed": "材料の追加に失敗しました"
+      },
+      "update": {
+        "success": "材料を更新しました",
+        "failed": "材料の更新に失敗しました"
+      },
+      "delete": {
+        "success": "材料を削除しました",
+        "failed": "材料の削除に失敗しました"
+      }
+    },
+    "success": {
+      "create": "作成成功",
+      "update": "更新成功",
+      "deleted": "削除成功",
+      "change": "変更成功"
+    },
+    "error": {
+      "failed_to_fetch_weather_data": "天気データの取得に失敗しました",
+      "page_not_found_description": "申し訳ありませんが、お探しのページは存在しません。",
+      "created": "作成失敗",
+      "update": "更新失敗",
+      "deleted": "削除失敗",
+      "change": "変更失敗",
+      "login": "ログイン失敗",
+      "register": "登録失敗",
+      "activate_account": "有効化失敗",
+      "resend_activation": "有効化メールの再送信失敗",
+      "change_password": "パスワード変更失敗",
+      "reset_password": "パスワードリセット失敗",
+      "forgot_password": "パスワードを忘れた場合の処理に失敗"
+    }
+  },
+  "sso": {
+    "missing_params": "必要な認可パラメーターが不足しています",
+    "invalid_format": "認可パラメーターの形式が正しくありません",
+    "unsupported_provider": "対応していないSSOプロバイダーです",
+    "login_failed": "SSOログインに失敗しました",
+    "generic_error": "SSOログイン処理中にエラーが発生しました",
+    "oauth_error": "Google からエラーが返されました: {error}"
+  },
+  "meta": {
+    "defaults": {
+      "title": "KaiJi ノート｜内装施工マネジメントソフト",
+      "description": "KaiJi ノートは現場記録、タスク追跡、スケジュール計画を統合し、内装チームの連携をスムーズにして重複作業を減らします。"
+    },
+    "routes": {
+      "overview": {
+        "title": "KaiJi｜工事概要 Overview｜Interior Notebook",
+        "description": "各案件の残り進捗を把握し、協力業者との調整をより確実に計画できます。"
+      },
+      "schedule": {
+        "title": "KaiJi｜スケジュールビュー Schedule｜Interior Notebook",
+        "description": "タイムライン上で工事項目を配置し、いつ何をするかを共有することで時間感覚をそろえます。"
+      },
+      "englishLanding": {
+        "title": "KaiJi | Interior Construction Management Software",
+        "description": "KaiJi helps interior construction teams capture site updates, plan schedules, and keep every renovation on track with one collaborative workspace."
+      }
+    }
+  },
+  "nav": {
+    "group": {
+      "schedule_assistant": "スケジュールアシスタント",
+      "main": "メイン",
+      "construction_planning": "工事計画フェーズ",
+      "construction_work": "施工段階",
+      "setting": "設定",
+      "other": "その他"
+    },
+    "menu": {
+      "overview": "残りタスクのクイックビュー",
+      "schedule": "スケジュール",
+      "set-member": "メンバー設定",
+      "set_common": "共通設定",
+      "help_center": "ユーザーサポート",
+      "planning_implementation": "プロジェクト計画ガントチャート",
+      "to_do": "施工タスク実行",
+      "quick_draft": "工事現場メモ",
+      "teaching": "動画操作ガイド"
+    }
+  },
+  "notification": {
+    "email": "メールアドレス",
+    "phone": "電話番号",
+    "name": "名前",
+    "section_title": {
+      "subscriber_info": "購読者情報",
+      "device_selection": "デバイス選択",
+      "time_range_settings": "時間範囲設定"
+    }
+  },
+  "option": {
+    "alarm": {
+      "notice": "通知",
+      "caution": "注意",
+      "warning": "警告"
+    },
+    "projectType": {
+      "residential": "住宅",
+      "luxury": "高級住宅",
+      "commercial": "商業施設",
+      "office": "オフィス",
+      "retail": "小売/店舗",
+      "restaurant": "飲食",
+      "hospitality": "宿泊施設",
+      "education": "教育施設",
+      "medical": "医療施設",
+      "public": "公共施設",
+      "exhibition": "展示/イベント",
+      "industrial": "産業施設",
+      "renovation": "リノベーション",
+      "showroom": "ショールーム",
+      "undefined": "未定義"
+    },
+    "status": {
+      "all": "すべて",
+      "todo": "未着手",
+      "inProgress": "進行中",
+      "done": "完了"
+    },
+    "role": {
+      "viewer": "閲覧者",
+      "editor": "編集者",
+      "manager": "管理者"
+    },
+    "display": {
+      "all": "すべて表示",
+      "content": "内容のみ表示",
+      "materials": "材料のみ表示"
+    }
+  },
+  "pagination": {
+    "total": "合計 {total} 件",
+    "pageSize": "件/ページ"
+  },
+  "placeholder": {
+    "auth": {
+      "name": "名前",
+      "email": "メールアドレス",
+      "password": "パスワード",
+      "confirm_password": "パスワード（確認）",
+      "old_password": "現在のパスワード",
+      "new_password": "新しいパスワード",
+      "new_confirm_password": "新しいパスワード（確認）",
+      "username": "ユーザー名"
+    },
+    "email": "メールアドレス",
+    "name": "名前",
+    "phone": "電話番号",
+    "company": "会社名",
+    "search": "検索",
+    "select": "選択",
+    "select_received_date": "受領日",
+    "select_date_and_time": "日付と時間を選択",
+    "project": {
+      "project": "プロジェクトを選択してください",
+      "project_name": "プロジェクト名を入力",
+      "project_type": "プロジェクトタイプを選択",
+      "construction": "工事タイプを選択",
+      "addContainer": "コンテナを入力してください",
+      "task": "タスクを入力してください",
+      "taskDescription": "タスクの説明を入力してください",
+      "add_construction": "工事タイプを追加",
+      "add_unit": "単位を追加",
+      "add_project_type": "プロジェクトタイプを追加",
+      "add_new": "新規追加"
+    },
+    "material": {
+      "name": "材料名",
+      "select_planning_name": "予算材料を選択してください",
+      "quantity": "数量",
+      "unit_price": "単価",
+      "unit": "単位",
+      "note": "備考",
+      "planning_total_quantity": "予算総数量"
+    },
+    "draft": {
+      "todo": "ToDoを入力"
+    }
+  },
+  "project": {
+    "project": "プロジェクト",
+    "construction": "工事",
+    "material": "材料"
+  },
+  "setting": {
+    "construction": "工事",
+    "unit": "単位",
+    "projectType": "プロジェクトタイプ",
+    "inviteMember": "メンバーを招待",
+    "collaborator": "共同編集者",
+    "membersList": "メンバー一覧",
+    "role": "役割",
+    "send": "送信",
+    "invite": "招待",
+    "remove": "削除",
+    "status": {
+      "pending": "保留中",
+      "joined": "参加済み"
+    },
+    "roles": {
+      "owner": "オーナー",
+      "admin": "管理者",
+      "editor": "編集者",
+      "viewer": "閲覧者"
+    },
+    "info": {
+      "empty_overview_data": "工程タスクはまだ作成されていません",
+      "empty_task_description": "「施工タスク実行」ページで未完了タスクを作成してください",
+      "empty_common_data": "共通の工事種別がまだ作成されていません",
+      "empty_project_description": "まず「プロジェクト計画」ページで工程計画をアップロードしてください",
+      "empty_common_description": "「プロジェクト計画」ページで工程表をアップロードすることをお勧めします。システムが自動的に工事種別をインポートします。以下で手動入力することも可能です。",
+      "go_to_planning_projects": "プロジェクト計画のアップロードへ移動",
+      "go_to_upload_plan": "平面図のアップロードへ移動",
+      "go_to_create_task": "タスク作成へ移動"
+    },
+    "messages": {
+      "inviteSent": "招待が正常に送信されました"
+    },
+    "errors": {
+      "emailExists": "このメールアドレスは既に存在します",
+      "inviteFailed": "メンバーの招待に失敗しました"
+    }
+  },
+  "subtitle": {
+    "todo": "現場の絶え間ない変化に対応するため、ノートカードですべての詳細を記録し、スケジュールを整理します。",
+    "planning_implementation": "工程表Excelファイルをアップロードして、システム内でプロジェクトガントチャートを自動作成します。",
+    "setting_common": "共通設定はすべてここで一元管理できます。"
+  },
+  "tab": {
+    "projects": "プロジェクト一覧",
+    "project": "プロジェクト",
+    "projects-download": "プロジェクトダウンロード",
+    "floor-plan": "間取り図",
+    "profile": "プロフィール",
+    "change-password": "パスワード変更",
+    "all": "すべて",
+    "schedule": {
+      "reminderDateTime": "リマインダースケジュール",
+      "endDateTime": "終了スケジュール",
+      "all": "すべて"
+    },
+    "tasks": {
+      "with_pin": "ピンあり",
+      "without_pin": "ピンなし",
+      "all": "すべて"
+    }
+  },
+  "title": {
+    "welcome": "KaiJiへようこそ",
+    "register": "登録",
+    "register_success": "登録成功",
+    "resend_activation": "有効化メール再送信",
+    "account_activation": "アカウント有効化",
+    "forgot_password": "パスワードをお忘れですか",
+    "reset_password": "パスワードリセット",
+    "overview_remaining_task": "残りタスクのクイックビュー",
+    "schedule": "スケジュール",
+    "unscheduled_task": "未定タスク",
+    "reminder_upcoming_task_in_10_days": "10日以内に期限を迎えるタスク",
+    "user": "ユーザー",
+    "todo": "施工タスク実行",
+    "quick_draft": "現場ToDoメモ",
+    "plan": "間取り図",
+    "planning_implementation": "プロジェクト計画ガントチャート",
+    "setting": "設定",
+    "help_center": "ユーザーサポート",
+    "teaching": "動画操作ガイド",
+    "share": "共有",
+    "setting_common": "共通設定",
+    "manage_project_collaborators": "このプロジェクトのコラボレーターを管理",
+    "manage_global_collaborators": "グローバルプロジェクトコラボレーターを管理",
+    "project_collaborator_management": "プロジェクトコラボレーター管理",
+    "material": "材料",
+    "material_construction": "工事中の材料使用",
+    "material_library": "材料ライブラリ",
+    "owned_projects": "自分のプロジェクト",
+    "collaborating_projects": "参加しているプロジェクト",
+    "manage_collaborators": "コラボレーター管理",
+    "collaboration_invitation": "コラボレーション招待",
+    "invitation_error": "招待エラー",
+    "delete_confirm": "削除確認",
+    "create_project": "プロジェクト作成",
+    "create_construction": "工事種別作成",
+    "move_note": "ノート移動",
+    "batch_download": "一括ダウンロード",
+    "edit_task": "タスク編集",
+    "add_task": "タスク追加",
+    "edit_planning": "計画編集",
+    "create_planning": "計画作成",
+    "sso_processing": "SSOログイン処理中",
+    "sso_success": "SSO ログイン成功",
+    "sso_error": "SSO ログイン失敗",
+    "page_not_found": "ページが見つかりません",
+    "edit_note": "ノート編集",
+    "subTitle": {}
+  },
+  "upload": {
+    "parsing_excel": "Excelファイルを解析中",
+    "upload_failed": "アップロード失敗",
+    "process_excel_file": "工程Excelファイルをアップロード",
+    "invalid_excel_type": "Excelファイル（.xlsx または .xls）をアップロードしてください",
+    "parse_failed": "ファイルの解析に失敗しました。ファイル形式を確認してください",
+    "supported_formats": "サポートされている形式",
+    "description": "ここにファイルをドラッグするか、クリックしてファイルを選択",
+    "description_cover": "(同じプロジェクトに再アップロードすると上書き更新されます)",
+    "progress_template_hint": "このテンプレートをダウンロードしてお使いください。システムが正しく解析してプロジェクトガントチャートを作成するには、列構造がこのExcelテンプレートに従っている必要があります。",
+    "edit_planning_gantt_bar": "進行状況バー / ＋ボタンをクリックして、情報の作成・編集ができます"
+  },
+  "validation": {
+    "name_required": "名前は必須です",
+    "phone_required": "電話番号は必須です",
+    "company_required": "会社名は必須です",
+    "description_required": "説明は必須です",
+    "construction_required": "工事項目は必須です",
+    "unit_required": "単位は必須です",
+    "project_type_required": "プロジェクトタイプは必須です",
+    "input_required": "これは必須です",
+    "email": {
+      "required": "メールアドレスは必須です",
+      "invalid": "無効なメールアドレス"
+    },
+    "title": {
+      "required": "タイトルは必須です",
+      "max_length": "タイトルは10文字以内でなければなりません"
+    },
+    "material": {
+      "required": "材料は必須です"
+    },
+    "input": {
+      "required": "これは必須項目です"
+    },
+    "password": {
+      "min": "少なくとも {min} 文字",
+      "uppercase": "少なくとも1つの大文字を含む必要があります",
+      "special": "少なくとも1つの特殊文字を含む必要があります（例: !#$%&）",
+      "alphanumeric": "英数字を含む必要があります",
+      "mismatch": "パスワードが一致しません"
+    },
+    "quantity": {
+      "required": "数量は必須です",
+      "positive": "数量は0より大きくなければなりません"
+    },
+    "unit_price": {
+      "required": "単価は必須です",
+      "negative": "単価は負の数にできません"
+    }
+  }
+}

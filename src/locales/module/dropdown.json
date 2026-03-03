@@ -1,0 +1,53 @@
+{
+  "en": {
+    "dropdown": {
+      "zh-TW": "繁體中文",
+      "en": "English",
+      "ja": "日本語",
+      "user": "User",
+      "logout": "Logout",
+      "edit": "Edit",
+      "detail": "Detail",
+      "floor_plan_preview_icon": {
+        "button_title": "{count} floor plans",
+        "tooltip_title": "Floor plan preview ({count} images)",
+        "tooltip_hint": "Click the icon to view all floor plans",
+        "image_alt": "Floor plan {index}"
+      }
+    }
+  },
+  "zh-TW": {
+    "dropdown": {
+      "zh-TW": "繁體中文",
+      "en": "English",
+      "ja": "日本語",
+      "user": "使用者",
+      "logout": "登出",
+      "edit": "編輯",
+      "detail": "詳細",
+      "floor_plan_preview_icon": {
+        "button_title": "{count} 張平面圖",
+        "tooltip_title": "平面圖預覽（共 {count} 張）",
+        "tooltip_hint": "點擊圖標查看完整平面圖",
+        "image_alt": "第 {index} 張平面圖"
+      }
+    }
+  },
+  "ja": {
+    "dropdown": {
+      "zh-TW": "繁體中文",
+      "en": "English",
+      "ja": "日本語",
+      "user": "ユーザー",
+      "logout": "ログアウト",
+      "edit": "編集",
+      "detail": "詳細",
+      "floor_plan_preview_icon": {
+        "button_title": "{count} 枚の間取り図",
+        "tooltip_title": "間取り図プレビュー（全 {count} 枚）",
+        "tooltip_hint": "アイコンをクリックしてすべての間取り図を表示",
+        "image_alt": "{index} 枚目の間取り図"
+      }
+    }
+  }
+}

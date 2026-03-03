@@ -1,0 +1,65 @@
+{
+  "en": {
+    "tab": {
+      "projects": "Projects List",
+      "project": "Project",
+      "projects-download": "Projects Download",
+      "floor-plan": "Floor Plan",
+      "profile": "Profile",
+      "change-password": "Change Password",
+      "all": "All",
+      "schedule": {
+        "reminderDateTime": "Reminder Schedule",
+        "endDateTime": "End Schedule",
+        "all": "All"
+      },
+      "tasks": {
+        "with_pin": "With Pin",
+        "without_pin": "Without Pin",
+        "all": "All"
+      }
+    }
+  },
+  "zh-TW": {
+    "tab": {
+      "projects": "專案群",
+      "project": "專案",
+      "projects-download": "專案下載",
+      "floor-plan": "平面圖",
+      "profile": "個人資料",
+      "change-password": "修改密碼",
+      "all": "全部",
+      "schedule": {
+        "reminderDateTime": "提醒排程",
+        "endDateTime": "截止排程",
+        "all": "全部"
+      },
+      "tasks": {
+        "with_pin": "有標記",
+        "without_pin": "無標記",
+        "all": "全部"
+      }
+    }
+  },
+  "ja": {
+    "tab": {
+      "projects": "プロジェクト一覧",
+      "project": "プロジェクト",
+      "projects-download": "プロジェクトダウンロード",
+      "floor-plan": "間取り図",
+      "profile": "プロフィール",
+      "change-password": "パスワード変更",
+      "all": "すべて",
+      "schedule": {
+        "reminderDateTime": "リマインダースケジュール",
+        "endDateTime": "終了スケジュール",
+        "all": "すべて"
+      },
+      "tasks": {
+        "with_pin": "ピンあり",
+        "without_pin": "ピンなし",
+        "all": "すべて"
+      }
+    }
+  }
+}

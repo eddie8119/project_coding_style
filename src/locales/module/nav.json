@@ -1,0 +1,71 @@
+{
+  "en": {
+    "nav": {
+      "group": {
+        "schedule_assistant": "Schedule Assistant",
+        "main": "Main",
+        "construction_planning": "Construction Planning Phase",
+        "construction_work": "Construction Work Phase",
+        "setting": "Setting",
+        "other": "Other"
+      },
+      "menu": {
+        "overview": "Quick View ",
+        "schedule": "Schedule",
+        "set-member": "Set Member",
+        "set_common": "Set Common",
+        "help_center": "User Assistance",
+        "planning_implementation": "Planning Gantt Chart",
+        "to_do": "Construction Task",
+        "quick_draft": "Quick Draft",
+        "teaching": "Video Tutorials"
+      }
+    }
+  },
+  "zh-TW": {
+    "nav": {
+      "group": {
+        "schedule_assistant": "行程助理",
+        "main": "主",
+        "construction_planning": "工程規劃階段",
+        "construction_work": "工程施作階段",
+        "setting": "設定",
+        "other": "其他"
+      },
+      "menu": {
+        "overview": "快速掌握剩餘任務",
+        "schedule": "行事曆",
+        "set-member": "成員設定",
+        "set_common": "通用設定",
+        "help_center": "使用者協助",
+        "planning_implementation": "專案規劃甘特圖",
+        "to_do": "工程施作任務",
+        "quick_draft": "工地待辦速記",
+        "teaching": "影片操作教學"
+      }
+    }
+  },
+  "ja": {
+    "nav": {
+      "group": {
+        "schedule_assistant": "スケジュールアシスタント",
+        "main": "メイン",
+        "construction_planning": "工事計画フェーズ",
+        "construction_work": "施工段階",
+        "setting": "設定",
+        "other": "その他"
+      },
+      "menu": {
+        "overview": "残りタスクのクイックビュー",
+        "schedule": "スケジュール",
+        "set-member": "メンバー設定",
+        "set_common": "共通設定",
+        "help_center": "ユーザーサポート",
+        "planning_implementation": "プロジェクト計画ガントチャート",
+        "to_do": "施工タスク実行",
+        "quick_draft": "工事現場メモ",
+        "teaching": "動画操作ガイド"
+      }
+    }
+  }
+}

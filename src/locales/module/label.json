@@ -1,0 +1,483 @@
+{
+  "en": {
+    "label": {
+      "search": "Search",
+      "time": "Time",
+      "construction": "Construction",
+      "name": "Name",
+      "type": "Type",
+      "end": "End",
+      "reminder": "Reminder",
+      "end_date_time": "End Date",
+      "reminder_date_time": "Reminder Datetime",
+      "role": "Role",
+      "detail": "Detail",
+      "total": "Total",
+      "action": "Action",
+      "note": "Note",
+      "content": "Content",
+      "average": "Average",
+      "day": "Day",
+      "unit": "Unit",
+      "start_time": "Start Time",
+      "end_time": "End Time",
+      "reminder_time": "Reminder Time",
+      "date_range": "Date Range",
+      "filter": "Filter",
+      "quick_select": "Direct input or rapid repeated clicking",
+      "or": "Or",
+      "timeline_view": "Timeline View",
+      "switch_view": "Switch Schedule View",
+      "title": "Title",
+      "description": "Description",
+      "status": {
+        "status": "Status",
+        "overdue": "Overdue",
+        "reminding": "Reminding"
+      },
+      "legend": {
+        "design_phase": "Design planning phase",
+        "onsite_phase": "On-site construction phase"
+      },
+      "time_status": {
+        "all": "All",
+        "unscheduled": "Unscheduled",
+        "overdue": "Overdue Not Completed",
+        "today": "Today Left",
+        "this_week": "This Week Left",
+        "this_month": "This Month Left"
+      },
+      "owner": "Owner",
+      "collaborator_role": "Collaborator",
+      "collaborator_count": "{count} collaborators",
+      "projects": "projects",
+      "collaborator": {
+        "global": "Global",
+        "global_default": "Global Default",
+        "global_managed": "Managed globally"
+      },
+      "invitation": {
+        "project": "Project",
+        "global": "Global",
+        "expires_at": "Expires at",
+        "project_invitation": "Project Invitation",
+        "global_invitation": "Global Collaboration Invitation"
+      },
+      "user": {
+        "name": "Username",
+        "email": "Email",
+        "member_since": "Member Since",
+        "phone": "Phone",
+        "company": "Company"
+      },
+      "project": {
+        "project": "Project",
+        "project_name": "Project Name",
+        "project_type": "Project Type",
+        "construction": "Construction",
+        "floor_plan": "Floor Plan",
+        "uploaded_images_count": "Uploaded {count} images"
+      },
+      "task": {
+        "task": "Task",
+        "task_display": "Task Display",
+        "due_date_range": "Filter by expiration days range",
+        "status": "All Tasks Status"
+      },
+      "material": {
+        "name": "Material Name",
+        "quantity": "Quantity",
+        "unit_price": "Unit Price",
+        "default_unit_price": "Default Unit Price",
+        "price_amount": "Total Amount",
+        "price": "Amount",
+        "unit": "Unit",
+        "note": "Note",
+        "received_date": "Received Date",
+        "cumulative_completion_rate": "Cumulative Completion Rate",
+        "total_quantity": "Total Quantity",
+        "total_usage_price": "Total Material Usage Cost",
+        "total_planning_amount": "Planned Total Expense",
+        "total_price": "Total Material Expense",
+        "planning_total_quantity": "Planned Total Quantity",
+        "planning_total_price": "Planned Total Expense",
+        "total_cost": "Total Material Cost",
+        "usage": "Material Usage",
+        "usage_accumulation": "Usage Accumulation",
+        "add_usage": "Add Material Usage",
+        "add_new_library": "Create Material Library",
+        "add_new_planning_library": "Create Budget Material",
+        "add_new": "Add Material"
+      },
+      "planning": {
+        "item": "Planning Item",
+        "upload_preview": "Upload content preview",
+        "projects_display": "Projects Schedule Planning Overview",
+        "demo": "No file has been uploaded yet. You can first view the sample Gantt chart.",
+        "demo_project_name": "Construction Progress Demo",
+        "demo_planning_note": "Planning note",
+        "demo_task_note": "Task note",
+        "planning_material": "Material Budget Planning"
+      },
+      "pin": {
+        "pinned": "Pinned",
+        "not_pinned": "Not pinned",
+        "pin_task": "Pin Task",
+        "remove_all": "Remove All Pins",
+        "cancel_pinning": "Cancel Pinning"
+      },
+      "setting": {
+        "existing_list": "Existing List"
+      },
+      "actions": {
+        "enable": "Enable",
+        "disable": "Disable"
+      },
+      "upload_area": {
+        "hint": "Click or drag to upload a floor plan",
+        "supported_formats": "Supports JPG, PNG, PDF (first page only)"
+      },
+      "construction_type": {
+        "3D_Drawing": "3D/Drawing",
+        "protection_demolition": "Protection/Demolition",
+        "electromechanical": "Electromechanical",
+        "hydropower": "Hydropower",
+        "flooring": "Flooring",
+        "masonry": "Masonry",
+        "door_frame": "Door Frame",
+        "light_partition": "Light Partition",
+        "woodwork": "Woodwork",
+        "metal": "Metal",
+        "glass": "Glass",
+        "painting": "Painting",
+        "flooring_material": "Flooring Material",
+        "waterproofing": "Waterproofing",
+        "bathroom_fixtures": "Bathroom Fixtures",
+        "kitchen_cabinet": "Kitchen Cabinet",
+        "air_conditioning": "Air Conditioning",
+        "structural_reinforcement": "Structural Reinforcement"
+      }
+    }
+  },
+  "zh-TW": {
+    "label": {
+      "search": "搜尋",
+      "time": "時間",
+      "construction": "工程",
+      "name": "名稱",
+      "end": "截止",
+      "type": "類型",
+      "reminder": "提醒",
+      "end_date_time": "截止時間",
+      "reminder_date_time": "提醒時間",
+      "role": "角色",
+      "detail": "詳情",
+      "total": "總計",
+      "action": "操作",
+      "note": "備註",
+      "content": "內容",
+      "average": "平均",
+      "day": "天",
+      "unit": "單位",
+      "start_time": "開始時間",
+      "end_time": "結束時間",
+      "reminder_time": "提醒時間",
+      "date_range": "日期範圍",
+      "filter": "篩選",
+      "quick_select": "直接輸入或是快速複選",
+      "or": "或",
+      "timeline_view": "時間軸視圖",
+      "switch_view": "切換排程視圖",
+      "title": "標題",
+      "description": "描述",
+      "status": {
+        "status": "狀態",
+        "overdue": "過期",
+        "reminding": "提醒"
+      },
+      "legend": {
+        "design_phase": "設計規劃階段",
+        "onsite_phase": "現場施作階段"
+      },
+      "time_status": {
+        "all": "全部",
+        "unscheduled": "尚未排程",
+        "overdue": "過期未完成",
+        "today": "今天剩餘",
+        "this_week": "本周剩餘",
+        "this_month": "本月剩餘"
+      },
+      "owner": "擁有者",
+      "collaborator_role": "協作者",
+      "collaborator_count": "{count} 位協作者",
+      "projects": "個專案",
+      "collaborator": {
+        "global": "全域",
+        "global_default": "全域預設",
+        "global_managed": "由全域管理"
+      },
+      "invitation": {
+        "project": "專案",
+        "global": "全域",
+        "expires_at": "過期時間",
+        "project_invitation": "專案邀請",
+        "global_invitation": "全域協作邀請"
+      },
+      "user": {
+        "name": "使用者名稱",
+        "email": "電子郵件",
+        "member_since": "加入日期",
+        "phone": "電話",
+        "company": "公司"
+      },
+      "project": {
+        "project": "專案",
+        "project_name": "專案名稱",
+        "project_type": "專案類型",
+        "construction": "工程",
+        "floor_plan": "平面圖",
+        "uploaded_images_count": "已上傳 {count} 張圖片"
+      },
+      "task": {
+        "task": "任務",
+        "task_display": "任務顯示內容",
+        "due_date_range": "篩選到期天數區間",
+        "status": "全案狀態篩選"
+      },
+      "material": {
+        "name": "材料名稱",
+        "quantity": "數量",
+        "unit_price": "單價",
+        "default_unit_price": "預設單價",
+        "price_amount": "總金額",
+        "price": "金額",
+        "unit": "單位",
+        "note": "備註",
+        "received_date": "進貨日期",
+        "cumulative_completion_rate": "累積完成率",
+        "total_quantity": "總數量",
+        "total_usage_price": "材料使用金額總計",
+        "total_planning_amount": "材料預算金額總計",
+        "total_price": "材料費用總計",
+        "planning_total_quantity": "預算總數量",
+        "planning_total_price": "預算總費用",
+        "total_cost": "材料成本總計",
+        "usage": "材料使用",
+        "usage_accumulation": "使用累積",
+        "add_usage": "新增材料使用",
+        "add_new_library": "建立材料庫",
+        "add_new_planning_library": "建立預算材料",
+        "add_new": "新增材料"
+      },
+      "planning": {
+        "item": "規劃項目",
+        "upload_preview": "上傳內容展示",
+        "projects_display": "專案工程規劃一覽",
+        "demo": "尚未上傳檔案，您可以點擊看範例",
+        "demo_project_name": "此為工進表示範",
+        "demo_planning_note": "規劃文字註記",
+        "demo_task_note": "任務文字註記",
+        "planning_material": "材料預算規劃"
+      },
+      "pin": {
+        "pinned": "已標記",
+        "not_pinned": "未標記",
+        "pin_task": "新增標記",
+        "remove_all": "移除所有標記",
+        "cancel_pinning": "取消標記"
+      },
+      "setting": {
+        "existing_list": "現有列表"
+      },
+      "actions": {
+        "enable": "啟用",
+        "disable": "停用"
+      },
+      "upload_area": {
+        "hint": "點擊或拖拽上傳平面圖",
+        "supported_formats": "支援 JPG、PNG、PDF（僅取第一頁）"
+      },
+      "construction_type": {
+        "3D_Drawing": "3D/繪圖",
+        "protection_demolition": "保護/拆除",
+        "electromechanical": "機電",
+        "hydropower": "水電",
+        "flooring": "地坪",
+        "masonry": "泥作",
+        "door_frame": "門框",
+        "light_partition": "輕隔間",
+        "woodwork": "木作",
+        "metal": "金屬",
+        "glass": "玻璃",
+        "painting": "油漆",
+        "flooring_material": "地板",
+        "waterproofing": "防水",
+        "bathroom_fixtures": "衛浴設備",
+        "kitchen_cabinet": "廚具",
+        "air_conditioning": "空調",
+        "structural_reinforcement": "結構補強"
+      }
+    }
+  },
+  "ja": {
+    "label": {
+      "search": "検索",
+      "time": "時間",
+      "construction": "工事",
+      "name": "名称",
+      "end": "期限",
+      "type": "タイプ",
+      "reminder": "リマインダー",
+      "end_date_time": "終了日時",
+      "reminder_date_time": "リマインダー日時",
+      "role": "役割",
+      "detail": "詳細",
+      "total": "合計",
+      "action": "操作",
+      "note": "備考",
+      "content": "内容",
+      "average": "平均",
+      "day": "日",
+      "unit": "単位",
+      "start_time": "開始時間",
+      "end_time": "終了時間",
+      "reminder_time": "リマインダー時間",
+      "date_range": "日付範囲",
+      "filter": "フィルタ",
+      "quick_select": "直接入力またはクイック選択",
+      "or": "または",
+      "timeline_view": "タイムラインビュー",
+      "switch_view": "スケジュールビューを切り替え",
+      "title": "タイトル",
+      "description": "説明",
+      "status": {
+        "status": "ステータス",
+        "overdue": "期限切れ",
+        "reminding": "リマインダー中"
+      },
+      "legend": {
+        "design_phase": "設計・計画フェーズ",
+        "onsite_phase": "現場施工フェーズ"
+      },
+      "time_status": {
+        "all": "すべて",
+        "unscheduled": "未定",
+        "overdue": "期限切れ未完了",
+        "today": "今日の残り",
+        "this_week": "今週の残り",
+        "this_month": "今月の残り"
+      },
+      "owner": "所有者",
+      "collaborator_role": "コラボレーター",
+      "collaborator_count": "{count} 人のコラボレーター",
+      "projects": "プロジェクト",
+      "collaborator": {
+        "global": "グローバル",
+        "global_default": "グローバルデフォルト",
+        "global_managed": "グローバル管理"
+      },
+      "invitation": {
+        "project": "プロジェクト",
+        "global": "グローバル",
+        "expires_at": "有効期限",
+        "project_invitation": "プロジェクト招待",
+        "global_invitation": "グローバルコラボレーション招待"
+      },
+      "user": {
+        "name": "ユーザー名",
+        "email": "メールアドレス",
+        "member_since": "登録日",
+        "phone": "電話番号",
+        "company": "会社"
+      },
+      "project": {
+        "project": "プロジェクト",
+        "project_name": "プロジェクト名",
+        "project_type": "プロジェクトタイプ",
+        "construction": "工事",
+        "floor_plan": "間取り図",
+        "uploaded_images_count": "{count} 枚の画像をアップロード済み"
+      },
+      "task": {
+        "task": "タスク",
+        "task_display": "タスク表示",
+        "due_date_range": "期限日数フィルター",
+        "status": "全タスクステータス"
+      },
+      "material": {
+        "name": "材料名",
+        "quantity": "数量",
+        "unit_price": "単価",
+        "default_unit_price": "デフォルト単価",
+        "price_amount": "金額合計",
+        "price": "金額",
+        "unit": "単位",
+        "note": "備考",
+        "received_date": "受領日",
+        "cumulative_completion_rate": "累積完了率",
+        "total_quantity": "総数量",
+        "total_usage_price": "材料使用金額合計",
+        "total_planning_amount": "予算総費用",
+        "total_price": "材料費用合計",
+        "planning_total_quantity": "予算総数量",
+        "planning_total_price": "予算総費用",
+        "total_cost": "材料コスト総計",
+        "usage": "材料使用",
+        "usage_accumulation": "使用累積",
+        "add_usage": "材料使用を追加",
+        "add_new_library": "材料ライブラリを作成",
+        "add_new_planning_library": "予算用の材料を作成",
+        "add_new": "材料を追加"
+      },
+      "planning": {
+        "item": "計画項目",
+        "upload_preview": "アップロード内容プレビュー",
+        "projects_display": "プロジェクト施工計画一覧",
+        "demo": "まだファイルがアップロードされていません。サンプルをご覧ください。",
+        "demo_project_name": "工事進捗デモ",
+        "demo_planning_note": "計画メモ",
+        "demo_task_note": "タスクメモ",
+        "planning_material": "材料予算計画"
+      },
+      "pin": {
+        "pinned": "ピン済み",
+        "not_pinned": "未ピン",
+        "pin_task": "ピンを追加",
+        "remove_all": "すべてのピンを削除",
+        "cancel_pinning": "ピン留めをキャンセル"
+      },
+      "setting": {
+        "existing_list": "既存リスト"
+      },
+      "actions": {
+        "enable": "有効化",
+        "disable": "無効化"
+      },
+      "upload_area": {
+        "hint": "クリックまたはドラッグして間取り図をアップロード",
+        "supported_formats": "JPG、PNG、PDF（1ページ目のみ）に対応"
+      },
+      "construction_type": {
+        "3D_Drawing": "3D/図面",
+        "protection_demolition": "養生/解体",
+        "electromechanical": "機電",
+        "hydropower": "水道/電気",
+        "flooring": "床工事",
+        "masonry": "左官",
+        "door_frame": "ドア枠",
+        "light_partition": "軽量間仕切り",
+        "woodwork": "木工事",
+        "metal": "金属",
+        "glass": "ガラス",
+        "painting": "塗装",
+        "flooring_material": "床材",
+        "waterproofing": "防水",
+        "bathroom_fixtures": "衛生設備",
+        "kitchen_cabinet": "キッチン",
+        "air_conditioning": "空調",
+        "structural_reinforcement": "構造補強"
+      },
+      "date_break": "日付の中断"
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "zh-TW": {
+    "date": {
+      "january": "一月",
+      "february": "二月",
+      "march": "三月",
+      "april": "四月",
+      "may": "五月",
+      "june": "六月",
+      "july": "七月",
+      "august": "八月",
+      "september": "九月",
+      "october": "十月",
+      "november": "十一月",
+      "december": "十二月",
+      "sunday_short": "日",
+      "monday_short": "一",
+      "tuesday_short": "二",
+      "wednesday_short": "三",
+      "thursday_short": "四",
+      "friday_short": "五",
+      "saturday_short": "六"
+    }
+  },
+  "en": {
+    "date": {
+      "january": "January",
+      "february": "February",
+      "march": "March",
+      "april": "April",
+      "may": "May",
+      "june": "June",
+      "july": "July",
+      "august": "August",
+      "september": "September",
+      "october": "October",
+      "november": "November",
+      "december": "December",
+      "sunday_short": "Su",
+      "monday_short": "Mo",
+      "tuesday_short": "Tu",
+      "wednesday_short": "We",
+      "thursday_short": "Th",
+      "friday_short": "Fr",
+      "saturday_short": "Sa"
+    }
+  },
+  "ja": {
+    "date": {
+      "january": "1月",
+      "february": "2月",
+      "march": "3月",
+      "april": "4月",
+      "may": "5月",
+      "june": "6月",
+      "july": "7月",
+      "august": "8月",
+      "september": "9月",
+      "october": "10月",
+      "november": "11月",
+      "december": "12月",
+      "sunday_short": "日",
+      "monday_short": "月",
+      "tuesday_short": "火",
+      "wednesday_short": "水",
+      "thursday_short": "木",
+      "friday_short": "金",
+      "saturday_short": "土"
+    }
+  }
+}

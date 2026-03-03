@@ -1,0 +1,44 @@
+{
+  "en": {
+    "upload": {
+      "parsing_excel": "Parsing Excel file",
+      "upload_failed": "Upload failed",
+      "process_excel_file": "Upload construction progress Excel file",
+      "invalid_excel_type": "Please upload an Excel file (.xlsx or .xls)",
+      "parse_failed": "File parsing failed, please check the file format",
+      "supported_formats": "Supported formats",
+      "description": "Drag a file here or click to select one",
+      "description_cover": "(Uploading again to the same project will overwrite the existing data.)",
+      "progress_template_hint": "Please download this template. The column structure must follow this Excel template so the system can parse it correctly and create the project Gantt chart.",
+      "edit_planning_gantt_bar": "Click the progress bar / + button to create or edit information."
+    }
+  },
+  "zh-TW": {
+    "upload": {
+      "parsing_excel": "正在解析 Excel 檔案",
+      "upload_failed": "上傳失敗",
+      "process_excel_file": "上傳工進 Excel 檔案",
+      "invalid_excel_type": "請上傳 Excel 檔案 (.xlsx 或 .xls)",
+      "parse_failed": "檔案解析失敗，請檢查檔案格式",
+      "supported_formats": "支援格式",
+      "description": "拖拽檔案到此處或點擊選擇檔案",
+      "description_cover": "(同個專案再次上傳會覆蓋更新)",
+      "progress_template_hint": "請直接下載本模板，工進表的欄位關係一定要參照這份 Excel 模板，系統才能讀取欄位成功、建立專案甘特圖",
+      "edit_planning_gantt_bar": "點擊進度條 / +按鈕，可以編輯與建立資訊"
+    }
+  },
+  "ja": {
+    "upload": {
+      "parsing_excel": "Excelファイルを解析中",
+      "upload_failed": "アップロード失敗",
+      "process_excel_file": "工程Excelファイルをアップロード",
+      "invalid_excel_type": "Excelファイル（.xlsx または .xls）をアップロードしてください",
+      "parse_failed": "ファイルの解析に失敗しました。ファイル形式を確認してください",
+      "supported_formats": "サポートされている形式",
+      "description": "ここにファイルをドラッグするか、クリックしてファイルを選択",
+      "description_cover": "(同じプロジェクトに再アップロードすると上書き更新されます)",
+      "progress_template_hint": "このテンプレートをダウンロードしてお使いください。システムが正しく解析してプロジェクトガントチャートを作成するには、列構造がこのExcelテンプレートに従っている必要があります。",
+      "edit_planning_gantt_bar": "進行状況バー / ＋ボタンをクリックして、情報の作成・編集ができます"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "en": {
+    "error": {
+      "login_failed": "Login failed",
+      "register_failed": "Register failed",
+      "resend_activation_failed": "Resend activation failed",
+      "activation_failed": "Activation failed",
+      "change_password_failed": "Failed to change password",
+      "reset_password_failed": "Reset password failed",
+      "update_failed": "Update failed"
+    }
+  },
+  "zh-TW": {
+    "error": {
+      "login_failed": "登入失敗",
+      "register_failed": "註冊失敗",
+      "resend_activation_failed": "重新發送激活信失敗",
+      "activation_failed": "激活失敗",
+      "change_password_failed": "修改密碼失敗",
+      "reset_password_failed": "重置密碼失敗",
+      "update_failed": "更新失敗"
+    }
+  },
+  "ja": {
+    "error": {
+      "login_failed": "ログインに失敗しました",
+      "register_failed": "登録に失敗しました",
+      "resend_activation_failed": "アクティベーションメールの再送信に失敗しました",
+      "activation_failed": "アクティベーションに失敗しました",
+      "change_password_failed": "パスワードの変更に失敗しました",
+      "reset_password_failed": "パスワードのリセットに失敗しました",
+      "update_failed": "更新に失敗しました"
+    }
+  }
+}

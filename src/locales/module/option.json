@@ -1,0 +1,128 @@
+{
+  "en": {
+    "option": {
+      "alarm": {
+        "notice": "Notice",
+        "caution": "Caution",
+        "warning": "Warning"
+      },
+      "projectType": {
+        "residential": "Residential",
+        "luxury": "Luxury",
+        "commercial": "Commercial",
+        "office": "Office",
+        "retail": "Retail / Shop",
+        "restaurant": "Restaurant",
+        "hospitality": "Hospitality",
+        "education": "Education",
+        "medical": "Medical",
+        "public": "Public",
+        "exhibition": "Exhibition",
+        "industrial": "Industrial",
+        "renovation": "Renovation",
+        "showroom": "Showroom",
+        "undefined": "Unknown"
+      },
+      "status": {
+        "all": "All",
+        "todo": "Todo",
+        "inProgress": "In Progress",
+        "done": "Done"
+      },
+      "role": {
+        "viewer": "Viewer",
+        "editor": "Editor",
+        "manager": "Manager"
+      },
+      "display": {
+        "all": "Show All",
+        "content": "Content Only",
+        "materials": "Materials Only"
+      }
+    }
+  },
+  "zh-TW": {
+    "option": {
+      "alarm": {
+        "notice": "通知",
+        "caution": "注意",
+        "warning": "警告"
+      },
+      "projectType": {
+        "residential": "住宅",
+        "luxury": "豪宅",
+        "commercial": "商業",
+        "office": "事務所",
+        "retail": "零售/店鋪",
+        "restaurant": "餐飲",
+        "hospitality": "旅宿",
+        "education": "教育",
+        "medical": "醫療",
+        "public": "公共",
+        "exhibition": "展覽/展演",
+        "industrial": "產業空間",
+        "renovation": "舊屋改造",
+        "showroom": "樣品屋",
+        "undefined": "未定義"
+      },
+      "status": {
+        "all": "全部",
+        "todo": "待辦",
+        "inProgress": "進行",
+        "done": "完成"
+      },
+      "role": {
+        "viewer": "瀏覽者",
+        "editor": "編輯者",
+        "manager": "管理員"
+      },
+      "display": {
+        "all": "都要顯示",
+        "content": "只顯示內容",
+        "materials": "只顯示材料"
+      }
+    }
+  },
+  "ja": {
+    "option": {
+      "alarm": {
+        "notice": "通知",
+        "caution": "注意",
+        "warning": "警告"
+      },
+      "projectType": {
+        "residential": "住宅",
+        "luxury": "高級住宅",
+        "commercial": "商業施設",
+        "office": "オフィス",
+        "retail": "小売/店舗",
+        "restaurant": "飲食",
+        "hospitality": "宿泊施設",
+        "education": "教育施設",
+        "medical": "医療施設",
+        "public": "公共施設",
+        "exhibition": "展示/イベント",
+        "industrial": "産業施設",
+        "renovation": "リノベーション",
+        "showroom": "ショールーム",
+        "undefined": "未定義"
+      },
+      "status": {
+        "all": "すべて",
+        "todo": "未着手",
+        "inProgress": "進行中",
+        "done": "完了"
+      },
+      "role": {
+        "viewer": "閲覧者",
+        "editor": "編集者",
+        "manager": "管理者"
+      },
+      "display": {
+        "all": "すべて表示",
+        "content": "内容のみ表示",
+        "materials": "材料のみ表示"
+      }
+    }
+  }
+}

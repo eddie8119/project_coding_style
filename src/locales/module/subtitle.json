@@ -1,0 +1,23 @@
+{
+  "en": {
+    "subtitle": {
+      "todo": "As your job site keeps changing, note cards capture every detail and keep your schedule organized.",
+      "planning_implementation": "Upload a construction schedule Excel file and automatically create a project Gantt chart in the system.",
+      "setting_common": "All your common preferences can be managed here in one place."
+    }
+  },
+  "zh-TW": {
+    "subtitle": {
+      "todo": "面對工地現場的滾動變化，筆記卡片幫你穩穩記住，讓繁雜進度也能井然有序",
+      "planning_implementation": "上傳工進表 Excel 檔案，自動在系統建立專案甘特圖",
+      "setting_common": "通用的習慣，都可以在這裡統一管理設定"
+    }
+  },
+  "ja": {
+    "subtitle": {
+      "todo": "現場の絶え間ない変化に対応するため、ノートカードですべての詳細を記録し、スケジュールを整理します。",
+      "planning_implementation": "工程表Excelファイルをアップロードして、システム内でプロジェクトガントチャートを自動作成します。",
+      "setting_common": "共通設定はすべてここで一元管理できます。"
+    }
+  }
+}

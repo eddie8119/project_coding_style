@@ -1,0 +1,105 @@
+{
+  "en": {
+    "common": {
+      "no": "No",
+      "keyword": "Keyword",
+      "cancel": "Cancel",
+      "save": "Save",
+      "add": "Add",
+      "delete": "Delete",
+      "edit": "Edit",
+      "back": "Back",
+      "theme": "Theme",
+      "language": "Language",
+      "light_set": "Brightness Theme",
+      "notification": "Notification",
+      "authentication": "Authentication",
+      "logout": "Logout",
+      "success": "Success",
+      "last_update_time": "Last Update",
+      "loading": "Loading",
+      "download": "Download",
+      "unclassified": "Unclassified",
+      "optional": "Optional",
+      "role": {
+        "admin": "Admin",
+        "user": "User"
+      },
+      "relative": {
+        "second": "{count} second",
+        "minute": "{count} minute ",
+        "hour": "{count} hour",
+        "day": "{count} day "
+      }
+    }
+  },
+  "zh-TW": {
+    "common": {
+      "no": "無",
+      "keyword": "關鍵字",
+      "cancel": "取消",
+      "save": "儲存",
+      "add": "新增",
+      "delete": "刪除",
+      "edit": "編輯",
+      "back": "返回",
+      "theme": "主題",
+      "language": "語言",
+      "light_set": "亮度主題",
+      "notification": "通知",
+      "authentication": "驗證",
+      "logout": "登出",
+      "success": "成功",
+      "last_update_time": "最後更新",
+      "loading": "載入中",
+      "download": "下載",
+      "unclassified": "未分類",
+      "optional": "選填",
+      "role": {
+        "admin": "管理者",
+        "user": "一般用戶"
+      },
+      "relative": {
+        "second": "{count} 秒前",
+        "minute": "{count} 分鐘前",
+        "hour": "{count} 小時前",
+        "day": "{count} 天前"
+      }
+    }
+  },
+  "ja": {
+    "common": {
+      "no": "なし",
+      "keyword": "キーワード",
+      "confirm": "確認",
+      "cancel": "キャンセル",
+      "save": "保存",
+      "add": "追加",
+      "delete": "削除",
+      "edit": "編集",
+      "back": "戻る",
+      "theme": "テーマ",
+      "language": "言語",
+      "light_set": "ライトテーマ",
+      "notification": "通知",
+      "authentication": "認証",
+      "logout": "ログアウト",
+      "success": "成功",
+      "last_update_time": "最終更新",
+      "loading": "読み込み中",
+      "download": "ダウンロード",
+      "unclassified": "未分類",
+      "optional": "任意",
+      "role": {
+        "admin": "管理者",
+        "user": "ユーザー"
+      },
+      "relative": {
+        "second": "{count} 秒前",
+        "minute": "{count} 分前",
+        "hour": "{count} 時間前",
+        "day": "{count} 日前"
+      }
+    }
+  }
+}

@@ -1,0 +1,388 @@
+{
+  "en": {
+    "message": {
+      "no_owned_projects": "You haven't created any projects yet",
+      "no_collaborating_projects": "You are not a collaborator on any projects yet",
+      "collaborator_updated": "Collaborator role updated successfully",
+      "collaborator_removed": "Collaborator removed successfully",
+      "update_collaborator_failed": "Failed to update collaborator role",
+      "remove_collaborator_failed": "Failed to remove collaborator",
+      "invalid_email": "Please enter a valid email address",
+      "no_done": "No done",
+      "no_undone": "No undone",
+      "no_tasks": "No tasks yet",
+      "no_plan": "No floor plans yet",
+      "no_tasks_for_day": "No tasks scheduled for this day",
+      "no_unscheduled_task": "No unscheduled tasks",
+      "sso_processing": "Processing your SSO login, please wait...",
+      "sso_success": "SSO login successful! Redirecting...",
+      "dialog": {
+        "activation_success": "Activation successful!",
+        "activation_error": "Activation failed",
+        "activating": "Activating...",
+        "check_email_for_activation": "Check your email for activation",
+        "no_email_received": "No email received",
+        "check_the_email": "Check the email",
+        "whitelist_notice": "This email isn't included in the beta list. We'll notify you as soon as we officially launch.",
+        "change_password_success": "Password changed successfully!",
+        "change_password_failed": "Failed to change password, please try again later",
+        "restore_input_query": "Clear the search box to display all tasks again."
+      },
+      "auth": {
+        "invalid_credentials": "Incorrect email or password",
+        "too_many_attempts": "Too many attempts, please try again later",
+        "email_unverified": "Email address not verified",
+        "account_locked": "Account has been locked"
+      },
+      "sign": {
+        "no_todo": "No todo",
+        "no_done": "No done",
+        "no_undone": "No undone",
+        "no_change": "No change",
+        "no_alarm": "No alarm",
+        "no_collaborators": "No project collaborators",
+        "no_global_collaborators": "No company collaborators",
+        "no_invitations": "No pending invitations",
+        "link_copied": "Link copied",
+        "share_disabled_hint": "Share disabled",
+        "delete_construction_content": "This will also delete all its related tasks.",
+        "confirm_delete_input": "To confirm deletion, please type:"
+      },
+      "invitation": {
+        "sent": "Invitation sent successfully",
+        "accepted": "Invitation accepted",
+        "rejected": "Invitation rejected",
+        "cancelled": "Invitation cancelled",
+        "send_failed": "Failed to send invitation",
+        "accept_failed": "Failed to accept invitation",
+        "reject_failed": "Failed to reject invitation",
+        "cancel_failed": "Failed to cancel invitation",
+        "already_exists": "An invitation already exists for this user",
+        "invited_by": "Invited by {name}",
+        "invited_you": "invited you to collaborate",
+        "login_required": "Please login or register to accept this invitation",
+        "ready_to_accept": "You are about to accept this collaboration invitation",
+        "invalid_token": "Invalid invitation link",
+        "not_found": "Invitation not found or already processed",
+        "expired": "This invitation has expired",
+        "load_failed": "Failed to load invitation details"
+      },
+      "upload": {
+        "unsupported_format": "File {fileName} is not a supported format",
+        "process_failed": "Failed to process file {fileName}",
+        "success": "Successfully uploaded {count} floor plans",
+        "failed": "Failed to upload floor plans"
+      },
+      "material": {
+        "group": {
+          "unclassified": "Uncategorized"
+        },
+        "empty": "No materials added yet",
+        "batch_update": {
+          "success": "Batch update successful",
+          "failed": "Batch update failed"
+        },
+        "add": {
+          "missing_task": "Cannot find a related task to add the material",
+          "missing_name": "Please enter a material name",
+          "success": "Material added successfully",
+          "failed": "Failed to add material"
+        },
+        "update": {
+          "success": "Material updated successfully",
+          "failed": "Failed to update material"
+        },
+        "delete": {
+          "success": "Material deleted successfully",
+          "failed": "Failed to delete material"
+        }
+      },
+      "success": {
+        "create": "Create successfully",
+        "update": "Update successfully",
+        "deleted": "Deleted successfully",
+        "change": "Changed successfully"
+      },
+      "error": {
+        "failed_to_fetch_weather_data": "Failed to fetch weather data",
+        "page_not_found_description": "Sorry, the page you are looking for does not exist.",
+        "created": "Failed to create",
+        "update": "Failed to update",
+        "deleted": "Failed to delete",
+        "change": "Failed to change",
+        "login": "Login failed",
+        "register": "Register failed",
+        "activate_account": "Activate account failed",
+        "resend_activation": "Resend activation failed",
+        "change_password": "Change password failed",
+        "reset_password": "Reset password failed"
+      },
+      "sso": {
+        "missing_params": "Missing required authorization parameters",
+        "invalid_format": "Invalid authorization parameter format",
+        "unsupported_provider": "Unsupported SSO provider",
+        "login_failed": "SSO login failed",
+        "generic_error": "An error occurred during the SSO login process",
+        "oauth_error": "Google returned an error: {error}"
+      }
+    }
+  },
+  "zh-TW": {
+    "message": {
+      "no_owned_projects": "您尚未建立任何專案",
+      "no_collaborating_projects": "您尚未成為任何專案的協作者",
+      "collaborator_updated": "協作者角色更新成功",
+      "collaborator_removed": "協作者已成功移除",
+      "update_collaborator_failed": "協作者角色更新失敗",
+      "remove_collaborator_failed": "移除協作者失敗",
+      "invalid_email": "請輸入有效的電子郵件地址",
+      "no_done": "無已完成事項",
+      "no_undone": "無未完成事項",
+      "no_tasks": "暫無任務",
+      "no_plan": "暫無平面圖",
+      "no_tasks_for_day": "當天無任務安排",
+      "no_unscheduled_task": "所有任務都已排程",
+      "sso_processing": "正在處理您的 SSO 登入，請稍候...",
+      "sso_success": "SSO 登入成功！正在跳轉...",
+      "dialog": {
+        "activation_success": "啟用成功！",
+        "activation_error": "啟用失敗",
+        "activating": "啟用中...",
+        "check_email_for_activation": "請查看您的電子郵件以完成啟用",
+        "no_email_received": "尚未收到電子郵件",
+        "check_the_email": "請檢查您的電子郵件",
+        "whitelist_notice": "email 非本次體驗名單，正式上線後將第一時間通知你。",
+        "change_password_success": "密碼變更成功！",
+        "change_password_failed": "密碼變更失敗，請稍後再試",
+        "restore_input_query": "清除搜尋關鍵字框，即可恢復展示所有任務"
+      },
+      "auth": {
+        "invalid_credentials": "帳號或密碼錯誤",
+        "too_many_attempts": "嘗試次數過多，請稍後再試",
+        "email_unverified": "電子郵件尚未驗證",
+        "account_locked": "帳號已被鎖定"
+      },
+      "sign": {
+        "no_todo": "無待辦事項",
+        "no_done": "無已完成事項",
+        "no_undone": "無未完成事項",
+        "no_change": "無變更",
+        "no_alarm": "無警報",
+        "no_collaborators": "無專案協作者",
+        "no_global_collaborators": "無全公司專案協作者",
+        "no_invitations": "無待處理邀請",
+        "link_copied": "已複製連結",
+        "share_disabled_hint": "分享功能已關閉",
+        "delete_construction_content": "以及其內的任務資料將被刪除",
+        "confirm_delete_input": "若確認刪除，請在下方輸入:"
+      },
+      "invitation": {
+        "sent": "邀請已成功發送",
+        "accepted": "已接受邀請",
+        "rejected": "已拒絕邀請",
+        "cancelled": "已取消邀請",
+        "send_failed": "發送邀請失敗",
+        "accept_failed": "接受邀請失敗",
+        "reject_failed": "拒絕邀請失敗",
+        "cancel_failed": "取消邀請失敗",
+        "already_exists": "該用戶已有待處理的邀請",
+        "invited_by": "由 {name} 邀請",
+        "invited_you": "邀請您加入協作",
+        "login_required": "請登入或註冊以接受此邀請",
+        "ready_to_accept": "您即將接受此協作邀請",
+        "invalid_token": "無效的邀請連結",
+        "not_found": "找不到邀請或已處理",
+        "expired": "此邀請已過期",
+        "load_failed": "無法載入邀請詳情"
+      },
+      "upload": {
+        "unsupported_format": "檔案 {fileName} 不是支援的格式",
+        "process_failed": "處理檔案 {fileName} 失敗",
+        "success": "成功上傳 {count} 張平面圖",
+        "failed": "上傳平面圖失敗"
+      },
+      "material": {
+        "group": {
+          "unclassified": "未分類"
+        },
+        "empty": "尚未新增材料",
+        "batch_update": {
+          "success": "批次更新成功",
+          "failed": "批次更新失敗"
+        },
+        "add": {
+          "missing_task": "無法找到對應的任務來新增材料",
+          "missing_name": "請輸入材料名稱",
+          "success": "材料新增成功",
+          "failed": "材料新增失敗"
+        },
+        "update": {
+          "success": "材料更新成功",
+          "failed": "材料更新失敗"
+        },
+        "delete": {
+          "success": "材料刪除成功",
+          "failed": "材料刪除失敗"
+        }
+      },
+      "success": {
+        "create": "建立成功",
+        "update": "更新成功",
+        "deleted": "刪除成功",
+        "change": "變更成功"
+      },
+      "error": {
+        "created": "建立失敗",
+        "update": "更新失敗",
+        "deleted": "刪除失敗",
+        "change": "變更失敗",
+        "login": "登入失敗",
+        "register": "註冊失敗",
+        "activate_account": "啟用失敗",
+        "resend_activation": "重新發送啟用郵件失敗",
+        "forgot_password": "忘記密碼失敗",
+        "reset_password": "重置密碼失敗",
+        "change_password": "變更密碼失敗",
+        "page_not_found_description": "抱歉，您要造訪的頁面不存在。",
+        "project_limit_reached": "已達方案可建立的專案上限 ({limit})，請先刪除一些專案再建立新專案。"
+      },
+      "sso": {
+        "missing_params": "缺少必要的授權參數",
+        "invalid_format": "授權參數格式錯誤",
+        "unsupported_provider": "不支援的 SSO 提供商",
+        "login_failed": "SSO 登入失敗",
+        "generic_error": "SSO 登入過程中發生錯誤",
+        "oauth_error": "Google 回傳錯誤：{error}"
+      }
+    }
+  },
+  "ja": {
+    "message": {
+      "no_owned_projects": "まだプロジェクトを作成していません",
+      "no_collaborating_projects": "まだどのプロジェクトのコラボレーターでもありません",
+      "collaborator_updated": "コラボレーターの役割を更新しました",
+      "collaborator_removed": "コラボレーターを削除しました",
+      "update_collaborator_failed": "コラボレーターの役割更新に失敗しました",
+      "remove_collaborator_failed": "コラボレーターの削除に失敗しました",
+      "invalid_email": "有効なメールアドレスを入力してください",
+      "no_done": "完了項目なし",
+      "no_undone": "未完了項目なし",
+      "no_tasks": "タスクがありません",
+      "no_plan": "間取り図はまだありません",
+      "no_tasks_for_day": "この日のタスクはありません",
+      "no_unscheduled_task": "すべてのタスクがスケジュール済みです",
+      "sso_processing": "SSOログインを処理中、お待ちください...",
+      "sso_success": "SSOログイン成功！リダイレクト中...",
+      "dialog": {
+        "activation_success": "アクティベーションに成功しました！",
+        "activation_error": "アクティベーションに失敗しました",
+        "activating": "アクティベート中...",
+        "check_email_for_activation": "認証メールをご確認ください",
+        "no_email_received": "メールが届いていません",
+        "check_the_email": "メールを確認してください",
+        "whitelist_notice": "このメールアドレスは今回のベータ体験対象外です。正式リリース後、最優先でご案内いたします。",
+        "change_password_success": "パスワードの変更に成功しました！",
+        "change_password_failed": "パスワードの変更に失敗しました。後でもう一度お試しください。",
+        "restore_input_query": "検索ボックスをクリアすると、すべてのタスクが再表示されます。"
+      },
+      "auth": {
+        "invalid_credentials": "メールアドレスまたはパスワードが正しくありません",
+        "too_many_attempts": "試行回数が多すぎます。しばらくしてから再試行してください",
+        "email_unverified": "メールアドレスが確認されていません",
+        "account_locked": "アカウントがロックされています"
+      },
+      "sign": {
+        "no_todo": "ToDoなし",
+        "no_done": "完了項目なし",
+        "no_undone": "未完了項目なし",
+        "no_change": "変更なし",
+        "no_alarm": "アラームなし",
+        "no_collaborators": "プロジェクトコラボレーターなし",
+        "no_global_collaborators": "グローバルコラボレーターなし",
+        "no_invitations": "保留中の招待なし",
+        "link_copied": "リンクをコピーしました",
+        "share_disabled_hint": "共有機能は無効です",
+        "delete_construction_content": "およびその中のタスクデータも削除されます",
+        "confirm_delete_input": "削除を確認するには、以下に入力してください:"
+      },
+      "invitation": {
+        "sent": "招待を送信しました",
+        "accepted": "招待を承認しました",
+        "rejected": "招待を拒否しました",
+        "cancelled": "招待をキャンセルしました",
+        "send_failed": "招待の送信に失敗しました",
+        "accept_failed": "招待の承認に失敗しました",
+        "reject_failed": "招待の拒否に失敗しました",
+        "cancel_failed": "招待のキャンセルに失敗しました",
+        "already_exists": "このユーザーには既に保留中の招待があります",
+        "invited_by": "{name} からの招待",
+        "invited_you": "があなたをコラボレーションに招待しました",
+        "login_required": "この招待を承認するにはログインまたは登録してください",
+        "ready_to_accept": "このコラボレーション招待を承認しようとしています",
+        "invalid_token": "無効な招待リンク",
+        "not_found": "招待が見つからないか、既に処理されています",
+        "expired": "この招待は期限切れです",
+        "load_failed": "招待の詳細の読み込みに失敗しました"
+      },
+      "upload": {
+        "unsupported_format": "ファイル {fileName} はサポートされていない形式です",
+        "process_failed": "ファイル {fileName} の処理に失敗しました",
+        "success": "{count} 枚の間取り図をアップロードしました",
+        "failed": "間取り図のアップロードに失敗しました"
+      },
+      "material": {
+        "group": {
+          "unclassified": "未分類"
+        },
+        "empty": "まだ材料が追加されていません",
+        "batch_update": {
+          "success": "一括更新が成功しました",
+          "failed": "一括更新に失敗しました"
+        },
+        "add": {
+          "missing_task": "対応するタスクが見つからず、材料を追加できません",
+          "missing_name": "材料名を入力してください",
+          "success": "材料を追加しました",
+          "failed": "材料の追加に失敗しました"
+        },
+        "update": {
+          "success": "材料を更新しました",
+          "failed": "材料の更新に失敗しました"
+        },
+        "delete": {
+          "success": "材料を削除しました",
+          "failed": "材料の削除に失敗しました"
+        }
+      },
+      "success": {
+        "create": "作成成功",
+        "update": "更新成功",
+        "deleted": "削除成功",
+        "change": "変更成功"
+      },
+      "error": {
+        "failed_to_fetch_weather_data": "天気データの取得に失敗しました",
+        "page_not_found_description": "申し訳ありませんが、お探しのページは存在しません。",
+        "created": "作成失敗",
+        "update": "更新失敗",
+        "deleted": "削除失敗",
+        "change": "変更失敗",
+        "login": "ログイン失敗",
+        "register": "登録失敗",
+        "activate_account": "有効化失敗",
+        "resend_activation": "有効化メールの再送信失敗",
+        "change_password": "パスワード変更失敗",
+        "reset_password": "パスワードリセット失敗",
+        "forgot_password": "パスワードを忘れた場合の処理に失敗"
+      }
+    },
+    "sso": {
+      "missing_params": "必要な認可パラメーターが不足しています",
+      "invalid_format": "認可パラメーターの形式が正しくありません",
+      "unsupported_provider": "対応していないSSOプロバイダーです",
+      "login_failed": "SSOログインに失敗しました",
+      "generic_error": "SSOログイン処理中にエラーが発生しました",
+      "oauth_error": "Google からエラーが返されました: {error}"
+    }
+  }
+}

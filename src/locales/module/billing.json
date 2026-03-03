@@ -1,0 +1,149 @@
+{
+  "en": {
+    "billing": {
+      "pricing": "Pricing",
+      "pricingDescription": "Choose the perfect plan for your needs. All plans include access to our core features.",
+      "mySubscription": "My Subscription",
+      "subscriptionDescription": "Manage your subscription and billing information.",
+      "featured": "Most Popular",
+      "currentPlan": "Current Plan",
+      "selectPlan": "Select Plan",
+      "contactSales": "Contact Sales",
+      "processing": "Processing...",
+      "currency": {
+        "usd": "USD"
+      },
+      "starter": {
+        "title": "Starter",
+        "subtitle": "Ideal for solo designers or new studios",
+        "feature1": "Up to 10 active projects and 2 collaborators",
+        "feature2": "Essential Gantt and schedule views",
+        "feature3": "Upload 4 floor plans/PDFs per project"
+      },
+      "professional": {
+        "title": "Professional",
+        "subtitle": "Designed for growing studios and multi-site teams",
+        "feature1": "Up to 15 active projects and 5 collaborators",
+        "feature2": "Upload 10 floor plans/PDFs per project",
+        "feature3": "Full Gantt, schedule, and on-site markup tools",
+        "feature4": "Centralized documents & floor plans (20GB storage)",
+        "feature5": "Custom project types with Excel/image export"
+      },
+      "enterprise": {
+        "title": "Enterprise",
+        "subtitle": "For large interior firms with multiple crews",
+        "feature1": "Unlimited active projects and collaborators",
+        "feature2": "Enterprise-grade permissions and multi-team control",
+        "feature3": "Custom workflows with dedicated support",
+        "note": "Custom pricing tailored to your workload"
+      },
+      "noPlans": "No pricing plans available at this time.",
+      "disabled": "Billing is currently disabled. Please contact support.",
+      "faq": "Frequently Asked Questions",
+      "faq1Question": "Can I change my plan anytime?",
+      "faq1Answer": "Yes, you can upgrade or downgrade your plan at any time. Changes will take effect at the next billing cycle.",
+      "faq2Question": "What payment methods do you accept?",
+      "faq2Answer": "We accept all major credit cards and debit cards through Stripe.",
+      "faq3Question": "Is there a free trial?",
+      "faq3Answer": "Contact our sales team to discuss trial options for your organization.",
+      "noActiveSubscription": "No Active Subscription",
+      "noActiveSubscriptionDesc": "You don't have an active subscription yet. Browse our plans to get started.",
+      "browsePlans": "Browse Plans",
+      "status": {
+        "active": "Active",
+        "inactive": "Inactive",
+        "cancelled": "Cancelled",
+        "past_due": "Past Due"
+      },
+      "currentPeriodStart": "Current Period Start",
+      "currentPeriodEnd": "Current Period End",
+      "cancelledAtPeriodEnd": "Your subscription will be cancelled on {date}",
+      "managePayment": "Manage Payment Method",
+      "cancelSubscription": "Cancel Subscription",
+      "resumeSubscription": "Resume Subscription",
+      "billingHistory": "Billing History",
+      "billingHistoryDesc": "View and download your invoices.",
+      "viewInvoices": "View Invoices",
+      "confirmCancel": "Are you sure you want to cancel your subscription? You will lose access to premium features at the end of your billing period.",
+      "interval": {
+        "month": "month",
+        "year": "year"
+      }
+    }
+  },
+  "zh-TW": {
+    "billing": {
+      "pricing": "定價",
+      "pricingDescription": "選擇適合您需求的完美方案。所有方案都包含我們的核心功能。",
+      "mySubscription": "我的訂閱",
+      "subscriptionDescription": "管理您的訂閱和帳單資訊。",
+      "featured": "最受歡迎",
+      "currentPlan": "目前方案",
+      "selectPlan": "選擇方案",
+      "contactSales": "聯繫銷售",
+      "processing": "處理中...",
+      "currency": {
+        "usd": "美元"
+      },
+      "starter": {
+        "title": "Starter",
+        "subtitle": "剛起步的自由設計或一人事務所",
+        "feature1": "最多 10 個活躍專案、2 位協作成員",
+        "feature2": "基礎甘特圖與日程視圖",
+        "feature3": "每個專案可上傳 4 張平面圖/PDF"
+      },
+      "professional": {
+        "title": "Professional",
+        "subtitle": "中小型設計公司、需要多工地同步的團隊",
+        "feature1": "最多 15 個活躍專案、5 位協作成員",
+        "feature2": "每個專案可上傳 10 張平面圖/PDF",
+        "feature3": "完整甘特圖、日程視圖與現場工程標記",
+        "feature4": "雲端文件與平面圖集中管理（20GB）",
+        "feature5": "客製專案類型，可匯出 Excel/圖片"
+      },
+      "enterprise": {
+        "title": "Enterprise",
+        "subtitle": "大型裝潢工程公司、多團隊協作企業",
+        "feature1": "無限活躍專案與協作成員",
+        "feature2": "企業級權限與多團隊管理",
+        "feature3": "客製需求與專屬支援",
+        "note": "可依需求客製報價"
+      },
+      "noPlans": "目前沒有可用的定價方案。",
+      "disabled": "帳單功能目前已停用。請聯絡支援團隊。",
+      "faq": "常見問題",
+      "faq1Question": "我可以隨時更改方案嗎？",
+      "faq1Answer": "可以，您可以隨時升級或降級您的方案。變更將在下一個計費週期生效。",
+      "faq2Question": "您接受哪些付款方式？",
+      "faq2Answer": "我們通過 Stripe 接受所有主要信用卡和借記卡。",
+      "faq3Question": "有免費試用嗎？",
+      "faq3Answer": "請聯絡我們的銷售團隊以討論您的組織的試用選項。",
+      "noActiveSubscription": "沒有有效的訂閱",
+      "noActiveSubscriptionDesc": "您還沒有有效的訂閱。瀏覽我們的方案以開始使用。",
+      "browsePlans": "瀏覽方案",
+      "status": {
+        "active": "有效",
+        "inactive": "無效",
+        "cancelled": "已取消",
+        "past_due": "逾期"
+      },
+      "currentPeriodStart": "目前期間開始",
+      "currentPeriodEnd": "目前期間結束",
+      "cancelledAtPeriodEnd": "您的訂閱將在 {date} 取消",
+      "managePayment": "管理付款方式",
+      "cancelSubscription": "取消訂閱",
+      "resumeSubscription": "恢復訂閱",
+      "billingHistory": "帳單歷史",
+      "billingHistoryDesc": "查看和下載您的發票。",
+      "viewInvoices": "查看發票",
+      "confirmCancel": "您確定要取消訂閱嗎？在計費週期結束時，您將無法訪問高級功能。",
+      "interval": {
+        "month": "月",
+        "year": "年"
+      }
+    }
+  },
+  "ja": {
+    "billing": {}
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "pagination": {
+      "total": "Total {total}",
+      "pageSize": "items/page"
+    }
+  },
+  "zh-TW": {
+    "pagination": {
+      "total": "共 {total} 筆",
+      "pageSize": "條/頁"
+    }
+  },
+  "ja": {
+    "pagination": {
+      "total": "合計 {total} 件",
+      "pageSize": "件/ページ"
+    }
+  }
+}

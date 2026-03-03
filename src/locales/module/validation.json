@@ -1,0 +1,125 @@
+{
+  "en": {
+    "validation": {
+      "name_required": "Name is required",
+      "phone_required": "Phone is required",
+      "company_required": "Company is required",
+      "description_required": "Description is required",
+      "construction_required": "Construction is required",
+      "unit_required": "Unit is required",
+      "project_type_required": "Project type is required",
+      "input_required": "This is required",
+      "email": {
+        "required": "Email is required",
+        "invalid": "Invalid email address"
+      },
+      "title": {
+        "required": "Title is required",
+        "max_length": "Title cannot exceed 10 characters"
+      },
+      "material": {
+        "required": "Material is required"
+      },
+      "input": {
+        "required": "This field is required"
+      },
+      "password": {
+        "min": "At least {min} characters",
+        "uppercase": "Must contain at least 1 uppercase letter",
+        "special": "Must contain at least 1 special character (e.g. !#$%&)",
+        "alphanumeric": "Must contain alphanumeric characters",
+        "mismatch": "Passwords do not match"
+      },
+      "quantity": {
+        "required": "Quantity is required",
+        "positive": "Quantity must be greater than 0"
+      },
+      "unit_price": {
+        "required": "Unit price is required",
+        "negative": "Unit price cannot be negative"
+      }
+    }
+  },
+  "zh-TW": {
+    "validation": {
+      "name_required": "名稱為必填",
+      "phone_required": "電話為必填",
+      "company_required": "公司為必填",
+      "description_required": "描述為必填",
+      "construction_required": "施工項目為必填",
+      "unit_required": "單位為必填",
+      "project_type_required": "案件類別為必填",
+      "input_required": "此為必填",
+      "email": {
+        "required": "電子郵件為必填",
+        "invalid": "無效的電子郵件地址"
+      },
+      "title": {
+        "required": "標題為必填",
+        "max_length": "標題不能超過10個字"
+      },
+      "material": {
+        "required": "材料為必填"
+      },
+      "input": {
+        "required": "此為必填"
+      },
+      "password": {
+        "min": "至少 {min} 個字元",
+        "uppercase": "必須包含至少 1 個大寫字母",
+        "special": "必須包含至少 1 個特殊字元 (例如 !#$%&)",
+        "alphanumeric": "必須包含英數字元",
+        "mismatch": "密碼不一致"
+      },
+      "quantity": {
+        "required": "數量為必填",
+        "positive": "數量必須大於 0"
+      },
+      "unit_price": {
+        "required": "單價為必填",
+        "negative": "單價不能為負數"
+      }
+    }
+  },
+  "ja": {
+    "validation": {
+      "name_required": "名前は必須です",
+      "phone_required": "電話番号は必須です",
+      "company_required": "会社名は必須です",
+      "description_required": "説明は必須です",
+      "construction_required": "工事項目は必須です",
+      "unit_required": "単位は必須です",
+      "project_type_required": "プロジェクトタイプは必須です",
+      "input_required": "これは必須です",
+      "email": {
+        "required": "メールアドレスは必須です",
+        "invalid": "無効なメールアドレス"
+      },
+      "title": {
+        "required": "タイトルは必須です",
+        "max_length": "タイトルは10文字以内でなければなりません"
+      },
+      "material": {
+        "required": "材料は必須です"
+      },
+      "input": {
+        "required": "これは必須項目です"
+      },
+      "password": {
+        "min": "少なくとも {min} 文字",
+        "uppercase": "少なくとも1つの大文字を含む必要があります",
+        "special": "少なくとも1つの特殊文字を含む必要があります（例: !#$%&）",
+        "alphanumeric": "英数字を含む必要があります",
+        "mismatch": "パスワードが一致しません"
+      },
+      "quantity": {
+        "required": "数量は必須です",
+        "positive": "数量は0より大きくなければなりません"
+      },
+      "unit_price": {
+        "required": "単価は必須です",
+        "negative": "単価は負の数にできません"
+      }
+    }
+  }
+}

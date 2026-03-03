@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/images/DesignerHelper_logo.png" />
+
+    <title>
+    KaiJi 開工大吉｜室內工程管理軟體｜工地紀錄與專案排程平台
+    </title>
+
+    <meta
+      name="description"
+      content="KaiJi 開工大吉是一款專為室內設計與施工團隊打造的工程管理軟體，整合工地紀錄、任務追蹤與專案排程，幫助監工與設計師降低漏項、誤工與溝通成本，讓每個案場從開工就井然有序。"
+    />
+    <meta name="robots" content="index, follow" />
+
+<meta name="application-name" content="KaiJi 開工大吉" />
+<meta name="author" content="KaiJi by Funsugar" />
+<meta name="theme-color" content="#ff7a00" />
+
+    <link id="brand-canonical" rel="canonical" />
+
+    <meta property="og:site_name" content="方生糖 Funsugar Designer Helper" />
+    <meta property="og:locale" content="zh_TW" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="KaiJi 開工大吉｜室內工程管理軟體"
+    />
+
+ <meta
+  property="og:description"
+  content="專為室內設計與工程團隊打造的管理平台，整合工地紀錄、任務排程與進度追蹤，減少漏項與重工，讓每個案場更有秩序。"
+/>
+    <meta property="og:url" />
+    <meta
+      property="og:image"
+      content="/images/og-cover.png"
+    />
+    <meta
+      property="og:image:alt"
+      content="KaiJi 開工大吉介面與品牌預覽 | KaiJi interface and brand preview"
+    />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta
+  name="twitter:title"
+  content="KaiJi 開工大吉｜室內工程管理軟體"
+/>
+<meta
+  name="twitter:description"
+  content="整合工地紀錄、任務排程與專案追蹤的工程管理系統，專為室內設計與施工團隊打造。"
+/>
+<meta name="twitter:image" content="/images/og-cover.png" />
+<meta name="twitter:site" content="@kaiji_app" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "KaiJi 開工大吉",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "Construction Management Software",
+  "operatingSystem": "Web",
+  "description": "KaiJi 是專為室內設計與施工團隊打造的工程管理軟體，提供工地紀錄、任務排程與進度追蹤功能，幫助團隊降低漏項與誤工成本。",
+  "brand": {
+    "@type": "Brand",
+    "name": "KaiJi"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "TWD"
+  }
+}
+</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module">
+      import { BRAND_LINK } from '/src/constants/link';
+
+      const appUrl = BRAND_LINK.production;
+      const ogImageUrl = new URL('/images/og-cover.png', appUrl).toString();
+
+      document
+        .querySelector('link[rel="canonical"]')
+        ?.setAttribute('href', appUrl);
+
+      document
+        .querySelector('meta[property="og:url"]')
+        ?.setAttribute('content', appUrl);
+
+      document
+        .querySelector('meta[property="og:image"]')
+        ?.setAttribute('content', ogImageUrl);
+
+      document
+        .querySelector('meta[name="twitter:image"]')
+        ?.setAttribute('content', ogImageUrl);
+
+      const ldJson = document.querySelector('script[type="application/ld+json"]');
+      if (ldJson?.textContent) {
+        const data = JSON.parse(ldJson.textContent);
+        data.url = appUrl;
+        data.image = ogImageUrl;
+        if (data.author && typeof data.author === 'object') {
+          data.author.url = appUrl;
+        }
+        ldJson.textContent = JSON.stringify(data);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

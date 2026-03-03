@@ -1,0 +1,124 @@
+{
+  "en": {
+    "setting": {
+      "construction": "Construction",
+      "unit": "Unit",
+      "projectType": "Project Type",
+      "inviteMember": "Invite Member",
+      "collaborator": "Collaborator",
+      "membersList": "Members List",
+      "role": "Role",
+      "send": "Send",
+      "invite": "Invite",
+      "remove": "Remove",
+      "status": {
+        "pending": "Pending",
+        "joined": "Joined"
+      },
+      "roles": {
+        "owner": "Owner",
+        "admin": "Admin",
+        "editor": "Editor",
+        "viewer": "Viewer"
+      },
+      "info": {
+        "empty_overview_data": "No tasks have been created yet",
+        "empty_task_description": "Please go to the 'Construction Task Execution' page to create pending tasks",
+        "empty_common_data": "No shared data has been created",
+        "empty_project_description": "Please go to the 'Project Planning' page to upload the project schedule first",
+        "empty_common_description": "It is recommended to go to the 'Project Planning' page to upload the project Gantt chart. The system will automatically import the construction items from the Gantt chart. You can also enter it manually below.",
+        "go_to_planning_projects": "Go to upload project planning",
+        "go_to_upload_plan": "Go to upload project plan",
+        "go_to_create_task": "Go to create task"
+      },
+      "messages": {
+        "inviteSent": "Invite sent successfully"
+      },
+      "errors": {
+        "emailExists": "Email already exists",
+        "inviteFailed": "Failed to invite member"
+      }
+    }
+  },
+  "zh-TW": {
+    "setting": {
+      "construction": "工程",
+      "unit": "單位",
+      "projectType": "專案類型",
+      "roles": {
+        "owner": "擁有者",
+        "admin": "管理員",
+        "editor": "編輯者",
+        "viewer": "檢視者"
+      },
+      "inviteMember": "邀請成員",
+      "collaborator": "協作者",
+      "role": "角色",
+      "send": "發送",
+      "invite": "邀請",
+      "remove": "移除",
+      "status": {
+        "pending": "待處理",
+        "joined": "已加入"
+      },
+      "info": {
+        "empty_overview_data": "尚未建立工程任務",
+        "empty_common_data": "尚未建立共用工程種類",
+        "empty_task_description": "建議先前往「工程施作任務」頁面建立待辦任務",
+        "empty_project_description": "建議先前往「專案規劃甘特圖」頁面上傳工進計畫",
+        "empty_common_description": "建議先前往「專案規劃」頁面上傳工進表，系統會自動將工程種類匯入。也可以直接在下方手動輸入。",
+        "go_to_planning_projects": "前往上傳專案規劃",
+        "go_to_upload_plan": "前往上傳平面圖",
+        "go_to_create_task": "前往建立待辦任務"
+      },
+      "messages": {
+        "inviteSent": "邀請已發送"
+      },
+      "errors": {
+        "emailExists": "電子郵件已存在",
+        "inviteFailed": "邀請失敗"
+      }
+    }
+  },
+  "ja": {
+    "setting": {
+      "construction": "工事",
+      "unit": "単位",
+      "projectType": "プロジェクトタイプ",
+      "inviteMember": "メンバーを招待",
+      "collaborator": "共同編集者",
+      "membersList": "メンバー一覧",
+      "role": "役割",
+      "send": "送信",
+      "invite": "招待",
+      "remove": "削除",
+      "status": {
+        "pending": "保留中",
+        "joined": "参加済み"
+      },
+      "roles": {
+        "owner": "オーナー",
+        "admin": "管理者",
+        "editor": "編集者",
+        "viewer": "閲覧者"
+      },
+      "info": {
+        "empty_overview_data": "工程タスクはまだ作成されていません",
+        "empty_task_description": "「施工タスク実行」ページで未完了タスクを作成してください",
+        "empty_common_data": "共通の工事種別がまだ作成されていません",
+        "empty_project_description": "まず「プロジェクト計画」ページで工程計画をアップロードしてください",
+        "empty_common_description": "「プロジェクト計画」ページで工程表をアップロードすることをお勧めします。システムが自動的に工事種別をインポートします。以下で手動入力することも可能です。",
+        "go_to_planning_projects": "プロジェクト計画のアップロードへ移動",
+        "go_to_upload_plan": "平面図のアップロードへ移動",
+        "go_to_create_task": "タスク作成へ移動"
+      },
+      "messages": {
+        "inviteSent": "招待が正常に送信されました"
+      },
+      "errors": {
+        "emailExists": "このメールアドレスは既に存在します",
+        "inviteFailed": "メンバーの招待に失敗しました"
+      }
+    }
+  }
+}
